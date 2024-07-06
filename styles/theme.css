@@ -11,6 +11,18 @@
 		@apply text-dark-200 dark:text-light-800;
 	}
 
+	.icon-light {
+		@apply text-[#121212];
+	}
+
+	.icon-dark {
+		@apply text-[#e0e0e2];
+	}
+
+	.invert-colors svg {
+		@apply text-[#121212] dark:text-[#e0e0e2];
+	}
+
 	.h1-intro {
 		@apply text-9xl font-medium text-dark200_light800;
 	}

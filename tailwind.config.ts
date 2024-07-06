@@ -20,6 +20,8 @@ const config: Config = {
 					900: '#FFFFFF',
 					800: '#E0E0E2',
 				},
+				'icon-light': '#121212',
+				'icon-dark': '#e0e0e2',
 			},
 			keyframes: {
 				flipIn: {

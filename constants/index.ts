@@ -1,0 +1,101 @@
+export const themes = [
+	{ value: 'light', icon: '/assets/icons/sun.svg' },
+	{ value: 'dark', icon: '/assets/icons/moon.svg' },
+];
+
+export const navLink = [
+	{
+		route: '/about',
+		label: 'About',
+	},
+	{
+		route: '/projects',
+		label: 'Projects',
+	},
+	{
+		route: '/contect',
+		label: 'contact',
+	},
+];
+
+export const mySkills = [
+	{
+		skill: 'HTML',
+		imgSkill: 'html.svg',
+	},
+	{
+		skill: 'CSS',
+		imgSkill: 'css.svg',
+	},
+	{
+		skill: 'JavaScript',
+		imgSkill: 'javascript.svg',
+	},
+	{
+		skill: 'TypeScript',
+		imgSkill: 'typescript.svg',
+	},
+	{
+		skill: 'TailwindCss',
+		imgSkill: 'tailwindcss.svg',
+	},
+	{
+		skill: 'styled-component',
+		imgSkill: 'styled-components.svg',
+	},
+	{
+		skill: 'Node.js',
+		imgSkill: 'nodejs.svg',
+	},
+	{
+		skill: 'express',
+		imgSkill: `express.svg`,
+	},
+	{
+		skill: 'React',
+		imgSkill: 'react.svg',
+	},
+	{
+		skill: 'Next.js',
+		imgSkill: 'nextjs.svg',
+	},
+	{
+		skill: 'MongoDb',
+		imgSkill: 'mongodb.svg',
+	},
+	{
+		skill: 'Figma',
+		imgSkill: 'figma.svg',
+	},
+	{
+		skill: 'Visual Studio Code',
+		imgSkill: 'vscode.svg',
+	},
+	{
+		skill: 'Git',
+		imgSkill: 'git.svg',
+	},
+];
+
+export const socialLink = [
+	{
+		label: 'Github',
+		href: 'https://github.com/Chanawin-kmpn',
+		socialImg: 'github.svg',
+	},
+	{
+		label: 'LinkedIn',
+		href: 'https://www.linkedin.com/in/chanawin-kamolpanus-30422524a/',
+		socialImg: 'linkedin.svg',
+	},
+	{
+		label: 'Facebook',
+		href: 'https://www.facebook.com/pond.kamolpanas/?locale=th_TH',
+		socialImg: 'facebook.svg',
+	},
+	{
+		label: 'Instragram',
+		href: 'https://www.instagram.com/qpondp/',
+		socialImg: 'instragram.svg',
+	},
+];
