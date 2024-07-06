@@ -1,20 +1,114 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
-  },
-  plugins: [],
+	content: [
+		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
+		'./components/**/*.{js,ts,jsx,tsx,mdx}',
+		'./app/**/*.{js,ts,jsx,tsx,mdx}',
+	],
+	theme: {
+		extend: {
+			fontFamily: {
+				baiJamjuree: ['var(--font-bai-jamjuree)'],
+			},
+			colors: {
+				dark: {
+					100: '#000000',
+					200: '#121212',
+				},
+				light: {
+					900: '#FFFFFF',
+					800: '#E0E0E2',
+				},
+			},
+			keyframes: {
+				flipIn: {
+					'0%': { opacity: '0', transform: 'rotateX(-90deg)' },
+					'50%': { opacity: '1', transform: 'rotateX(0deg)' },
+					'100%': { opacity: '0', transform: 'rotateX(90deg)' },
+				},
+				gradientButton: {
+					from: { 'background-position': '100% 0%' },
+					to: { 'background-position': '0% 0%' },
+				},
+			},
+			animation: {
+				flipIn: 'flipIn 1.5s forwards',
+				flipInDelay: 'flipIn 1.5s forwards 1.5s',
+				gradientBtn: 'gradientButton 10s ease-in-out infinite',
+			},
+			transformOrigin: {
+				'top-center': '0% 100%',
+			},
+			backgroundImage: {
+				'gradient-btn': `radial-gradient(
+				  circle at top left,
+				  hsl(325deg, 100%, 48%),
+				  hsl(325deg, 100%, 48%),
+				  hsl(325deg, 100%, 48%),
+				  hsl(260deg, 100%, 55%),
+				  hsl(230deg, 100%, 45%),
+				  hsl(240deg, 100%, 45%),
+				  hsl(325deg, 100%, 48%),
+				  hsl(325deg, 100%, 48%),
+				  hsl(325deg, 100%, 48%)
+				)`,
+			},
+			backgroundSize: {
+				'600': '600%',
+			},
+			borderRadius: {
+				custom: '4px',
+				'custom-top': '20px 20px 100px 100px / 14px 14px 30px 30px',
+			},
+			padding: {
+				btn: '1rem 2rem',
+			},
+			transitionProperty: {
+				transform: 'transform',
+			},
+			transitionDuration: {
+				'250': '250ms',
+			},
+		},
+	},
+	plugins: [
+		function ({ addComponents }: any) {
+			addComponents({
+				'.gradient-btn': {
+					'background-size': '600%',
+					'border-radius': '4px',
+					'will-change': 'transform',
+					transition: 'transform 250ms',
+					padding: '1rem 2rem',
+					'&::before': {
+						content: '""',
+						position: 'absolute',
+						zIndex: '1',
+						top: '2px',
+						left: '6px',
+						right: '6px',
+						height: '20%',
+						margin: '0 auto',
+						background:
+							'linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0))',
+						borderRadius: '20px 20px 100px 100px / 14px 14px 30px 30px',
+					},
+					'&::after': {
+						content: '""',
+						position: 'absolute',
+						zIndex: '1',
+						bottom: '0px',
+						left: '0px',
+						right: '0px',
+						height: '30%',
+						background:
+							'linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.17))',
+						borderRadius: '0px 0px 4px 4px',
+					},
+				},
+			});
+		},
+	],
 };
 export default config;

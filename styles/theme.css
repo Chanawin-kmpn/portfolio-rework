@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+	.bg-light800_dark200 {
+		@apply bg-light-800 dark:bg-dark-200;
+	}
+
+	.text-dark200_light800 {
+		@apply text-dark-200 dark:text-light-800;
+	}
+
+	.h1-intro {
+		@apply text-9xl font-medium text-dark200_light800;
+	}
+
+	.h1-bold {
+		@apply text-5xl font-bold leading-[85px] tracking-[2%];
+	}
+
+	.h1-bold-desktop {
+		@apply text-[64px] font-bold leading-[85px] tracking-[2%];
+	}
+
+	.h1-outline {
+		@apply text-[64px] font-bold leading-[85px] tracking-[2%] drop-shadow-[0_0_1px_rgba(0,0,0,1)];
+	}
+
+	.h2-bold {
+		@apply text-[40px] font-bold leading-[53px] tracking-[2%];
+	}
+
+	.h2-bold-desktop {
+		@apply text-5xl font-bold tracking-[2%];
+	}
+
+	.h2-outline {
+		@apply text-5xl font-bold leading tracking-[2%] drop-shadow-[0_0_1px_rgba(0,0,0,1)];
+	}
+
+	.h3-bold {
+		@apply text-[32px] font-bold tracking-[2%];
+	}
+
+	.h4-bold {
+		@apply text-2xl font-bold tracking-[2%];
+	}
+
+	.paragraph-medium {
+		@apply text-base font-medium;
+	}
+
+	.paragraph-medium-desktop {
+		@apply text-2xl font-medium;
+	}
+
+	.paragraph-regular-desktop {
+		@apply text-2xl font-normal;
+	}
+
+	.paragraph-bold {
+		@apply text-xl font-bold;
+	}
+
+	.paragraph-bold-desktop {
+		@apply text-2xl font-bold;
+	}
+
+	.body-medium-desktop {
+		@apply text-[32px] font-medium;
+	}
+
+	.small-regular-desktop {
+		@apply text-sm font-normal;
+	}
+
+	.small-regular {
+		@apply text-xs font-normal;
+	}
+}
