@@ -3,18 +3,33 @@ export const themes = [
 	{ value: 'dark', icon: '/assets/icons/moon.svg' },
 ];
 
-export const navLink = [
+export const navLinks = [
 	{
-		route: '/about',
+		route: '#about',
 		label: 'About',
 	},
 	{
-		route: '/projects',
+		route: '#projects',
 		label: 'Projects',
 	},
 	{
-		route: '/contect',
-		label: 'contact',
+		route: '#contact',
+		label: 'Contact',
+	},
+];
+
+export const projectLinks = [
+	{
+		route: '/project1',
+		label: 'Project 1',
+	},
+	{
+		route: '/project2',
+		label: 'Project 2',
+	},
+	{
+		route: '/project3',
+		label: 'Project 3',
 	},
 ];
 

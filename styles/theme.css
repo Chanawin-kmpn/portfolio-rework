@@ -7,6 +7,14 @@
 		@apply bg-light-800 dark:bg-dark-200;
 	}
 
+	.bg-mobile-nav {
+		@apply backdrop-blur bg-[#D9D9D9]/50 dark:bg-[#202020]/50;
+	}
+
+	.transition-theme {
+		@apply transition duration-250;
+	}
+
 	.text-dark200_light800 {
 		@apply text-dark-200 dark:text-light-800;
 	}
@@ -71,11 +79,11 @@
 		@apply text-2xl font-normal;
 	}
 
-	.paragraph-bold {
+	.paragraph-bold-desktop {
 		@apply text-xl font-bold;
 	}
 
-	.paragraph-bold-desktop {
+	.paragraph-bold {
 		@apply text-2xl font-bold;
 	}
 

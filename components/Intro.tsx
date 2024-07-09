@@ -13,10 +13,10 @@ const Intro = () => {
 	return (
 		<>
 			{displayIntro && (
-				<div className="fixed w-full h-full flex flex-col justify-center items-center bg-light800_dark200 ">
+				<div className="bg-light800_dark200 fixed z-[999999] flex size-full flex-col items-center justify-center">
 					<div className="relative" style={{ perspective: '1000px' }}>
 						<div
-							className="flip-text text-center opacity-0 transform rotate-x-[-90deg] animate-flipIn"
+							className="animate-flipIn text-center opacity-0"
 							style={{
 								transformOrigin: '0% 100%',
 								transformStyle: 'preserve-3d',
@@ -26,7 +26,7 @@ const Intro = () => {
 							<h1 className="h1-intro font-baiJamjuree">สวัสดี</h1>
 						</div>
 						<div
-							className="flip-text top-0 text-center absolute opacity-0 transform rotate-x-[-90deg] animate-flipInDelay"
+							className="absolute top-0 animate-flipInDelay text-center opacity-0"
 							style={{
 								transformOrigin: '0% 100%',
 								transformStyle: 'preserve-3d',

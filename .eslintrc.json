@@ -1,3 +1,5 @@
 {
-	"extends": ["next/core-web-vitals", "prettier"]
+	"root": true,
+	"extends": ["plugin:tailwindcss/recommended"],
+	"parser": "@typescript-eslint/parser"
 }

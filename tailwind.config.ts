@@ -1,10 +1,12 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
+	darkMode: ['class'],
 	content: [
-		'./pages/**/*.{js,ts,jsx,tsx,mdx}',
-		'./components/**/*.{js,ts,jsx,tsx,mdx}',
-		'./app/**/*.{js,ts,jsx,tsx,mdx}',
+		'./pages/**/*.{ts,tsx}',
+		'./components/**/*.{ts,tsx}',
+		'./app/**/*.{ts,tsx}',
+		'./src/**/*.{ts,tsx}',
 	],
 	theme: {
 		extend: {
@@ -20,8 +22,6 @@ const config: Config = {
 					900: '#FFFFFF',
 					800: '#E0E0E2',
 				},
-				'icon-light': '#121212',
-				'icon-dark': '#e0e0e2',
 			},
 			keyframes: {
 				flipIn: {

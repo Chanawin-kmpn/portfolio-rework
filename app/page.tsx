@@ -1,28 +1,32 @@
+'use client';
+import HeroSection from '@/components/Sections/HeroSection';
+import Navbar from '../components/Navbar/Navbar';
+import AboutmeSection from '@/components/Sections/AboutmeSection';
+import ProjectSection from '@/components/Sections/ProjectSection';
+import ContactSection from '@/components/Sections/ContactSection';
 import Intro from '@/components/Intro';
-import Image from 'next/image';
 
-export default function Home() {
+const Home = () => {
 	return (
-		<div className="flex flex-col justify-center items-center h-full ">
-			<Intro />
-			<div>
-				<h1 className="h1-bold text-dark200_light800">Homepage</h1>
-				<div className=" px-4 py-6 border ">
-					<button className="flex-between w-full invert-colors">
-						Download CV
-						<Image
-							src="/assets/icons/dark-download-circle-fill.svg"
-							width={32}
-							height={32}
-							alt="CV download button"
-							className="icon-dark"
-						/>
-					</button>
-				</div>
-				{/* <button className="gradient-btn bg-gradient-btn bg-600 rounded-custom p-btn transition-transform duration-250 animate-gradientBtn">
-					Button Text
-				</button> */}
+		<div className="flex-column">
+			{/* <Intro /> */}
+			<Navbar />
+			<div className="flex-column px-4 md:px-16">
+				<section id="hero" className="h-screen">
+					<HeroSection />
+				</section>
+				<section id="about" className="h-screen">
+					<AboutmeSection />
+				</section>
+				<section id="projects" className="h-screen">
+					<ProjectSection />
+				</section>
+				<section id="contact" className="h-screen">
+					<ContactSection />
+				</section>
 			</div>
 		</div>
 	);
-}
+};
+
+export default Home;
