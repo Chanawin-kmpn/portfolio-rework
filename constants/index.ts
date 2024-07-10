@@ -111,6 +111,6 @@ export const socialLink = [
 	{
 		label: 'Instragram',
 		href: 'https://www.instagram.com/qpondp/',
-		socialImg: 'instragram.svg',
+		socialImg: 'instagram.svg',
 	},
 ];

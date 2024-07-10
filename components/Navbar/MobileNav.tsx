@@ -31,7 +31,7 @@ const MobileNav = () => {
 			</button>
 
 			<div
-				className={`flex-column bg-mobile-nav fixed left-0 top-0 size-full gap-32 px-4 py-[22px] ${isOpen ? 'z-40 opacity-100' : '-z-10 opacity-0'} transition-theme`}
+				className={`bg-mobile-nav fixed left-0 top-0 size-full gap-32 px-4 py-[22px] ${isOpen ? 'flex-column' : 'hidden'} transition-theme`}
 			>
 				<div className="flex min-h-[85px] items-center gap-8 pl-[214px]">
 					<Audio />

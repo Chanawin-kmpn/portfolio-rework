@@ -22,8 +22,15 @@ const config: Config = {
 					900: '#FFFFFF',
 					800: '#E0E0E2',
 				},
+				'custom-pink': 'hsl(325deg, 100%, 48%)',
+				'custom-blue': 'hsl(230deg, 100%, 45%)',
+				'custom-purple': 'hsl(260deg, 100%, 55%)',
 			},
 			keyframes: {
+				wave: {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(45deg)' },
+				},
 				flipIn: {
 					'0%': { opacity: '0', transform: 'rotateX(-90deg)' },
 					'50%': { opacity: '1', transform: 'rotateX(0deg)' },
@@ -33,11 +40,23 @@ const config: Config = {
 					from: { 'background-position': '100% 0%' },
 					to: { 'background-position': '0% 0%' },
 				},
+				gradientText: {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' },
+				},
+				fadeIn: {
+					from: { opacity: '0' },
+					to: { opacity: '1' },
+				},
 			},
 			animation: {
+				fadeIn: 'fadeIn 250ms cubic-bezier(0.4, 0, 0.2, 1)',
+				waveHand: 'wave 1s linear infinite alternate',
 				flipIn: 'flipIn 1.5s forwards',
 				flipInDelay: 'flipIn 1.5s forwards 1.5s',
 				gradientBtn: 'gradientButton 10s ease-in-out infinite',
+				gradientText: 'gradientText 20s ease-in-out infinite alternate',
 			},
 			transformOrigin: {
 				'top-center': '0% 100%',
@@ -57,7 +76,8 @@ const config: Config = {
 				)`,
 			},
 			backgroundSize: {
-				'600': '600%',
+				'300%': '300%',
+				'600%': '600%',
 			},
 			borderRadius: {
 				custom: '4px',

@@ -8,22 +8,26 @@ import Intro from '@/components/Intro';
 
 const Home = () => {
 	return (
-		<div className="flex-column">
+		<div className="flex-column bg-light800_dark200 transition-theme">
 			{/* <Intro /> */}
 			<Navbar />
-			<div className="flex-column px-4 md:px-16">
-				<section id="hero" className="h-screen">
+			<div className="flex-column section-container z-40 max-md:gap-8">
+				<section id="hero" className=" section">
 					<HeroSection />
 				</section>
-				<section id="about" className="h-screen">
+				<hr className="horizon-line" />
+				<section id="about" className=" section">
 					<AboutmeSection />
 				</section>
-				<section id="projects" className="h-screen">
+				<hr className="horizon-line" />
+				<section id="projects" className=" section">
 					<ProjectSection />
 				</section>
-				<section id="contact" className="h-screen">
+				<hr className="horizon-line" />
+				<section id="contact" className=" section">
 					<ContactSection />
 				</section>
+				<hr className="horizon-line" />
 			</div>
 		</div>
 	);

@@ -12,6 +12,9 @@ body {
 }
 
 @layer utilities {
+	.section {
+		@apply h-fit 2xl:h-screen;
+	}
 	.flex-center {
 		@apply flex justify-center items-center;
 	}
@@ -26,10 +29,6 @@ body {
 
 	.flex-column {
 		@apply flex flex-col;
-	}
-
-	.flex-row {
-		@apply flex-row;
 	}
 
 	.grid-list-desktop {
