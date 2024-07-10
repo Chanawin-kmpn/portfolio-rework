@@ -7,7 +7,7 @@ import SocialLink from '../SocialLink';
 const HeroSection = () => {
 	const { mode } = useTheme();
 	return (
-		<div className="flex-column  items-start justify-start gap-16 md:mt-2 md:flex md:size-full md:flex-row 2xl:mt-16 ">
+		<div className="flex-column items-start justify-start gap-16 md:mt-2 md:flex md:size-full md:flex-row 2xl:mt-16 ">
 			<Image
 				src={`/assets/images/backgrounds/${mode}-hero-bg.webp`}
 				width={532}

@@ -20,10 +20,10 @@ const MobileNav = () => {
 		<div className="flex-column">
 			<button
 				onClick={toggleMenu}
-				className={`fixed right-4 top-[28.5px] z-50 size-[72px] p-4 ${isOpen ? 'bg-none' : 'bg-light800_dark200'} rounded-full`}
+				className={`fixed right-4 top-[28.5px] z-50 size-[72px] p-4 ${isOpen ? 'bg-none' : 'invert-bg'} rounded-full`}
 			>
 				<Image
-					src={`/assets/icons/${isOpen ? `${mode}-close-menu.svg` : `${mode}-menu.svg`}`}
+					src={`/assets/icons/${isOpen ? `${mode}-close-menu.svg` : `${mode === 'dark' ? 'light' : 'dark'}-menu.svg`}`}
 					width={40}
 					height={40}
 					alt="Mobile menu"
