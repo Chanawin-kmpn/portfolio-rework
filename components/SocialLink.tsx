@@ -18,7 +18,7 @@ const SocialLink = ({ direction }: Props) => {
 			className={`${flexDirection} w-full items-center gap-5 self-end md:justify-end`}
 		>
 			{socialLink.map((link) => (
-				<Link key={link.label} href={link.href}>
+				<Link key={link.label} href={link.href} target="_blank">
 					<Image
 						src={`/assets/icons/${mode}-${link.socialImg}`}
 						width={24}

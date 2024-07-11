@@ -8,7 +8,7 @@ import Audio from './Audio';
 const Navbar = () => {
 	return (
 		<nav className="flex-between bg-light800_dark200 transition-theme top-0 z-50 w-full px-4 py-[22px] md:sticky md:px-16">
-			<ScrollLink href="#hero">
+			<ScrollLink href="hero">
 				<Image
 					src="/assets/images/chanawin-logo.webp"
 					width={130}

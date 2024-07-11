@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Bai_Jamjuree, Inter, JetBrains_Mono } from 'next/font/google';
+import { Bai_Jamjuree, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeProvider';
 

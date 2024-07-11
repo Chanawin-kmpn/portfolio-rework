@@ -47,7 +47,7 @@ const MobileNav = () => {
 							<ScrollLink href={link.route} isMobile={true}>
 								{link.label}
 							</ScrollLink>
-							{link.route === '#projects' && (
+							{link.route === 'projects' && (
 								<div className="flex-column text-dark200_light800 gap-[10px] px-4 text-xl font-bold">
 									{projectLinks.map((link) => (
 										<Link href={link.route} key={link.label}>

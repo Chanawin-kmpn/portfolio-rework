@@ -11,12 +11,13 @@ interface ScrollLinkProps {
 }
 
 const ScrollLink = ({ href, isMobile, children }: ScrollLinkProps) => {
-	const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+	const handleClick = (
+		e: React.MouseEvent<HTMLParagraphElement, MouseEvent>
+	) => {
 		e.preventDefault();
-		const targetId = href.replace('#', '');
-		const element = document.getElementById(targetId);
+		const element = document.getElementById(href);
 		if (element) {
-			const navHeight = href === '#hero' || !isMobile ? 129 : 44.5;
+			const navHeight = href === 'hero' || !isMobile ? 129 : 44.5;
 			const elementPosition = element.getBoundingClientRect().top;
 			const offsetPosition = elementPosition + window.pageYOffset - navHeight;
 
@@ -29,13 +30,12 @@ const ScrollLink = ({ href, isMobile, children }: ScrollLinkProps) => {
 	};
 
 	return (
-		<Link
-			href={href}
+		<p
 			onClick={handleClick}
-			className={`paragraph-bold md:paragraph-bold-desktop text-dark200_light800`}
+			className={`paragraph-bold text-dark200_light800 cursor-pointer`}
 		>
 			{children}
-		</Link>
+		</p>
 	);
 };
 

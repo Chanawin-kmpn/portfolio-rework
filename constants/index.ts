@@ -5,15 +5,19 @@ export const themes = [
 
 export const navLinks = [
 	{
-		route: '#about',
+		route: 'about',
 		label: 'About',
 	},
 	{
-		route: '#projects',
+		route: 'skill',
+		label: 'Skill',
+	},
+	{
+		route: 'projects',
 		label: 'Projects',
 	},
 	{
-		route: '#contact',
+		route: 'contact',
 		label: 'Contact',
 	},
 ];
@@ -65,6 +69,7 @@ export const mySkills = [
 	{
 		skill: 'express',
 		imgSkill: `express.svg`,
+		theme: true,
 	},
 	{
 		skill: 'React',
@@ -73,6 +78,7 @@ export const mySkills = [
 	{
 		skill: 'Next.js',
 		imgSkill: 'nextjs.svg',
+		theme: true,
 	},
 	{
 		skill: 'MongoDb',
@@ -83,12 +89,13 @@ export const mySkills = [
 		imgSkill: 'figma.svg',
 	},
 	{
-		skill: 'Visual Studio Code',
-		imgSkill: 'vscode.svg',
-	},
-	{
 		skill: 'Git',
 		imgSkill: 'git.svg',
+		theme: true,
+	},
+	{
+		skill: 'Visual Studio Code',
+		imgSkill: 'vscode.svg',
 	},
 ];
 

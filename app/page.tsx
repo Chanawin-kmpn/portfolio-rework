@@ -5,6 +5,7 @@ import AboutmeSection from '@/components/Sections/AboutmeSection';
 import ProjectSection from '@/components/Sections/ProjectSection';
 import ContactSection from '@/components/Sections/ContactSection';
 import Intro from '@/components/Intro';
+import SkillSection from '@/components/Sections/SkillSection';
 
 const Home = () => {
 	return (
@@ -18,6 +19,10 @@ const Home = () => {
 				<hr className="horizon-line" />
 				<section id="about" className=" section">
 					<AboutmeSection />
+				</section>
+				<hr className="horizon-line" />
+				<section id="skill" className=" section">
+					<SkillSection />
 				</section>
 				<hr className="horizon-line" />
 				<section id="projects" className=" section">

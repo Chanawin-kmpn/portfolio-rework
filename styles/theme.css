@@ -71,7 +71,7 @@
 	}
 
 	.paragraph-medium {
-		@apply text-base md:text-2xl font-medium;
+		@apply text-base md:text-2xl font-medium leading-[32px];
 	}
 
 	.paragraph-regular {
