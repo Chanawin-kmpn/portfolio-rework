@@ -39,10 +39,10 @@ const SkillSection = () => {
 						{mySkills.map((skill) => (
 							<li key={skill.skill} className="text-dark200_light800">
 								<Image
-									src={`/assets/icons/skills/${skill.theme ? mode + '-' : ''}${skill.imgSkill}`}
+									src={`/assets/icons/skills/${skill.theme ? `${mode}-` : ''}${skill.imgSkill}`}
 									width={80}
 									height={80}
-									alt="Skill icon"
+									alt={`${skill.skill} icon`}
 									className="max-md:aspect-square max-md:w-[50px]"
 								/>
 							</li>

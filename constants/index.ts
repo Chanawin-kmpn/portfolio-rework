@@ -22,80 +22,92 @@ export const navLinks = [
 	},
 ];
 
-export const projectLinks = [
-	{
-		route: '/project1',
-		label: 'Project 1',
-	},
-	{
-		route: '/project2',
-		label: 'Project 2',
-	},
-	{
-		route: '/project3',
-		label: 'Project 3',
-	},
+interface Skill {
+	skill: string;
+	imgSkill: string;
+	theme?: boolean;
+}
+
+export const techStackData: { [key: string]: Omit<Skill, 'skill'> } = {
+	html: { imgSkill: 'html.svg' },
+	css: { imgSkill: 'css.svg' },
+	javascript: { imgSkill: 'javascript.svg' },
+	typescript: { imgSkill: 'typescript.svg' },
+	tailwindcss: { imgSkill: 'tailwindcss.svg' },
+	styledComponents: { imgSkill: 'styled-components.svg' },
+	nodejs: { imgSkill: 'nodejs.svg' },
+	express: { imgSkill: 'express.svg', theme: true },
+	react: { imgSkill: 'react.svg' },
+	nextjs: { imgSkill: 'nextjs.svg', theme: true },
+	mongodb: { imgSkill: 'mongodb.svg' },
+	figma: { imgSkill: 'figma.svg' },
+	git: { imgSkill: 'git.svg', theme: true },
+	vscode: { imgSkill: 'vscode.svg' },
+};
+
+export const mySkills: Skill[] = [
+	{ skill: 'HTML', ...techStackData.html },
+	{ skill: 'CSS', ...techStackData.css },
+	{ skill: 'JavaScript', ...techStackData.javascript },
+	{ skill: 'TypeScript', ...techStackData.typescript },
+	{ skill: 'TailwindCss', ...techStackData.tailwindcss },
+	{ skill: 'styled-component', ...techStackData.styledComponents },
+	{ skill: 'Node.js', ...techStackData.nodejs },
+	{ skill: 'express', ...techStackData.express },
+	{ skill: 'React', ...techStackData.react },
+	{ skill: 'Next.js', ...techStackData.nextjs },
+	{ skill: 'MongoDb', ...techStackData.mongodb },
+	{ skill: 'Figma', ...techStackData.figma },
+	{ skill: 'Git', ...techStackData.git },
+	{ skill: 'Visual Studio Code', ...techStackData.vscode },
 ];
 
-export const mySkills = [
+interface ProjectCard {
+	id: number;
+	title: string;
+	iconProject: string;
+	imgProject: string;
+	description: string;
+	stack: (keyof typeof techStackData)[];
+	route: string;
+}
+
+export const projectCards: ProjectCard[] = [
 	{
-		skill: 'HTML',
-		imgSkill: 'html.svg',
+		id: 1,
+		title: 'Project 1',
+		iconProject: 'https://fakeimg.pl/32/',
+		imgProject: 'https://fakeimg.pl/668/',
+		description:
+			'" LunarFit is a user-friendly web app that helps fitness enthusiasts track workouts, set goals, and monitor progress with an intuitive interface "',
+		stack: [
+			'react',
+			'nodejs',
+			'express',
+			'tailwindcss',
+			'styledComponents',
+			'mongodb',
+			'git',
+		],
+		route: '/project1',
 	},
 	{
-		skill: 'CSS',
-		imgSkill: 'css.svg',
+		id: 2,
+		title: 'Project 2',
+		iconProject: 'https://fakeimg.pl/32/',
+		imgProject: 'https://fakeimg.pl/668/',
+		description: 'lorem',
+		stack: ['react'],
+		route: '/project2',
 	},
 	{
-		skill: 'JavaScript',
-		imgSkill: 'javascript.svg',
-	},
-	{
-		skill: 'TypeScript',
-		imgSkill: 'typescript.svg',
-	},
-	{
-		skill: 'TailwindCss',
-		imgSkill: 'tailwindcss.svg',
-	},
-	{
-		skill: 'styled-component',
-		imgSkill: 'styled-components.svg',
-	},
-	{
-		skill: 'Node.js',
-		imgSkill: 'nodejs.svg',
-	},
-	{
-		skill: 'express',
-		imgSkill: `express.svg`,
-		theme: true,
-	},
-	{
-		skill: 'React',
-		imgSkill: 'react.svg',
-	},
-	{
-		skill: 'Next.js',
-		imgSkill: 'nextjs.svg',
-		theme: true,
-	},
-	{
-		skill: 'MongoDb',
-		imgSkill: 'mongodb.svg',
-	},
-	{
-		skill: 'Figma',
-		imgSkill: 'figma.svg',
-	},
-	{
-		skill: 'Git',
-		imgSkill: 'git.svg',
-		theme: true,
-	},
-	{
-		skill: 'Visual Studio Code',
-		imgSkill: 'vscode.svg',
+		id: 3,
+		title: 'Project 3',
+		iconProject: 'https://fakeimg.pl/32/',
+		imgProject: 'https://fakeimg.pl/668/',
+		description: 'lorem',
+		stack: ['react', 'express'],
+		route: '/project3',
 	},
 ];
 

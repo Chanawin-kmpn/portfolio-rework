@@ -38,6 +38,31 @@
 		@apply dark:bg-light-800 bg-dark-200;
 	}
 
+	.invert-text {
+		@apply text-light-800 dark:text-dark-200;
+	}
+
+	.cloud-message {
+		@apply invert-bg rounded-[10px] max-w-[420px] p-8 relative dark:after:border-t-[#e0e0e2] dark:after:border-r-[#e0e0e2] translate-x-1/4;
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 2rem;
+			aspect-ratio: 1;
+			left: auto;
+			right: 4rem;
+			bottom: -40px;
+			border: 20px solid;
+			border-top-color: #121212;
+			border-right-color: #121212;
+		}
+	}
+
+	.card-shadow {
+		@apply shadow-[3px_3px_0_4px_rgb(18,18,18)] dark:shadow-[3px_3px_0_4px_rgba(224,224,226)];
+	}
+
 	.horizon-line {
 		@apply invert-bg h-[2px] md:hidden;
 	}
@@ -63,7 +88,7 @@
 	}
 
 	.h3-bold {
-		@apply text-[32px] font-bold;
+		@apply text-[2rem] md:text-4xl font-bold leading-[35.2px];
 	}
 
 	.h4-bold {
@@ -71,11 +96,11 @@
 	}
 
 	.paragraph-medium {
-		@apply text-base md:text-2xl font-medium leading-[32px];
+		@apply text-base md:text-2xl font-medium;
 	}
 
 	.paragraph-regular {
-		@apply text-2xl font-normal;
+		@apply text-xl md:text-2xl font-normal;
 	}
 
 	.paragraph-bold {
@@ -87,10 +112,16 @@
 	}
 
 	.body-medium {
-		@apply text-xl md:text-[32px] font-medium md:leading-[42.2px];
+		@apply text-xl md:text-3xl font-medium;
 	}
 
 	.small-regular {
 		@apply text-xs md:text-sm font-normal;
+	}
+}
+
+@layer components {
+	.bg-project-detail {
+		@apply bg-light-800/70 dark:bg-dark-200/70;
 	}
 }

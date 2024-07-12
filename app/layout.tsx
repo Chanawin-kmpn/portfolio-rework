@@ -1,3 +1,4 @@
+import React from 'react';
 import type { Metadata } from 'next';
 import { Bai_Jamjuree, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
@@ -12,6 +13,7 @@ const baiJamjuree = Bai_Jamjuree({
 const jetBrainsMono = JetBrains_Mono({
 	subsets: ['latin'],
 	weight: ['400', '500', '600', '700'],
+	variable: '--font-jetbrains-mono',
 });
 
 export const metadata: Metadata = {
@@ -24,12 +26,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: Readonly<{
+}: {
 	children: React.ReactNode;
-}>) {
+}) {
 	return (
 		<html lang="en">
-			<body className={`${jetBrainsMono.className} ${baiJamjuree.variable}`}>
+			<body className={`${jetBrainsMono.variable} ${baiJamjuree.variable}`}>
 				<ThemeProvider>{children}</ThemeProvider>
 			</body>
 		</html>

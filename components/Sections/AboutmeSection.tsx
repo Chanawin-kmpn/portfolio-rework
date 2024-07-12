@@ -7,7 +7,7 @@ const AboutmeSection = () => {
 	return (
 		<div className="flex-column items-center md:p-16">
 			<div className="max-md:flex-column flex w-full items-center justify-center gap-16">
-				<div className="flex-column items-center justify-center gap-16 self-start">
+				<div className="flex-column items-center justify-center gap-8 self-start md:gap-16">
 					<h2 className="h2-bold text-dark200_light800 md:self-start">
 						About me
 					</h2>
@@ -21,7 +21,7 @@ const AboutmeSection = () => {
 							alt="Chanawin Protrait"
 						/>
 					</div>
-					<div className="flex-column max-w-[898px] gap-8">
+					<div className="flex-column max-w-[898px] gap-6 md:gap-8">
 						<p className="text-dark200_light800 paragraph-medium">
 							Hello there! I’m Chanawin Kamolpanus you can call me Pond who
 							likes and enjoys creating things with creative design and solving

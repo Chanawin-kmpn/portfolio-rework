@@ -1,6 +1,6 @@
 'use client';
 
-import { projectLinks } from '@/constants';
+import { projectCards } from '@/constants';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
@@ -11,9 +11,7 @@ interface ScrollLinkProps {
 }
 
 const ScrollLink = ({ href, isMobile, children }: ScrollLinkProps) => {
-	const handleClick = (
-		e: React.MouseEvent<HTMLParagraphElement, MouseEvent>
-	) => {
+	const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
 		const element = document.getElementById(href);
 		if (element) {
@@ -30,12 +28,13 @@ const ScrollLink = ({ href, isMobile, children }: ScrollLinkProps) => {
 	};
 
 	return (
-		<p
+		<Link
+			href={href}
 			onClick={handleClick}
 			className={`paragraph-bold text-dark200_light800 cursor-pointer`}
 		>
 			{children}
-		</p>
+		</Link>
 	);
 };
 

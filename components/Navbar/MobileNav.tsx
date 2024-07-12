@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Theme from './Theme';
 import Audio from './Audio';
 import { useTheme } from '@/context/ThemeProvider';
-import { navLinks, projectLinks } from '@/constants';
+import { navLinks, projectCards } from '@/constants';
 import Link from 'next/link';
 
 const MobileNav = () => {
@@ -49,9 +49,9 @@ const MobileNav = () => {
 							</ScrollLink>
 							{link.route === 'projects' && (
 								<div className="flex-column text-dark200_light800 gap-[10px] px-4 text-xl font-bold">
-									{projectLinks.map((link) => (
-										<Link href={link.route} key={link.label}>
-											{link.label}
+									{projectCards.map((link) => (
+										<Link href={link.route} key={link.title}>
+											{link.title}
 										</Link>
 									))}
 								</div>
