@@ -80,7 +80,7 @@
 	}
 
 	.h2-bold {
-		@apply text-[40px] md:text-5xl font-bold tracking-[0.02] leading-[53px];
+		@apply text-[40px] md:text-5xl font-bold tracking-[0.02] leading-[53px] text-dark200_light800;
 	}
 
 	.h2-outline {
@@ -92,11 +92,11 @@
 	}
 
 	.h4-bold {
-		@apply text-2xl font-bold;
+		@apply text-3xl font-bold text-dark200_light800;
 	}
 
 	.paragraph-medium {
-		@apply text-base md:text-2xl font-medium;
+		@apply text-base md:text-2xl font-medium text-dark200_light800;
 	}
 
 	.paragraph-regular {
@@ -104,7 +104,7 @@
 	}
 
 	.paragraph-bold {
-		@apply text-2xl md:text-xl font-bold;
+		@apply text-2xl md:text-xl font-bold text-dark200_light800;
 	}
 
 	.body-semibold {

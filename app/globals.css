@@ -13,7 +13,7 @@ body {
 
 @layer utilities {
 	.section {
-		@apply h-fit 2xl:h-screen;
+		@apply h-fit 2xl:min-h-screen;
 	}
 	.flex-center {
 		@apply flex justify-center items-center;

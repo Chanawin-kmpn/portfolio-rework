@@ -9,10 +9,10 @@ import SkillSection from '@/components/Sections/SkillSection';
 
 const Home = () => {
 	return (
-		<div className="flex-column bg-light800_dark200 transition-theme">
+		<div className="flex-column bg-light800_dark200 transition-theme ">
 			{/* <Intro /> */}
 			<Navbar />
-			<div className="flex-column section-container z-40 max-md:gap-8">
+			<div className="flex-column section-container z-40 max-md:gap-8 md:gap-16">
 				<section id="hero" className=" section">
 					<HeroSection />
 				</section>
