@@ -23,16 +23,16 @@ const ProjectCard = ({ project }: Props) => {
 	const { mode } = useTheme();
 	return (
 		<div className="flex-column max-md:card-shadow text-dark200_light800 relative max-w-[668px] snap-center rounded-[10px]">
-			<div className="h-[200px] w-[250px] overflow-hidden md:size-full">
+			<div className="h-[200px] w-[250px] overflow-hidden rounded-t-[10px] md:size-full  md:rounded-b-[10px]">
 				<Image
 					src={project.imgProject}
 					width={668}
 					height={668}
 					alt="Project image"
-					className="h-[200px] w-[250px] rounded-t-[10px] object-cover md:size-full"
+					className="h-[200px] w-[250px] object-cover md:size-full"
 				/>
 			</div>
-			<div className="flex-column bg-project-detail gap-4 p-4 md:absolute md:right-0 md:h-full md:w-[267px]">
+			<div className="flex-column bg-project-detail gap-4 p-4 max-md:rounded-b-[10px] md:absolute md:right-0 md:h-full md:w-[267px]">
 				<div className="flex-column gap-2">
 					<div className="flex items-center justify-between">
 						<h4 className="h4-bold">{project.title}</h4>

@@ -7,10 +7,16 @@ import { ReactNode } from 'react';
 interface ScrollLinkProps {
 	href: string;
 	isMobile?: boolean;
+	isGradient?: boolean;
 	children: ReactNode;
 }
 
-const ScrollLink = ({ href, isMobile, children }: ScrollLinkProps) => {
+const ScrollLink = ({
+	href,
+	isMobile,
+	isGradient,
+	children,
+}: ScrollLinkProps) => {
 	const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
 		e.preventDefault();
 		const element = document.getElementById(href);
@@ -31,7 +37,7 @@ const ScrollLink = ({ href, isMobile, children }: ScrollLinkProps) => {
 		<Link
 			href={href}
 			onClick={handleClick}
-			className={`paragraph-bold text-dark200_light800 cursor-pointer`}
+			className={`paragraph-bold text-dark200_light800 cursor-pointer ${isGradient ? 'gradient-btn' : ''}`}
 		>
 			{children}
 		</Link>

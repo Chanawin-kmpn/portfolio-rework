@@ -1,8 +1,7 @@
 import { projectCards } from '@/constants';
-import Image from 'next/image';
 import React from 'react';
-import ScrollLink from '../ScrollLink';
 import ProjectCard from '../Card/ProjectCard';
+import AnimateMessage from '../AnimateMessage';
 
 const ProjectSection = () => {
 	return (
@@ -23,22 +22,7 @@ const ProjectSection = () => {
 							examples of my work.
 						</p>
 					</div>
-					<div className="md:flex-column max-md:hidden">
-						<div className="cloud-message">
-							<p className="paragraph-regular">
-								If you are interesting me please contact me.
-							</p>
-							<ScrollLink href="contact">Contact me!</ScrollLink>
-						</div>
-
-						<Image
-							src="/assets/images/chanawin-illustrator.webp"
-							width={280}
-							height={300}
-							alt="Chanawin illustrator"
-							className="self-end overflow-hidden"
-						/>
-					</div>
+					<AnimateMessage />
 				</div>
 			</div>
 		</div>

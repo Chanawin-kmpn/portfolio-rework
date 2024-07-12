@@ -8,9 +8,6 @@ import Intro from '@/components/Intro';
 import SkillSection from '@/components/Sections/SkillSection';
 
 const Home = () => {
-	window.addEventListener('scroll', function () {
-		console.log('Scroll position:', window.pageYOffset);
-	});
 	return (
 		<div className="flex-column bg-light800_dark200 transition-theme">
 			{/* <Intro /> */}

@@ -119,9 +119,3 @@
 		@apply text-xs md:text-sm font-normal;
 	}
 }
-
-@layer components {
-	.bg-project-detail {
-		@apply bg-light-800/70 dark:bg-dark-200/70;
-	}
-}

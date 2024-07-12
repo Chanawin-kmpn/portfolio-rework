@@ -35,3 +35,40 @@ body {
 		@apply grid;
 	}
 }
+
+@layer components {
+	.bg-project-detail {
+		@apply bg-light-800/70 dark:bg-dark-200/70;
+	}
+	.rotate-45 {
+		transform: rotate(45deg);
+	}
+
+	.fade-in {
+		opacity: 1;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.invisible {
+		opacity: 0;
+	}
+
+	.gradient-btn {
+		@apply mt-4 inline-block text-white text-base font-bold self-start
+			   bg-gradient-radial bg-600% animate-gradient-move
+			   cursor-pointer rounded
+			   relative overflow-hidden
+			   px-8 py-4 transition-transform duration-250 hover:scale-105;
+	}
+
+	.gradient-btn::before {
+		@apply content-[''] absolute z-10 top-0.5 left-1.5 right-1.5 h-1/5
+			   bg-gradient-to-b from-white/30 to-transparent
+			   rounded-[20px_20px_100px_100px/14px_14px_30px_30px];
+	}
+
+	.gradient-btn::after {
+		@apply content-[''] absolute z-10 bottom-0 left-0 right-0 h-[30%]
+			   bg-gradient-to-b from-transparent to-black/20 rounded-b;
+	}
+}
