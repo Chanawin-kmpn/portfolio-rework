@@ -6,6 +6,7 @@ import ProjectSection from '@/components/Sections/ProjectSection';
 import ContactSection from '@/components/Sections/ContactSection';
 import Intro from '@/components/Intro';
 import SkillSection from '@/components/Sections/SkillSection';
+import FooterSection from '@/components/Sections/FooterSection';
 
 const Home = () => {
 	return (
@@ -34,6 +35,7 @@ const Home = () => {
 				</section>
 				<hr className="horizon-line" />
 			</div>
+			<FooterSection />
 		</div>
 	);
 };

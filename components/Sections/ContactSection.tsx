@@ -45,6 +45,7 @@ const ContactSection = () => {
 					</div>
 				</div>
 			</div>
+			<hr className="invert-bg max-md:hidden" />
 		</div>
 	);
 };
