@@ -104,7 +104,7 @@
 	}
 
 	.paragraph-bold {
-		@apply text-2xl md:text-xl font-bold text-dark200_light800;
+		@apply text-2xl md:text-xl font-bold text-dark200_light800 !important;
 	}
 
 	.body-semibold {
@@ -117,5 +117,9 @@
 
 	.small-regular {
 		@apply text-xs md:text-sm font-normal;
+	}
+
+	.input {
+		@apply text-base p-4 h-fit text-dark-200 dark:text-light-800 border-2 border-[#121212] dark:border-[#e0e0e2] bg-light-800 dark:bg-dark-200 !important;
 	}
 }

@@ -58,17 +58,17 @@ body {
 			   bg-gradient-radial bg-600% animate-gradient-move
 			   cursor-pointer rounded
 			   relative overflow-hidden
-			   px-8 py-4 transition-transform duration-250 hover:scale-105;
+			   px-8 py-4 transition-transform duration-250 hover:scale-105 h-fit !important;
 	}
 
 	.gradient-btn::before {
 		@apply content-[''] absolute z-10 top-0.5 left-1.5 right-1.5 h-1/5
 			   bg-gradient-to-b from-white/30 to-transparent
-			   rounded-[20px_20px_100px_100px/14px_14px_30px_30px];
+			   rounded-[20px_20px_100px_100px/14px_14px_30px_30px] !important;
 	}
 
 	.gradient-btn::after {
 		@apply content-[''] absolute z-10 bottom-0 left-0 right-0 h-[30%]
-			   bg-gradient-to-b from-transparent to-black/20 rounded-b;
+			   bg-gradient-to-b from-transparent to-black/20 rounded-b !important;
 	}
 }

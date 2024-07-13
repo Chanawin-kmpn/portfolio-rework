@@ -8,7 +8,15 @@ const config: Config = {
 		'./app/**/*.{ts,tsx}',
 		'./src/**/*.{ts,tsx}',
 	],
+	prefix: '',
 	theme: {
+		container: {
+			center: true,
+			padding: '2rem',
+			screens: {
+				'2xl': '1400px',
+			},
+		},
 		extend: {
 			fontFamily: {
 				baiJamjuree: ['var(--font-bai-jamjuree)'],
@@ -53,6 +61,14 @@ const config: Config = {
 					from: { opacity: '0' },
 					to: { opacity: '1' },
 				},
+				'accordion-down': {
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' },
+				},
+				'accordion-up': {
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' },
+				},
 			},
 			animation: {
 				'gradient-move': 'gradientMove 10s ease-in-out infinite',
@@ -61,6 +77,8 @@ const config: Config = {
 				flipIn: 'flipIn 1.5s forwards',
 				flipInDelay: 'flipIn 1.5s forwards 1.5s',
 				gradientText: 'gradientText 20s ease-in-out infinite alternate',
+				'accordion-down': 'accordion-down 0.2s ease-out',
+				'accordion-up': 'accordion-up 0.2s ease-out',
 			},
 			transformOrigin: {
 				'top-center': '0% 100%',
@@ -70,10 +88,11 @@ const config: Config = {
 				'600%': '600%',
 			},
 			transitionDuration: {
-				'250': '250ms',
+				'250': '250',
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('tailwindcss-animate')],
 };
+
 export default config;
