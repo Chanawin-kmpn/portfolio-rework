@@ -29,7 +29,7 @@ const AnimateMessage = () => {
 				className={`cloud-message ${isMessageVisible ? 'fade-in' : 'invisible'}`}
 			>
 				<p className="paragraph-regular">
-					If you are interested in me, please contact me.
+					If you are interested in me, please feel free to contact me.
 				</p>
 				<ScrollLink href="contact" isGradient={true}>
 					Contact me!
