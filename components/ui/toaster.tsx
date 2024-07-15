@@ -22,7 +22,7 @@ export function Toaster() {
 						{...props}
 						className="border-[#e0e0e2] bg-dark-200 dark:border-[#121212] dark:bg-light-800"
 					>
-						<div className="grid gap-1">
+						<div className="invert-text grid gap-1">
 							{title && <ToastTitle>{title}</ToastTitle>}
 							{description && (
 								<ToastDescription>{description}</ToastDescription>
