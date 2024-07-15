@@ -30,7 +30,6 @@ const ScrollLink = ({
 				behavior: 'smooth',
 			});
 		}
-		console.log(href);
 	};
 
 	return (

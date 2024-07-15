@@ -11,11 +11,13 @@ const Theme = () => {
 	};
 	const iconName = mode === 'dark' ? 'moon' : 'sun';
 	return (
-		<button onClick={toggleMode}>
+		<button
+			onClick={toggleMode}
+			style={{ position: 'relative', width: '24px', height: '24px' }}
+		>
 			<Image
 				src={`/assets/icons/${iconName}.svg`}
-				width={24}
-				height={24}
+				fill
 				alt={`${mode === 'dark' ? 'Dark mode' : 'Light mode'} `}
 			/>
 		</button>

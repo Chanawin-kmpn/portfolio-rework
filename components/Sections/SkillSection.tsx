@@ -7,13 +7,16 @@ const SkillSection = () => {
 	const { mode } = useTheme();
 	return (
 		<div className="flex-column items-center gap-16 md:flex-row ">
-			<div className="max-md:hidden ">
+			<div
+				className="relative max-md:hidden"
+				style={{ width: '423px', height: '1024px' }}
+			>
 				<Image
 					src={`/assets/images/backgrounds/${mode}-skill-bg.webp`}
-					width={423}
-					height={1024}
 					alt="Skill background"
 					unoptimized={true}
+					fill
+					style={{ objectFit: 'contain' }}
 				/>
 			</div>
 			<div className="flex-column max-w-[953px] items-center gap-8 md:gap-16 md:py-16 md:pr-16">
@@ -21,7 +24,7 @@ const SkillSection = () => {
 				<div className="flex-column gap-8 md:gap-16 ">
 					<p className="paragraph-medium text-dark200_light800">
 						I learned writing language from various sources such as Documents,
-						Online Courses, Youtube, Learning website and Bootcamp. So these are
+						Online Courses, Youtube, Online platform and Bootcamp. So these are
 						the skills I learned that are used in the real-world scenarios and
 						application.
 					</p>
@@ -37,13 +40,15 @@ const SkillSection = () => {
 					</ul>
 					<ul className="flex flex-wrap gap-4 md:gap-12">
 						{mySkills.map((skill) => (
-							<li key={skill.skill} className="text-dark200_light800">
+							<li
+								key={skill.skill}
+								className="text-dark200_light800 relative size-20 max-md:size-[50px]"
+							>
 								<Image
 									src={`/assets/icons/skills/${skill.theme ? `${mode}-` : ''}${skill.imgSkill}`}
-									width={80}
-									height={80}
+									fill
 									alt={`${skill.skill} icon`}
-									className="max-md:aspect-square max-md:w-[50px]"
+									style={{ objectFit: 'contain' }}
 								/>
 							</li>
 						))}

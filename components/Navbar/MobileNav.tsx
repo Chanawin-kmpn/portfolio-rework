@@ -33,7 +33,7 @@ const MobileNav = () => {
 			<div
 				className={`bg-mobile-nav fixed left-0 top-0 size-full gap-32 px-4 py-[22px] ${isOpen ? 'flex-column' : 'hidden'} transition-theme`}
 			>
-				<div className="flex min-h-[85px] items-center gap-8 pl-[214px]">
+				<div className="flex min-h-[85px] items-center gap-8 ">
 					<Audio />
 					<Theme />
 				</div>

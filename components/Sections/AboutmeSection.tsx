@@ -41,7 +41,7 @@ const AboutmeSection = () => {
 							HTML, CSS, JavaScript, Bootstrap and PHP.
 						</p>
 						<p className="paragraph-medium">
-							After Graduated from university I decided to participate in
+							After graduated from university I decided to participate in
 							Generation's Junior Software developer Bootcamp for changing my
 							career path and learn about technical skill and soft skill that
 							suit for this career.

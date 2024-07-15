@@ -17,9 +17,9 @@ const ProjectSection = () => {
 					<div className="flex-column md:invert-bg md: gap-4 rounded-[10px] md:w-[580px] md:gap-8 md:p-8">
 						<h3 className="h3-bold">In every my project.</h3>
 						<p className="paragraph-regular">
-							I like to spend time honing my skills based on challenges I come
-							across online or come up with my own ideas and here are some
-							examples of my work.
+							I enjoy developing my skills through online challenges,
+							collaborating with teammates in bootcamps, and pursuing personal
+							projects. Here are some examples of my work.
 						</p>
 					</div>
 					<AnimateMessage />

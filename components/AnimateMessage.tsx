@@ -36,15 +36,21 @@ const AnimateMessage = () => {
 				</ScrollLink>
 			</div>
 
-			<Image
-				src="/assets/images/chanawin-illustrator.webp"
-				width={280}
-				height={300}
-				alt="Chanawin illustrator"
-				className={`-translate-y-20 translate-x-full self-end overflow-hidden transition-transform duration-500 ${
-					isRotated ? '-rotate-45' : ''
-				}`}
-			/>
+			<div
+				className="relative -translate-y-20 translate-x-full self-end"
+				style={{ width: '280px', height: '614px' }}
+			>
+				<Image
+					src="/assets/images/chanawin-illustrator.webp"
+					alt="Chanawin illustrator"
+					fill
+					sizes="(max-width: 768px) 100vw, 280px"
+					style={{ objectFit: 'contain' }}
+					className={`overflow-hidden transition-transform duration-500 ${
+						isRotated ? '-rotate-45' : ''
+					}`}
+				/>
+			</div>
 		</div>
 	);
 };
