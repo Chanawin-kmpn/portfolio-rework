@@ -31,12 +31,6 @@ const ScrollLink = ({
 				behavior: 'smooth',
 			});
 		}
-
-		toast({
-			title: 'Your message has been send!.',
-			description:
-				'Thank you for contacting me. I will reply to you as soon as possible. 🙏',
-		});
 	};
 
 	return (
