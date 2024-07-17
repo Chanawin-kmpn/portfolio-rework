@@ -5,7 +5,7 @@ import AnimateMessage from '../AnimateMessage';
 
 const ProjectSection = () => {
 	return (
-		<div className="flex-column text-dark200_light800 md:invert-text gap-8">
+		<div className="flex-column text-dark200_light800 md:invert-text items-center gap-8 md:self-end">
 			<h2 className="h2-bold">My Project</h2>
 			<div className="flex flex-col-reverse gap-8 md:flex-row md:gap-16">
 				<div className="md:flex-column flex h-fit snap-x snap-mandatory gap-8 overflow-auto p-4 md:p-0">

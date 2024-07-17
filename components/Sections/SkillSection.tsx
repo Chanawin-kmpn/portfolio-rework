@@ -6,8 +6,7 @@ import SkillLoading from '../SectionLoading/SkillLoading';
 
 const SkillSection = () => {
 	const { mode } = useTheme();
-	const isLoading = true;
-	if (isLoading) return <SkillLoading />;
+
 	return (
 		<div className="flex-column items-center gap-16 md:flex-row ">
 			<div
