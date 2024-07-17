@@ -57,6 +57,7 @@ const AboutmeSection = () => {
 							className="size-[300px] object-cover object-top md:size-[350px]"
 							sizes="(min-width: 768px) 350px, 300px"
 							alt="Chanawin Protrait"
+							priority
 						/>
 					</div>
 					<div>

@@ -7,6 +7,9 @@ import ContactSection from '@/components/Sections/ContactSection';
 import Intro from '@/components/Intro';
 import SkillSection from '@/components/Sections/SkillSection';
 import FooterSection from '@/components/Sections/FooterSection';
+import HeroLoading from '@/components/SectionLoading/HeroLoading';
+import { Suspense } from 'react';
+import AboutmeLoading from '@/components/SectionLoading/AboutmeLoading';
 
 const Home = () => {
 	return (
@@ -15,14 +18,18 @@ const Home = () => {
 			<Navbar />
 			<div className="flex-column section-container z-40 max-md:gap-8 md:gap-16">
 				<section id="hero" className=" section">
-					<HeroSection />
+					<Suspense fallback={<HeroLoading />}>
+						<HeroSection />
+					</Suspense>
 				</section>
 				<hr className="horizon-line" />
 				<section id="about" className=" section">
-					<AboutmeSection />
+					<Suspense fallback={<AboutmeLoading />}>
+						<AboutmeSection />
+					</Suspense>
 				</section>
 				<hr className="horizon-line" />
-				<section id="skill" className=" section">
+				<section id="skills" className=" section">
 					<SkillSection />
 				</section>
 				<hr className="horizon-line" />

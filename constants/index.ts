@@ -9,8 +9,8 @@ export const navLinks = [
 		label: 'About',
 	},
 	{
-		route: 'skill',
-		label: 'Skill',
+		route: 'skills',
+		label: 'Skills',
 	},
 	{
 		route: 'projects',

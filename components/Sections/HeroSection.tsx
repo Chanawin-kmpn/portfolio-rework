@@ -9,12 +9,13 @@ const HeroSection = () => {
 	return (
 		<div className="flex-column items-start justify-start gap-16 md:mt-2 md:flex md:size-full md:flex-row 2xl:mt-16 ">
 			<Image
-				src={`/assets/images/backgrounds/${mode}-hero-bg.webp`}
+				src={`/assets/images/backgrounds/${mode || 'light'}-hero-bg.webp`}
 				width={532}
 				height={887}
 				alt="Hero background"
 				unoptimized={true}
 				className="max-md:hidden"
+				priority={true}
 			/>
 			<div className="flex-column w-full gap-12 py-1 md:gap-44 md:py-16">
 				<div className="flex-column gap-44 md:gap-8">
