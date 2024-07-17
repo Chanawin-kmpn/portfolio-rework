@@ -10,6 +10,7 @@ import FooterSection from '@/components/Sections/FooterSection';
 import HeroLoading from '@/components/SectionLoading/HeroLoading';
 import { Suspense } from 'react';
 import AboutmeLoading from '@/components/SectionLoading/AboutmeLoading';
+import SkillLoading from '@/components/SectionLoading/SkillLoading';
 
 const Home = () => {
 	return (
@@ -30,7 +31,9 @@ const Home = () => {
 				</section>
 				<hr className="horizon-line" />
 				<section id="skills" className=" section">
-					<SkillSection />
+					<Suspense fallback={<SkillLoading />}>
+						<SkillSection />
+					</Suspense>
 				</section>
 				<hr className="horizon-line" />
 				<section id="projects" className=" section">
