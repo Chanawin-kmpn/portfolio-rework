@@ -24,9 +24,9 @@ const MobileNav = () => {
 			>
 				<Image
 					src={`/assets/icons/${isOpen ? `${mode}-close-menu.svg` : `${mode === 'dark' ? 'light' : 'dark'}-menu.svg`}`}
-					width={40}
-					height={40}
+					fill
 					alt="Mobile menu"
+					className="m-auto max-h-10 max-w-10"
 				/>
 			</button>
 
@@ -41,18 +41,20 @@ const MobileNav = () => {
 					{navLinks.map((link) => (
 						<div
 							key={link.label}
-							className="flex-column gap-[10px] p-[10px]"
+							className="flex-column gap-[10px] self-start p-[10px]"
 							onClick={() => setIsOpen(false)}
 						>
 							<ScrollLink href={link.route} isMobile={true}>
 								{link.label}
 							</ScrollLink>
 							{link.route === 'projects' && (
-								<div className="flex-column text-dark200_light800 gap-[10px] px-4 text-xl font-bold">
+								<div className="flex-column  text-dark200_light800  gap-[10px] text-xl font-bold">
 									{projectCards.map((link) => (
-										<Link href={link.route} key={link.title}>
-											{link.title}
-										</Link>
+										<div className="ml-4" key={link.id}>
+											<Link href={link.route} key={link.title}>
+												{link.title}
+											</Link>
+										</div>
 									))}
 								</div>
 							)}

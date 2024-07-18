@@ -32,7 +32,7 @@ const ProjectCard = ({ project }: Props) => {
 					className="h-[200px] w-[250px] object-cover md:size-full"
 				/>
 			</div>
-			<div className="flex-column bg-project-detail gap-4 p-4 max-md:rounded-b-[10px] md:absolute md:right-0 md:h-full md:w-[267px]">
+			<div className="bg-project-detail flex-column flex-1 gap-4 p-4 max-md:rounded-b-[10px] md:absolute md:right-0 md:h-full md:w-[267px]">
 				<div className="flex-column gap-2">
 					<div className="flex items-center justify-between">
 						<h4 className="h4-bold">{project.title}</h4>
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }: Props) => {
 					</div>
 					<p className="small-regular">{project.description}</p>
 				</div>
-				<div className="flex-column gap-2 md:flex-1">
+				<div className="flex-column mt-auto gap-2 md:flex-1">
 					<div className="flex flex-wrap justify-between md:justify-start md:gap-5">
 						{project.stack.map((tech, index) => (
 							<Image

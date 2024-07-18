@@ -5,6 +5,7 @@ import React from 'react';
 
 const SkillSection = () => {
 	const { mode } = useTheme();
+
 	return (
 		<div className="flex-column items-center gap-16 md:flex-row ">
 			<div
