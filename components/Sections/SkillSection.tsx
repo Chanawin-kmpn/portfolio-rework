@@ -2,7 +2,6 @@ import { mySkills } from '@/constants';
 import { useTheme } from '@/context/ThemeProvider';
 import Image from 'next/image';
 import React from 'react';
-import SkillLoading from '../SectionLoading/SkillLoading';
 
 const SkillSection = () => {
 	const { mode } = useTheme();

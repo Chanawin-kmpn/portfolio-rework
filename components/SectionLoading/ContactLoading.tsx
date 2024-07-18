@@ -1,6 +1,4 @@
 import React from 'react';
-import ContactForm from '../Form/ContactForm';
-import SocialLink from '../SocialLink';
 import { Skeleton } from '../ui/skeleton';
 
 const ContactLoading = () => {
@@ -15,21 +13,21 @@ const ContactLoading = () => {
 							<Skeleton className="h-[120px] w-full" />
 						</div>
 						<div className="flex-column gap-8">
-							<div className="flex md:gap-16">
-								<div className="flex-column flex-1 md:gap-2">
+							<div className="flex-column gap-8 md:flex md:gap-16">
+								<div className="flex-column flex-1 gap-2 ">
 									<Skeleton className="h-[26px] w-[60px]" />
 									<Skeleton className="h-[60px] w-full" />
 								</div>
-								<div className="flex-column flex-1 md:gap-2">
+								<div className="flex-column flex-1 gap-2">
 									<Skeleton className="h-[26px] w-[60px]" />
 									<Skeleton className="h-[60px] w-full" />
 								</div>
 							</div>
-							<div className="flex-column flex-1 md:gap-2">
+							<div className="flex-column flex-1 gap-2">
 								<Skeleton className="h-[26px] w-[60px]" />
 								<Skeleton className="h-[60px] w-full" />
 							</div>
-							<div className="flex-column flex-1 md:gap-2">
+							<div className="flex-column flex-1 gap-2">
 								<Skeleton className="h-[26px] w-[60px]" />
 								<Skeleton className="h-[300px] w-full" />
 							</div>
@@ -40,8 +38,8 @@ const ContactLoading = () => {
 						</div>
 					</div>
 					<div className="flex-column gap-16">
-						<Skeleton className="h-[608px] w-[382px]" />
-						<Skeleton className="mx-auto h-[382px] w-[24px]" />
+						<Skeleton className="h-[608px] w-[382px] max-md:hidden" />
+						<Skeleton className="mx-auto h-6 w-[382px] md:h-[382px] md:w-6" />
 					</div>
 				</div>
 			</div>

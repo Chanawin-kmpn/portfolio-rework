@@ -3,11 +3,8 @@ import Image from 'next/image';
 import SocialLink from '../SocialLink';
 import { useTheme } from '@/context/ThemeProvider';
 import ContactForm from '../Form/ContactForm';
-import ContactLoading from '../SectionLoading/ContactLoading';
 
 const ContactSection = () => {
-	const isLoading = true;
-	if (isLoading) return <ContactLoading />;
 	const { mode } = useTheme();
 	return (
 		<div className="flex-column md:gap-10">

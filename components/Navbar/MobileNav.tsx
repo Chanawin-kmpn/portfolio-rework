@@ -24,9 +24,9 @@ const MobileNav = () => {
 			>
 				<Image
 					src={`/assets/icons/${isOpen ? `${mode}-close-menu.svg` : `${mode === 'dark' ? 'light' : 'dark'}-menu.svg`}`}
-					width={40}
-					height={40}
+					fill
 					alt="Mobile menu"
+					className="m-auto max-h-10 max-w-10"
 				/>
 			</button>
 
