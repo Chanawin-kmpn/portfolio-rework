@@ -4,7 +4,7 @@
 
 @layer utilities {
 	.section-container {
-		@apply mx-4 md:mx-auto md:max-w-[1440px];
+		@apply mx-4 xl:mx-auto xl:max-w-[1440px];
 	}
 	.bg-light800_dark200 {
 		@apply bg-light-800 dark:bg-dark-200;
@@ -64,11 +64,11 @@
 	}
 
 	.horizon-line {
-		@apply invert-bg h-[2px] md:hidden;
+		@apply invert-bg h-[2px] xl:hidden;
 	}
 
 	.carousel-arrow {
-		@apply bg-light-800 hover:bg-light-800/10 dark:bg-dark-200 hover:dark:bg-dark-200/10 dark:border-light-800 border-dark-200 text-dark200_light800 dark:ring-offset-dark-200 max-md:hidden !important;
+		@apply bg-light-800 hover:bg-light-800/10 dark:bg-dark-200 hover:dark:bg-dark-200/10 dark:border-light-800 border-dark-200 text-dark200_light800 dark:ring-offset-dark-200 max-xl:hidden !important;
 	}
 
 	.h1-intro {
@@ -76,23 +76,23 @@
 	}
 
 	.h1-bold {
-		@apply text-5xl md:text-[64px] font-bold leading-[85px] text-dark200_light800;
+		@apply text-5xl xl:text-[64px] font-bold leading-[85px] text-dark200_light800;
 	}
 
 	.h1-outline {
-		@apply text-[36px] font-bold md:h1-bold w-fit animate-gradientText bg-gradient-to-r from-custom-pink via-custom-blue to-custom-purple bg-600% bg-clip-text pb-4 text-transparent shadow-[0_5px_0_#121212] dark:shadow-[0_5px_0_#E0E0E2];
+		@apply text-[36px] font-bold xl:h1-bold w-fit animate-gradientText bg-gradient-to-r from-custom-pink via-custom-blue to-custom-purple bg-600% bg-clip-text pb-4 text-transparent shadow-[0_5px_0_#121212] dark:shadow-[0_5px_0_#E0E0E2];
 	}
 
 	.h2-bold {
-		@apply text-[40px] md:text-5xl font-bold tracking-[0.02] leading-[53px] text-dark200_light800 text-dark200_light800;
+		@apply text-[40px] xl:text-5xl font-bold tracking-[0.02] leading-[53px] text-dark200_light800 text-dark200_light800;
 	}
 
 	.h2-outline {
-		@apply text-[40px] md:text-5xl font-bold drop-shadow-[0_0_2px_rgba(0,0,0,1)] text-light;
+		@apply text-[40px] xl:text-5xl font-bold drop-shadow-[0_0_2px_rgba(0,0,0,1)] text-light;
 	}
 
 	.h3-bold {
-		@apply text-[2rem] md:text-4xl font-bold leading-[35.2px];
+		@apply text-[2rem] xl:text-4xl font-bold leading-[35.2px];
 	}
 
 	.h4-bold {
@@ -100,15 +100,15 @@
 	}
 
 	.paragraph-medium {
-		@apply text-base md:text-2xl font-medium text-dark200_light800;
+		@apply text-base xl:text-2xl font-medium text-dark200_light800;
 	}
 
 	.paragraph-regular {
-		@apply text-base md:text-2xl font-normal text-dark200_light800;
+		@apply text-base xl:text-2xl font-normal text-dark200_light800;
 	}
 
 	.paragraph-bold {
-		@apply text-2xl md:text-xl font-bold text-dark200_light800 !important;
+		@apply text-2xl xl:text-xl font-bold text-dark200_light800 !important;
 	}
 
 	.body-semibold {
@@ -116,11 +116,11 @@
 	}
 
 	.body-medium {
-		@apply text-xl md:text-3xl font-medium;
+		@apply text-xl xl:text-3xl font-medium;
 	}
 
 	.small-regular {
-		@apply text-xs md:text-sm font-normal;
+		@apply text-xs xl:text-sm font-normal;
 	}
 
 	.input {

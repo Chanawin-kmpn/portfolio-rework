@@ -24,7 +24,7 @@ const AnimateMessage = () => {
 	}, [isRotated]);
 
 	return (
-		<div className="md:flex-column max-md:hidden" ref={ref}>
+		<div className="xl:flex-column max-xl:hidden" ref={ref}>
 			<div
 				className={`cloud-message ${isMessageVisible ? 'fade-in' : 'invisible'}`}
 			>

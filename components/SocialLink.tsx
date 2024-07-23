@@ -13,11 +13,11 @@ const SocialLink = ({ direction }: Props) => {
 	const lineDirection =
 		direction === 'row'
 			? 'w-[176px] h-[2px]'
-			: 'w-[176px] h-[2px] md:h-[176px] md:w-[2px]';
-	const flexDirection = direction === 'row' ? 'flex' : 'md:flex-column flex';
+			: 'w-[176px] h-[2px] xl:h-[176px] xl:w-[2px]';
+	const flexDirection = direction === 'row' ? 'flex' : 'xl:flex-column flex';
 	return (
 		<div
-			className={`${flexDirection} w-full items-center gap-5 self-end md:justify-end`}
+			className={`${flexDirection} w-full items-center gap-5 self-end xl:justify-end`}
 		>
 			{socialLink.map((link) => (
 				<Link key={link.label} href={link.href} target="_blank">
@@ -29,7 +29,7 @@ const SocialLink = ({ direction }: Props) => {
 					/>
 				</Link>
 			))}
-			<div className={`${lineDirection} invert-bg max-md:flex-1`}></div>
+			<div className={`${lineDirection} invert-bg max-xl:flex-1`}></div>
 		</div>
 	);
 };

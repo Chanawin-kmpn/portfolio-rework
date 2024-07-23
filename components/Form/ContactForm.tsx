@@ -61,7 +61,7 @@ const ContactForm = () => {
 				onSubmit={form.handleSubmit(onSubmit)}
 				className="flex-column gap-4"
 			>
-				<div className="flex-column gap-4 md:flex-row md:gap-16">
+				<div className="flex-column gap-4 xl:flex-row xl:gap-16">
 					<FormField
 						control={form.control}
 						name="username"

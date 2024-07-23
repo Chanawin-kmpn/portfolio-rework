@@ -9,7 +9,7 @@ import Audio from './Audio';
 
 const Navbar = () => {
 	return (
-		<nav className="flex-between bg-light800_dark200 transition-theme top-0 z-50 w-full px-4 py-[22px] md:sticky md:px-16">
+		<nav className="flex-between bg-light800_dark200 transition-theme top-0 z-50 w-full px-4 py-[22px] xl:sticky xl:px-16">
 			<ScrollLink href="hero">
 				<Image
 					src="/assets/images/chanawin-logo.webp"
@@ -19,7 +19,7 @@ const Navbar = () => {
 				/>
 			</ScrollLink>
 			<div className="flex">
-				<div className="md:flex-between hidden md:gap-4">
+				<div className="xl:flex-between hidden xl:gap-4">
 					<div className="flex-center gap-4">
 						<Audio />
 						<Theme />
@@ -30,7 +30,7 @@ const Navbar = () => {
 						</ScrollLink>
 					))}
 				</div>
-				<div className="md:hidden">
+				<div className="xl:hidden">
 					<MobileNav />
 				</div>
 			</div>

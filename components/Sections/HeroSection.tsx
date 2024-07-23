@@ -7,20 +7,20 @@ import SocialLink from '../SocialLink';
 const HeroSection = () => {
 	const { mode } = useTheme();
 	return (
-		<div className="flex-column items-start justify-start gap-16 md:mt-2 md:flex md:size-full md:flex-row 2xl:mt-16 ">
+		<div className="flex-column items-start justify-start gap-16 xl:mt-2 xl:flex xl:size-full xl:flex-row 2xl:mt-16 ">
 			<Image
 				src={`/assets/images/backgrounds/${mode || 'light'}-hero-bg.webp`}
 				width={532}
 				height={887}
 				alt="Hero background"
 				unoptimized={true}
-				className="max-md:hidden"
+				className="max-xl:hidden"
 				priority={true}
 			/>
-			<div className="flex-column w-full gap-12 py-1 md:gap-44 md:py-16">
-				<div className="flex-column gap-44 md:gap-8">
+			<div className="flex-column w-full gap-12 py-1 xl:gap-44 xl:py-16">
+				<div className="flex-column gap-44 xl:gap-8">
 					<div className="flex-column gap-8">
-						<h1 className="h1-bold md:h1-bold text-dark200_light800">
+						<h1 className="h1-bold xl:h1-bold text-dark200_light800">
 							Hi, <span className="inline-block animate-waveHand">👋</span>{' '}
 							<br /> I'm Chanawin
 						</h1>
@@ -30,7 +30,7 @@ const HeroSection = () => {
 							designs and pixel-perfect precision.
 						</p>
 					</div>
-					<div className="mt-auto md:mt-0">
+					<div className="mt-auto xl:mt-0">
 						<Link
 							href="https://drive.google.com/file/d/1rl5j28VOBD0ufNOiJd2ox6V__lrlZov-/view?usp=sharing"
 							target="_blank"

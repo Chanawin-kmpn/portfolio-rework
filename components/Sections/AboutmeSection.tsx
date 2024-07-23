@@ -5,21 +5,21 @@ import React from 'react';
 const AboutmeSection = () => {
 	const { mode } = useTheme();
 	return (
-		<div className="flex-column items-center md:p-16">
-			<div className="max-md:flex-column flex w-full items-center justify-center gap-16">
-				<div className="flex-column items-center justify-center gap-8 self-start md:gap-16">
-					<h2 className="h2-bold md:self-start">About me</h2>
-					<div className="aspect-square w-fit overflow-hidden rounded-full border-2 border-dark-200 dark:border-light-800 md:hidden">
+		<div className="flex-column items-center xl:p-16">
+			<div className="max-xl:flex-column flex w-full items-center justify-center gap-16">
+				<div className="flex-column items-center justify-center gap-8 self-start xl:gap-16">
+					<h2 className="h2-bold xl:self-start">About me</h2>
+					<div className="aspect-square w-fit overflow-hidden rounded-full border-2 border-dark-200 dark:border-light-800 xl:hidden">
 						<Image
 							src="/assets/images/chanawin-protrait.webp"
 							width={300}
 							height={300}
-							className="size-[300px] object-cover object-top md:size-[350px]"
+							className="size-[300px] object-cover object-top xl:size-[350px]"
 							sizes="(min-width: 768px) 350px, 300px"
 							alt="Chanawin Protrait"
 						/>
 					</div>
-					<div className="flex-column max-w-[898px] gap-6 md:gap-8">
+					<div className="flex-column max-w-[898px] gap-6 xl:gap-8">
 						<p className="paragraph-medium">
 							Hello there! I’m Chanawin Kamolpanus you can call me Pond who
 							likes and enjoys creating things with creative design and solving
@@ -48,13 +48,13 @@ const AboutmeSection = () => {
 						</p>
 					</div>
 				</div>
-				<div className="flex-column gap-16 max-md:hidden">
+				<div className="flex-column gap-16 max-xl:hidden">
 					<div className="aspect-square w-fit overflow-hidden rounded-full border-2 border-dark-200 dark:border-light-800">
 						<Image
 							src="/assets/images/chanawin-protrait.webp"
 							width={300}
 							height={300}
-							className="size-[300px] object-cover object-top md:size-[350px]"
+							className="size-[300px] object-cover object-top xl:size-[350px]"
 							sizes="(min-width: 768px) 350px, 300px"
 							alt="Chanawin Protrait"
 							priority
@@ -67,7 +67,7 @@ const AboutmeSection = () => {
 							height={482}
 							alt="About me background"
 							unoptimized={true}
-							className="max-md:hidden"
+							className="max-xl:hidden"
 						/>
 					</div>
 				</div>

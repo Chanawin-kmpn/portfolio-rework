@@ -44,11 +44,11 @@ const ScreenShotCarousel = ({
 
 	return (
 		<>
-			<div className="grid w-full grid-cols-2 gap-4 md:grid-cols-4 ">
+			<div className="grid w-full grid-cols-2 gap-4 xl:grid-cols-4 ">
 				{projectScreenshot.map((img, index) =>
 					index === 0 ? (
 						<div
-							className="relative col-span-2 aspect-square w-full md:row-span-2"
+							className="relative col-span-2 aspect-square w-full xl:row-span-2"
 							key={index}
 							onClick={handleZoom}
 						>
@@ -82,7 +82,7 @@ const ScreenShotCarousel = ({
 				>
 					<div
 						onClick={(e) => e.stopPropagation()}
-						className="z-50 flex  items-center px-4 md:size-1/2"
+						className="z-50 flex  items-center px-4 xl:size-1/2"
 					>
 						<Carousel
 							className=""

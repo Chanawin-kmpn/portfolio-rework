@@ -17,7 +17,7 @@ const Home = () => {
 		<>
 			{/* <Intro /> */}
 			<Navbar />
-			<div className="flex-column section-container z-40 max-md:gap-8 md:gap-16">
+			<div className="flex-column section-container z-40 max-xl:gap-8 xl:gap-16">
 				<section id="hero" className=" section">
 					<Suspense fallback={<HeroLoading />}>
 						<HeroSection />

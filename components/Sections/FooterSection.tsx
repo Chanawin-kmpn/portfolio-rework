@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const FooterSection = () => {
 	return (
-		<div className="flex-column bg-light800_dark200 transition-theme items-center px-4 py-[22px] max-md:gap-8 md:flex-row md:justify-between md:px-16">
+		<div className="flex-column bg-light800_dark200 transition-theme items-center px-4 py-[22px] max-xl:gap-8 xl:flex-row xl:justify-between xl:px-16">
 			<ScrollLink href="hero">
 				<Image
 					src="/assets/images/chanawin-logo.webp"

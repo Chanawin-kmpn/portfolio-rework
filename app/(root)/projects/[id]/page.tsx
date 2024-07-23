@@ -30,7 +30,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 	if (!project) return <div>Project not found</div>;
 
 	return (
-		<div className="flex-column section-container items-start justify-start gap-8 px-0 py-[22px] md:size-full md:gap-16 md:p-16 ">
+		<div className="flex-column section-container items-start justify-start gap-8 px-0 py-[22px] xl:size-full xl:gap-16 xl:p-16 ">
 			<ScrollToTopButton />
 			<div className="border-light800_dark200 flex w-full items-center justify-between border-b-2 ">
 				<Link className="text-dark200_light800" href="/">
@@ -80,7 +80,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 				/>
 			</div>
 
-			<div className="flex-column w-full gap-4 md:flex-row">
+			<div className="flex-column w-full gap-4 xl:flex-row">
 				<div className="flex-column flex-1 gap-8">
 					<h2 className="h2-bold">Project Purpose</h2>
 					<p className="paragraph-regular">{project.purpose}</p>
@@ -95,8 +95,8 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 				</div>
 			</div>
 
-			<div className="flex-column w-full gap-4 md:flex-row">
-				<div className="relative aspect-square w-full max-w-[500px] max-md:hidden">
+			<div className="flex-column w-full gap-4 xl:flex-row">
+				<div className="relative aspect-square w-full max-w-[500px] max-xl:hidden">
 					<Image
 						src={`/assets/images/backgrounds/project-backgrounds/grid-bg.webp`}
 						fill
@@ -115,7 +115,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 				<ScreenShotCarousel projectScreenshot={project.screenshots} />
 			</div>
 
-			<div className="flex-column w-full gap-4 md:flex-row">
+			<div className="flex-column w-full gap-4 xl:flex-row">
 				<div className="flex-column w-full flex-1 gap-8">
 					<h2 className="h2-bold">Problems and Thought Process</h2>
 					<p className="paragraph-regular">{project.problems}</p>
@@ -130,7 +130,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 				</div>
 			</div>
 
-			<div className="flex w-full flex-col-reverse gap-4 md:flex-row">
+			<div className="flex w-full flex-col-reverse gap-4 xl:flex-row">
 				<div className="relative aspect-square w-full max-w-[500px]">
 					<Image
 						src={`/assets/images/backgrounds/project-backgrounds/mind-map-bg.svg`}
