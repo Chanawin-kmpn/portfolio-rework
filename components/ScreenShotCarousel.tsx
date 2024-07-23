@@ -77,7 +77,7 @@ const ScreenShotCarousel = ({
 			</div>
 			{open && (
 				<div
-					className="bg-blur fixed inset-0 z-40 flex size-full items-center justify-center"
+					className="bg-blur fixed inset-0 z-50 flex size-full items-center justify-center"
 					onClick={handleClose}
 				>
 					<div

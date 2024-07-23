@@ -13,7 +13,7 @@ async function getProjects(): Promise<Project[]> {
 }
 
 export async function generateStaticParams() {
-	const projects = await getProjects(); // ฟังก์ชันเดียวกับด้านบน
+	const projects = await getProjects();
 
 	return projects.map((project) => ({
 		id: project.id.toString(),

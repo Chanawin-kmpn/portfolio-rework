@@ -29,7 +29,7 @@ function ScrollToTopButton() {
 
 	return (
 		<div
-			className={`fixed bottom-4 right-4 z-50 transition-opacity duration-300 ease-in-out xl:bottom-16 xl:right-16 ${
+			className={`fixed bottom-4 right-4 z-40 transition-opacity duration-300 ease-in-out xl:bottom-16 xl:right-16 ${
 				isVisible ? 'opacity-100' : 'pointer-events-none opacity-0'
 			}`}
 		>

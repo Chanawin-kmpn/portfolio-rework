@@ -15,7 +15,7 @@ const ContactSection = () => {
 					<div className="flex-column flex-1 gap-8 xl:gap-12">
 						<div className="flex-column gap-6 xl:gap-4">
 							<h3 className="h3-bold text-dark200_light800">
-								Let's build somthing together
+								Let's build something together
 							</h3>
 							<p className="paragraph-regular text-dark200_light800">
 								If you’re looking for a developer feel free to contact me.
