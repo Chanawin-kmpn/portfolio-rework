@@ -19,7 +19,6 @@ const ScreenShotCarousel = ({
 
 	const handleZoom = () => {
 		setOpen((prev) => !prev);
-		console.log(open);
 	};
 
 	const handleClose = () => {
@@ -55,8 +54,10 @@ const ScreenShotCarousel = ({
 							<Image
 								src={img}
 								fill
+								sizes="100%"
 								alt="Project screenshot"
 								className="object-cover"
+								priority
 							/>
 						</div>
 					) : (
@@ -68,8 +69,10 @@ const ScreenShotCarousel = ({
 							<Image
 								src={img}
 								fill
+								sizes="100%"
 								alt="Project screenshot"
 								className="object-cover"
+								priority
 							/>
 						</div>
 					)

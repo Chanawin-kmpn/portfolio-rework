@@ -6,6 +6,7 @@ import { useTheme } from '@/context/ThemeProvider';
 import { Project, projects } from '@/data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
+import Loading from './loading';
 
 async function getProjects(): Promise<Project[]> {
 	const { projects } = await import('@/data/projects');
@@ -75,7 +76,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 					src={project.heroImage}
 					alt="Project hero image"
 					fill
-					sizes="100vw"
+					sizes="100%"
 					className="object-cover"
 				/>
 			</div>
@@ -100,7 +101,8 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 					<Image
 						src={`/assets/images/backgrounds/project-backgrounds/grid-bg.webp`}
 						fill
-						alt="Project Purpose image"
+						sizes="100%"
+						alt="Project stack background"
 						className="object-cover"
 					/>
 				</div>
