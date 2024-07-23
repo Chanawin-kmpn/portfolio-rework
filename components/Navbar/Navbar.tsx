@@ -1,3 +1,5 @@
+'use client';
+
 import { navLinks } from '@/constants';
 import ScrollLink from '../ScrollLink';
 import Image from 'next/image';

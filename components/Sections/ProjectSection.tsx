@@ -1,7 +1,7 @@
-import { projectCards } from '@/constants';
 import React from 'react';
 import ProjectCard from '../Card/ProjectCard';
 import AnimateMessage from '../AnimateMessage';
+import { Project, projects } from '@/data/projects';
 
 const ProjectSection = () => {
 	return (
@@ -9,14 +9,14 @@ const ProjectSection = () => {
 			<h2 className="h2-bold max-md:self-center">My Project</h2>
 			<div className="flex flex-col-reverse gap-8 md:flex-row md:gap-16">
 				<div className="md:flex-column flex h-fit snap-x snap-mandatory gap-8 overflow-auto p-4 md:p-0">
-					{projectCards.map((project) => (
+					{projects.map((project: Project) => (
 						<ProjectCard key={project.id} project={project} />
 					))}
 				</div>
 				<div className="md:flex-column top-[193px] self-start overflow-hidden md:sticky md:gap-16 ">
 					<div className="flex-column md:invert-bg md: gap-4 rounded-[10px] md:w-[580px] md:gap-8 md:p-8">
 						<h3 className="h3-bold">In every my project.</h3>
-						<p className="paragraph-regular">
+						<p className="paragraph-regular md:invert-text">
 							I enjoy developing my skills through online challenges,
 							collaborating with teammates in bootcamps, and pursuing personal
 							projects. Here are some examples of my work.

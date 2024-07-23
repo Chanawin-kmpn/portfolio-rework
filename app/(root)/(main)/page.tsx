@@ -1,6 +1,6 @@
 'use client';
 import HeroSection from '@/components/Sections/HeroSection';
-import Navbar from '../components/Navbar/Navbar';
+import Navbar from '../../../components/Navbar/Navbar';
 import AboutmeSection from '@/components/Sections/AboutmeSection';
 import ProjectSection from '@/components/Sections/ProjectSection';
 import ContactSection from '@/components/Sections/ContactSection';
@@ -14,7 +14,7 @@ import SkillLoading from '@/components/SectionLoading/SkillLoading';
 
 const Home = () => {
 	return (
-		<div className="flex-column bg-light800_dark200 transition-theme ">
+		<>
 			{/* <Intro /> */}
 			<Navbar />
 			<div className="flex-column section-container z-40 max-md:gap-8 md:gap-16">
@@ -46,7 +46,7 @@ const Home = () => {
 				<hr className="horizon-line" />
 			</div>
 			<FooterSection />
-		</div>
+		</>
 	);
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Skeleton } from '../ui/skeleton';
-import { projectCards } from '@/constants';
+import { projects } from '@/data/projects';
 
 const ProjectLoading = () => {
 	return (
@@ -8,7 +8,7 @@ const ProjectLoading = () => {
 			<h2 className="h2-bold">My Project</h2>
 			<div className="flex w-full flex-col-reverse gap-8 md:flex-row md:gap-16">
 				<div className="md:flex-column flex h-fit snap-x snap-mandatory gap-8 overflow-auto p-4 md:p-0">
-					{projectCards.map((project) => (
+					{projects.map((project) => (
 						<Skeleton className="mx-auto h-[448px] min-w-[250px] md:size-[668px]" />
 					))}
 				</div>

@@ -5,8 +5,9 @@ import Image from 'next/image';
 import Theme from './Theme';
 import Audio from './Audio';
 import { useTheme } from '@/context/ThemeProvider';
-import { navLinks, projectCards } from '@/constants';
+import { navLinks } from '@/constants';
 import Link from 'next/link';
+import { projects } from '@/data/projects';
 
 const MobileNav = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +32,7 @@ const MobileNav = () => {
 			</button>
 
 			<div
-				className={`bg-mobile-nav fixed left-0 top-0 size-full gap-32 px-4 py-[22px] ${isOpen ? 'flex-column' : 'hidden'} transition-theme`}
+				className={`bg-blur fixed left-0 top-0 size-full gap-32 px-4 py-[22px] ${isOpen ? 'flex-column' : 'hidden'} transition-theme`}
 			>
 				<div className="flex min-h-[85px] items-center gap-8 ">
 					<Audio />
@@ -49,10 +50,10 @@ const MobileNav = () => {
 							</ScrollLink>
 							{link.route === 'projects' && (
 								<div className="flex-column  text-dark200_light800  gap-[10px] text-xl font-bold">
-									{projectCards.map((link) => (
-										<div className="ml-4" key={link.id}>
-											<Link href={link.route} key={link.title}>
-												{link.title}
+									{projects.map((project) => (
+										<div className="ml-4" key={project.id}>
+											<Link href={`/projects/${project.id}`} key={project.id}>
+												{project.name}
 											</Link>
 										</div>
 									))}

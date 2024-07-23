@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Bai_Jamjuree, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeProvider';
-import { Toaster } from '@/components/ui/toaster';
+import Navbar from '@/components/Navbar/Navbar';
 
 const baiJamjuree = Bai_Jamjuree({
 	subsets: ['thai'],
@@ -34,7 +34,6 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={`${jetBrainsMono.variable} ${baiJamjuree.variable}`}>
 				<ThemeProvider>{children}</ThemeProvider>
-				<Toaster />
 			</body>
 		</html>
 	);

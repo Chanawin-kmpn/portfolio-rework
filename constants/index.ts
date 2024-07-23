@@ -62,54 +62,53 @@ export const mySkills: Skill[] = [
 	{ skill: 'Visual Studio Code', ...techStackData.vscode },
 ];
 
-interface ProjectCard {
-	id: number;
-	title: string;
-	iconProject: string;
-	imgProject: string;
-	description: string;
-	stack: (keyof typeof techStackData)[];
-	route: string;
-}
+// interface ProjectCard {
+// 	id: number;
+// 	title: string;
+// 	iconProject: string;
+// 	imgProject: string;
+// 	description: string;
+// 	stack: (keyof typeof techStackData)[];
+// 	route: string;
+// }
 
-export const projectCards: ProjectCard[] = [
-	{
-		id: 1,
-		title: 'Project 1',
-		iconProject: 'https://fakeimg.pl/32/',
-		imgProject: 'https://fakeimg.pl/668/',
-		description:
-			'" LunarFit is a user-friendly web app that helps fitness enthusiasts track workouts, set goals, and monitor progress with an intuitive interface "',
-		stack: [
-			'react',
-			'nodejs',
-			'express',
-			'tailwindcss',
-			'styledComponents',
-			'mongodb',
-			'git',
-		],
-		route: '/project1',
-	},
-	{
-		id: 2,
-		title: 'Project 2',
-		iconProject: 'https://fakeimg.pl/32/',
-		imgProject: 'https://fakeimg.pl/668/',
-		description: 'lorem',
-		stack: ['react'],
-		route: '/project2',
-	},
-	{
-		id: 3,
-		title: 'Project 3',
-		iconProject: 'https://fakeimg.pl/32/',
-		imgProject: 'https://fakeimg.pl/668/',
-		description: 'lorem',
-		stack: ['react', 'express'],
-		route: '/project3',
-	},
-];
+// export const projectCards: ProjectCard[] = [
+// 	{
+// 		id: 1,
+// 		title: 'Project 1',
+// 		iconProject: 'https://fakeimg.pl/32/',
+// 		imgProject: 'https://fakeimg.pl/668/',
+// 		description: '" A web application that build from scratch "',
+// 		stack: [
+// 			'react',
+// 			'nodejs',
+// 			'express',
+// 			'tailwindcss',
+// 			'styledComponents',
+// 			'mongodb',
+// 			'git',
+// 		],
+// 		route: 'projects/project1',
+// 	},
+// 	{
+// 		id: 2,
+// 		title: 'Project 2',
+// 		iconProject: 'https://fakeimg.pl/32/',
+// 		imgProject: 'https://fakeimg.pl/668/',
+// 		description: 'A web application that build from scratch',
+// 		stack: ['react'],
+// 		route: 'projects/project2',
+// 	},
+// 	{
+// 		id: 3,
+// 		title: 'Project 3',
+// 		iconProject: 'https://fakeimg.pl/32/',
+// 		imgProject: 'https://fakeimg.pl/668/',
+// 		description: 'A web application that build from scratch',
+// 		stack: ['react', 'express'],
+// 		route: 'projects/project3',
+// 	},
+// ];
 
 export const socialLink = [
 	{

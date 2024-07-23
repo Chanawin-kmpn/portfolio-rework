@@ -10,7 +10,7 @@
 		@apply bg-light-800 dark:bg-dark-200;
 	}
 
-	.bg-mobile-nav {
+	.bg-blur {
 		@apply backdrop-blur bg-[#D9D9D9]/50 dark:bg-[#202020]/50 animate-fadeIn;
 	}
 
@@ -39,7 +39,7 @@
 	}
 
 	.invert-text {
-		@apply text-light-800 dark:text-dark-200;
+		@apply text-light-800 dark:text-dark-200 !important;
 	}
 
 	.cloud-message {
@@ -67,12 +67,16 @@
 		@apply invert-bg h-[2px] md:hidden;
 	}
 
+	.carousel-arrow {
+		@apply bg-light-800 hover:bg-light-800/10 dark:bg-dark-200 hover:dark:bg-dark-200/10 dark:border-light-800 border-dark-200 text-dark200_light800 dark:ring-offset-dark-200 max-md:hidden !important;
+	}
+
 	.h1-intro {
 		@apply text-9xl font-medium text-dark200_light800;
 	}
 
 	.h1-bold {
-		@apply text-5xl md:text-[64px] font-bold leading-[85px];
+		@apply text-5xl md:text-[64px] font-bold leading-[85px] text-dark200_light800;
 	}
 
 	.h1-outline {
@@ -80,7 +84,7 @@
 	}
 
 	.h2-bold {
-		@apply text-[40px] md:text-5xl font-bold tracking-[0.02] leading-[53px] text-dark200_light800;
+		@apply text-[40px] md:text-5xl font-bold tracking-[0.02] leading-[53px] text-dark200_light800 text-dark200_light800;
 	}
 
 	.h2-outline {
@@ -100,7 +104,7 @@
 	}
 
 	.paragraph-regular {
-		@apply text-xl md:text-2xl font-normal;
+		@apply text-base md:text-2xl font-normal text-dark200_light800;
 	}
 
 	.paragraph-bold {
