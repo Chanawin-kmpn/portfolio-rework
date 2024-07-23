@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ScrollLink from '../ScrollLink';
 import Image from 'next/image';
 import Theme from './Theme';
-import Audio from './Audio';
+// import Audio from './Audio';
 import { useTheme } from '@/context/ThemeProvider';
 import { navLinks } from '@/constants';
 import Link from 'next/link';
@@ -35,7 +35,7 @@ const MobileNav = () => {
 				className={`bg-blur fixed left-0 top-0 size-full gap-32 px-4 py-[22px] ${isOpen ? 'flex-column' : 'hidden'} transition-theme`}
 			>
 				<div className="flex min-h-[85px] items-center gap-8 ">
-					<Audio />
+					{/* <Audio /> */}
 					<Theme />
 				</div>
 				<div className="flex-column gap-4">

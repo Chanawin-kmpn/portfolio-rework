@@ -1,9 +1,6 @@
 'use client';
 
-import { projectCards } from '@/constants';
-import Link from 'next/link';
 import { ReactNode } from 'react';
-import { toast } from './ui/use-toast';
 
 interface ScrollLinkProps {
 	href: string;

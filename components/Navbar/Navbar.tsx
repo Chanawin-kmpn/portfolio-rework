@@ -5,7 +5,7 @@ import ScrollLink from '../ScrollLink';
 import Image from 'next/image';
 import MobileNav from './MobileNav';
 import Theme from './Theme';
-import Audio from './Audio';
+// import Audio from './Audio';
 
 const Navbar = () => {
 	return (
@@ -21,7 +21,7 @@ const Navbar = () => {
 			<div className="flex">
 				<div className="xl:flex-between hidden xl:gap-4">
 					<div className="flex-center gap-4">
-						<Audio />
+						{/* <Audio /> */}
 						<Theme />
 					</div>
 					{navLinks.map((link) => (
