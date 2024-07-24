@@ -24,7 +24,7 @@ const ContactSection = () => {
 						<ContactForm />
 						<div className="flex-column gap-2 xl:gap-6">
 							<div className="flex items-center gap-4">
-								<p className="paragraph-bold inline-block">
+								<p className="body-semibold inline-block">
 									Or you can send me a message directly to this email.
 								</p>
 								<span className="invert-bg inline-block h-[2px] w-full max-w-[176px] max-xl:hidden  max-xl:flex-1"></span>

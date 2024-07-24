@@ -34,22 +34,22 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 		<div className="flex-column section-container items-start justify-start gap-8 px-0 py-[22px] xl:size-full xl:gap-16 xl:p-16 ">
 			<ScrollToTopButton />
 			<div className="border-light800_dark200 flex w-full items-center justify-between border-b-2 ">
-				<Link className="text-dark200_light800" href="/">
+				<Link className="body-semibold" href="/">
 					Back to main page
 				</Link>
 				<Theme />
 			</div>
 			<div>
-				<h1 className="h1-bold">{project.name}</h1>
+				<h1 className="h1-bold text-dark200_light800">{project.name}</h1>
 				<p className="paragraph-regular">{project.description}</p>
 			</div>
 			<div className="flex-column gap-8">
 				<div className="flex items-baseline gap-2">
-					<p className="paragraph-medium">Created at:</p>
+					<p className="body-semibold">Created at:</p>
 					<p className="paragraph-regular">{project.createdAt}</p>
 				</div>
 				<div className="flex items-start gap-2">
-					<p className="paragraph-medium">Stack:</p>
+					<p className="body-semibold">Stack:</p>
 					<ul>
 						{project.stack.map((tech, index) => (
 							<li key={index} className="text-dark200_light800">
@@ -61,7 +61,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 					</ul>
 				</div>
 				<div className="flex items-baseline gap-2">
-					<p className="paragraph-medium">Live Demo:</p>
+					<p className="body-semibold">Live Demo:</p>
 					<Link
 						href={project.liveDemo}
 						className="paragraph-medium text-custom-pink dark:text-custom-pink"
@@ -147,7 +147,7 @@ const ProjectDetail = async ({ params }: { params: { id: string } }) => {
 				</div>
 			</div>
 			<div className="border-light800_dark200 flex w-full items-center justify-between border-b-2 ">
-				<Link className="text-dark200_light800" href="/">
+				<Link className="body-semibold" href="/">
 					Back to main page
 				</Link>
 			</div>

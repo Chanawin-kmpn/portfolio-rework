@@ -112,7 +112,7 @@
 	}
 
 	.body-semibold {
-		@apply text-xl font-semibold;
+		@apply text-xl font-semibold text-dark200_light800;
 	}
 
 	.body-medium {
