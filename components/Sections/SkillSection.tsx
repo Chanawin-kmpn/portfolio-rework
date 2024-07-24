@@ -21,7 +21,7 @@ const SkillSection = () => {
 				/>
 			</div>
 			<div className="flex-column max-w-[953px] items-center gap-8 xl:gap-16 xl:py-16 xl:pr-16">
-				<h2 className="h2-bold xl:self-end">My SKill</h2>
+				<h2 className="h2-bold xl:self-end">My SKills</h2>
 				<div className="flex-column gap-8 xl:gap-16 ">
 					<p className="paragraph-medium text-dark200_light800">
 						I learned writing language from various sources such as Documents,

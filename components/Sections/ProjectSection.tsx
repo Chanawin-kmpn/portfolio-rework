@@ -6,7 +6,7 @@ import { Project, projects } from '@/data/projects';
 const ProjectSection = () => {
 	return (
 		<div className="flex-column text-dark200_light800 xl:invert-text gap-8">
-			<h2 className="h2-bold max-xl:self-center">My Project</h2>
+			<h2 className="h2-bold max-xl:self-center">My Projects</h2>
 			<div className="flex flex-col-reverse gap-8 xl:flex-row xl:gap-16">
 				<div className="xl:flex-column flex h-fit snap-x snap-mandatory gap-8 overflow-auto p-4 xl:p-0">
 					{projects.map((project: Project) => (
