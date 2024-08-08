@@ -25,7 +25,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
 			<div className="bg-project-detail flex-column flex-1 gap-4 p-4 max-xl:rounded-b-[10px] xl:absolute xl:right-0 xl:h-full xl:w-[267px]">
 				<div className="flex-column gap-2">
 					<div className="flex items-center justify-between">
-						<h4 className="h4-bold">{project.name}</h4>
+						<p className="project-name">{project.name}</p>
 						<Image
 							src={project.heroImage}
 							width={32}

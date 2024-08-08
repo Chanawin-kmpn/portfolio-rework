@@ -95,7 +95,7 @@
 		@apply text-[2rem] xl:text-4xl font-bold leading-[35.2px];
 	}
 
-	.h4-bold {
+	.project-name {
 		@apply text-3xl font-bold text-dark200_light800;
 	}
 
