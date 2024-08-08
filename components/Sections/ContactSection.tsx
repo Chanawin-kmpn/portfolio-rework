@@ -7,7 +7,7 @@ import ContactForm from '../Form/ContactForm';
 const ContactSection = () => {
 	const { mode } = useTheme();
 	return (
-		<div className="flex-column xl:gap-10">
+		<div className="flex-column xl:gap-10 xl:p-16">
 			<hr className="invert-bg max-xl:hidden" />
 			<div className="flex-column gap-4 xl:gap-16">
 				<h2 className="h2-bold self-center xl:self-end">Contact</h2>
