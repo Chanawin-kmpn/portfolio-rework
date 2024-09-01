@@ -4,7 +4,6 @@ import Navbar from '../../../components/Navbar/Navbar';
 import AboutmeSection from '@/components/Sections/AboutmeSection';
 import ProjectSection from '@/components/Sections/ProjectSection';
 import ContactSection from '@/components/Sections/ContactSection';
-import Intro from '@/components/Intro';
 import SkillSection from '@/components/Sections/SkillSection';
 import FooterSection from '@/components/Sections/FooterSection';
 import HeroLoading from '@/components/SectionLoading/HeroLoading';

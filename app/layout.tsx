@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { Bai_Jamjuree, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import { ThemeProvider } from '@/context/ThemeProvider';
-import Navbar from '@/components/Navbar/Navbar';
 
 const baiJamjuree = Bai_Jamjuree({
 	subsets: ['thai'],

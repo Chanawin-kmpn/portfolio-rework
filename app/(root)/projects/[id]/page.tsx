@@ -1,12 +1,9 @@
 import Theme from '@/components/Navbar/Theme';
 import ScreenShotCarousel from '@/components/ScreenShotCarousel';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/context/ThemeProvider';
-import { Project, projects } from '@/data/projects';
+import { Project } from '@/data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
-import Loading from './loading';
 
 async function getProjects(): Promise<Project[]> {
 	const { projects } = await import('@/data/projects');
