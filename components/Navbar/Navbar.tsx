@@ -5,19 +5,28 @@ import ScrollLink from '../ScrollLink';
 import Image from 'next/image';
 import MobileNav from './MobileNav';
 import Theme from './Theme';
+import Link from 'next/link';
 // import Audio from './Audio';
 
 const Navbar = () => {
 	return (
 		<nav className="flex-between bg-light800_dark200 transition-theme top-0 z-50 w-full px-4 py-[22px] xl:sticky xl:px-16">
-			<ScrollLink href="hero">
-				<Image
-					src="/assets/images/chanawin-logo.webp"
-					width={130}
-					height={85}
-					alt="Chanawin Logo"
-				/>
-			</ScrollLink>
+			<div className="flex items-center gap-12">
+				<ScrollLink href="hero">
+					<Image
+						src="/assets/images/chanawin-logo.webp"
+						width={130}
+						height={85}
+						alt="Chanawin Logo"
+					/>
+				</ScrollLink>
+				<Link
+					className="paragraph-bold text-dark200_light800 cursor-pointer"
+					href="/myTools"
+				>
+					MyTools
+				</Link>
+			</div>
 			<div className="flex">
 				<div className="xl:flex-between hidden xl:gap-4">
 					<div className="flex-center gap-4">
