@@ -86,6 +86,7 @@ const config: Config = {
 			backgroundSize: {
 				'300%': '300%',
 				'600%': '600%',
+				'200-100': '200% 100%',
 			},
 			transitionDuration: {
 				'250': '250',

@@ -15,7 +15,7 @@
 					"name": "Adobe Color",
 					"url": "https://color.adobe.com/",
 					"description": "Create color schemes with the color wheel or browse thousands of color combinations",
-					"recommend": false,
+					"recommend": true,
 					"tag": "color"
 				},
 				{
@@ -36,7 +36,7 @@
 					"name": "CCColor",
 					"url": "https://fffuel.co/cccolor/",
 					"description": "Color palette generator with customizable options",
-					"recommend": false,
+					"recommend": true,
 					"tag": "color"
 				},
 				{
@@ -56,7 +56,7 @@
 					"name": "Unsplash",
 					"url": "https://unsplash.com",
 					"description": "Beautiful, free images and photos that you can download and use for any project",
-					"recommend": false,
+					"recommend": true,
 					"tag": "image"
 				},
 				{
@@ -90,21 +90,21 @@
 					"name": "Heroicons",
 					"url": "https://heroicons.com/",
 					"description": "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS",
-					"recommend": false,
+					"recommend": true,
 					"tag": "icon"
 				},
 				{
 					"name": "Flaticon",
 					"url": "https://www.flaticon.com/",
 					"description": "Large database of free icons available in PNG, SVG, EPS, PSD and BASE 64 formats",
-					"recommend": false,
+					"recommend": true,
 					"tag": "icon"
 				},
 				{
 					"name": "Font Awesome",
 					"url": "https://fontawesome.com/icons",
 					"description": "Vector icons and social logos for your website",
-					"recommend": false,
+					"recommend": true,
 					"tag": "icon"
 				},
 				{
@@ -190,6 +190,13 @@
 					"description": "Beautifully crafted 3D icons",
 					"recommend": false,
 					"tag": "icon"
+				},
+				{
+					"name": "FFFuel",
+					"url": "https://www.fffuel.co/",
+					"description": "SVG generators for gradients, patterns, textures, shapes & backgrounds",
+					"recommend": true,
+					"tag": "icon"
 				}
 			]
 		},
@@ -201,14 +208,14 @@
 					"name": "CDN Fonts",
 					"url": "https://www.cdnfonts.com/",
 					"description": "Free fonts hosted on fast CDN servers",
-					"recommend": false,
+					"recommend": true,
 					"tag": "font"
 				},
 				{
 					"name": "Google Fonts",
 					"url": "https://fonts.google.com/",
 					"description": "Making the web more beautiful, fast, and open through great typography",
-					"recommend": false,
+					"recommend": true,
 					"tag": "font"
 				},
 				{
@@ -298,7 +305,7 @@
 					"name": "Dribbble",
 					"url": "https://dribbble.com/shots/popula",
 					"description": "Discover the world's top designers & creatives",
-					"recommend": false,
+					"recommend": true,
 					"tag": "design"
 				},
 				{
@@ -326,7 +333,7 @@
 					"name": "Lapa Ninja",
 					"url": "https://www.lapa.ninja/",
 					"description": "The best landing page design inspiration from around the web",
-					"recommend": false,
+					"recommend": true,
 					"tag": "design"
 				}
 			]
@@ -344,7 +351,7 @@
 				},
 				{
 					"name": "Icons8 Illustrations",
-					"url": "https://icons8.com/illustration",
+					"url": "https://icons8.com/illustrations",
 					"description": "Free vector illustrations to class up your project",
 					"recommend": false,
 					"tag": "illustration"
@@ -353,7 +360,7 @@
 					"name": "Storyset",
 					"url": "https://storyset.com/",
 					"description": "Awesome free customizable illustrations for your next project",
-					"recommend": false,
+					"recommend": true,
 					"tag": "illustration"
 				},
 				{
@@ -371,10 +378,10 @@
 					"tag": "illustration"
 				},
 				{
-					"name": "Humaaans",
-					"url": "https://blush.design/collections/humaaans/humaaans",
-					"description": "Mix-&-match illustrations of people with a design library",
-					"recommend": false,
+					"name": "Blush",
+					"url": "https://blush.design/",
+					"description": "Easily create and customize stunning illustrations with collections made by artists across the globe.",
+					"recommend": true,
 					"tag": "illustration"
 				},
 				{
@@ -388,7 +395,7 @@
 					"name": "Open Doodles",
 					"url": "https://www.opendoodles.com/",
 					"description": "A free set of open-source illustrations",
-					"recommend": false,
+					"recommend": true,
 					"tag": "illustration"
 				},
 				{
@@ -399,7 +406,7 @@
 					"tag": "illustration"
 				},
 				{
-					"name": "Storytale.io",
+					"name": "Storytale",
 					"url": "https://storytale.io/",
 					"description": "Unique illustrations for web and mobile projects",
 					"recommend": false,
@@ -415,7 +422,7 @@
 					"name": "Mesh Gradient",
 					"url": "https://meshgradient.in/",
 					"description": "Create beautiful mesh gradients",
-					"recommend": false,
+					"recommend": true,
 					"tag": "background"
 				},
 				{
@@ -429,14 +436,14 @@
 					"name": "Cool Backgrounds",
 					"url": "https://coolbackgrounds.io/",
 					"description": "Create cool background images using gradients, patterns, and more",
-					"recommend": false,
+					"recommend": true,
 					"tag": "background"
 				},
 				{
 					"name": "Haikei",
 					"url": "https://app.haikei.app/",
 					"description": "Generate unique SVG design assets",
-					"recommend": false,
+					"recommend": true,
 					"tag": "background"
 				},
 				{
@@ -463,35 +470,35 @@
 					"name": "Live Server",
 					"url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
 					"description": "Launch a development local Server with live reload feature for static & dynamic pages",
-					"recommend": false,
+					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{
 					"name": "Auto Close Tag",
 					"url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag",
 					"description": "Automatically add HTML/XML close tag",
-					"recommend": false,
+					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{
 					"name": "Auto Rename Tag",
 					"url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag",
 					"description": "Auto rename paired HTML/XML tag",
-					"recommend": false,
+					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{
 					"name": "Path Intellisense",
 					"url": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense",
 					"description": "Visual Studio Code plugin that autocompletes filenames",
-					"recommend": false,
+					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{
 					"name": "Prettier - Code formatter",
 					"url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
 					"description": "Code formatter using prettier",
-					"recommend": false,
+					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{
@@ -505,7 +512,7 @@
 					"name": "Random Everything",
 					"url": "https://marketplace.visualstudio.com/items?itemName=helixquar.randomeverything",
 					"description": "Generate random data directly in VS Code",
-					"recommend": false,
+					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{

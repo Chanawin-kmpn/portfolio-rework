@@ -2,6 +2,7 @@ import { ToolsDisplayProps } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import RecommandTag from '../RecommandTag';
 
 const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 	return (
@@ -9,8 +10,9 @@ const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 			{tools.map((tool) => (
 				<div
 					key={tool.name}
-					className="flex-column card-bg gap-4 rounded-lg border border-dark-200 p-4 shadow-md transition-transform hover:scale-105 dark:border-light-800"
+					className="flex-column card-bg relative gap-4 rounded-lg border border-dark-200 p-4 shadow-md transition-transform hover:scale-105 dark:border-light-800"
 				>
+					{tool.recommend && <RecommandTag />}
 					<div className="flex items-center justify-between">
 						<Image
 							src={`/assets/icons/tools/${tool.tag}-icon.png`}
@@ -18,7 +20,7 @@ const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 							height={40}
 							alt={`${tool.tag}-icons`}
 						/>
-						<Link href={tool.url} target="_blank">
+						<Link href={tool.url} target="_blank" className="z-10">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
