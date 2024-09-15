@@ -1,11 +1,12 @@
 import Theme from '@/components/Navbar/Theme';
 import ScreenShotCarousel from '@/components/ScreenShotCarousel';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
-import { Project } from '@/data/projects';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ProjectProp } from '@/types/types';
+import { Project } from 'next/dist/build/swc';
 
-async function getProjects(): Promise<Project[]> {
+async function getProjects(): Promise<ProjectProp[]> {
 	const { projects } = await import('@/data/projects');
 	return projects;
 }
@@ -18,9 +19,9 @@ export async function generateStaticParams() {
 	}));
 }
 
-async function getProject(id: string): Promise<Project> {
+async function getProject(id: string): Promise<ProjectProp> {
 	const projects = await getProjects();
-	return projects.find((p) => p.id.toString() === id) || ({} as Project);
+	return projects.find((p) => p.id.toString() === id) || ({} as ProjectProp);
 }
 
 const ProjectDetail = async ({ params }: { params: { id: string } }) => {
