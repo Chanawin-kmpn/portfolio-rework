@@ -74,6 +74,7 @@ export interface ToolsDisplayProps {
 
 export interface CategoriesFilterProps {
 	categories: Category[];
-	onFilter: (selectedCategories: string[]) => void;
+	onFilter: (categories: string[], recommendedOnly: boolean) => void;
 	initialSelected: string[];
+	initialRecommended: boolean;
 }

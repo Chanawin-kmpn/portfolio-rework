@@ -20,7 +20,7 @@ const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 							height={40}
 							alt={`${tool.tag}-icons`}
 						/>
-						<Link href={tool.url} target="_blank" className="z-10">
+						<Link href={tool.url} target="_blank" className="z-20">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"

@@ -21,30 +21,44 @@ const AboutmeSection = () => {
 					</div>
 					<div className="flex-column max-w-[898px] gap-6 xl:gap-8">
 						<p className="paragraph-medium">
-							Hello there! I’m Chanawin Kamolpanus you can call me Pond who
-							likes and enjoys creating things with creative design and solving
-							problem.
+							Hello, I'm Chanawin Kamolpanus, a passionate software developer
+							with a focus on crafting impressive digital experiences. My
+							journey began with a foundation in Electronic and Computer System
+							Engineering from Silpakorn University, where I developed a keen
+							interest in technology and its applications.
 						</p>
 						<p className="paragraph-medium">
-							First of all I’m want to tell that I’m graduate from Silpakorn
-							University department of electrical engineering and this is my
-							story that what make me want to become Front-end developer.
+							Since then, I've evolved from working on IoT projects to becoming
+							a Front-end Development specialist. My expertise spans HTML, CSS,
+							JavaScript, and TypeScript, with proficiency in modern frameworks
+							and libraries such as React, Tailwind CSS, and styled-components.
+							This skill set allows me to create beautiful, type-safe, and
+							user-friendly interfaces that not only look great but also perform
+							exceptionally.
 						</p>
 						<p className="paragraph-medium">
-							My first experience with programming was in my first year at
-							university, coding in C++ for an Arduino. At that time, I still
-							felt indifferent about programming.{' '}
+							I'm a firm believer in continuous learning and growth. Currently,
+							I'm expanding my skills with Next.js to become a full-stack
+							developer, ready to tackle the challenges in the rapidly evolving
+							tech landscape.
 						</p>
 						<p className="paragraph-medium">
-							In my last year I had the opportunity to participate in a program
-							of my department. On the topic of creating a Web Application using
-							HTML, CSS, JavaScript, Bootstrap and PHP.
+							Beyond technical skills, I bring strong problem-solving abilities,
+							effective teamwork, and a growth mindset to every project. I'm
+							particularly excited about emerging technologies like Web3 and AI,
+							and I'm always eager to explore how these can be integrated into
+							innovative solutions.
 						</p>
 						<p className="paragraph-medium">
-							After graduated from university I decided to participate in
-							Generation's Junior Software developer Bootcamp for changing my
-							career path and learn about technical skill and soft skill that
-							suit for this career.
+							When I'm not coding, you can find me exploring the latest tech
+							trends, contributing to open-source projects, or collaborating
+							with fellow developers to push the boundaries of what's possible
+							in web development.
+						</p>
+						<p className="paragraph-medium">
+							I'm looking forward to leveraging my skills and passion to create
+							valuable, robust solutions and contribute meaningfully to exciting
+							projects. Let's connect and build something amazing together!"
 						</p>
 					</div>
 				</div>

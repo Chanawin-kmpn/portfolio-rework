@@ -6,23 +6,31 @@ const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
 	categories,
 	onFilter,
 	initialSelected,
+	initialRecommended,
 }) => {
 	const [selectedCategories, setSelectedCategories] =
 		useState<string[]>(initialSelected);
+	const [recommendedOnly, setRecommendedOnly] = useState(false);
 
 	useEffect(() => {
 		setSelectedCategories(initialSelected);
-	}, [initialSelected]);
+		setRecommendedOnly(initialRecommended);
+	}, [initialSelected, initialRecommended]);
 
 	const handleCategoryChange = (categoryName: string) => {
 		const updatedCategories = selectedCategories.includes(categoryName)
-			? selectedCategories.filter((category) => category !== categoryName)
-			: [...selectedCategories, categoryName];
+			? selectedCategories.filter((category) => category !== categoryName) //Toggle select category. If category has been in selectedCategories then return filtered array that not include that category name
+			: [...selectedCategories, categoryName]; // If category not include in selected Categories then add to array of selectedCategories
 
 		setSelectedCategories(updatedCategories);
-		onFilter(updatedCategories);
+		onFilter(updatedCategories, recommendedOnly); // Send updatedCategories and recommendedOnly to filter function
 	};
 
+	const handleRecommendedChange = () => {
+		const newRecommendedOnly = !recommendedOnly;
+		setRecommendedOnly(newRecommendedOnly);
+		onFilter(selectedCategories, newRecommendedOnly);
+	};
 	return (
 		<div className="flex flex-col gap-4">
 			<h2 className="h1-bold text-dark200_light800 mb-2">Categories</h2>
@@ -40,7 +48,7 @@ const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
 							type="checkbox"
 							checked={selectedCategories.includes(category.category_name)}
 							onChange={() => handleCategoryChange(category.category_name)}
-							className="sr-only" // This hides the checkbox visually but keeps it accessible
+							className="sr-only"
 						/>
 						<Image
 							src={`/assets/icons/tools/${category.tag}-icon.png`}
@@ -52,6 +60,15 @@ const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
 					</label>
 				))}
 			</div>
+			<label className="flex cursor-pointer items-center gap-2">
+				<input
+					type="checkbox"
+					checked={recommendedOnly}
+					onChange={handleRecommendedChange}
+					className="size-5 text-blue-600"
+				/>
+				<span className="text-dark200_light800">Recommended Only</span>
+			</label>
 		</div>
 	);
 };
