@@ -35,15 +35,22 @@ function ScrollToTopButton() {
 		>
 			<button
 				onClick={scrollToTop}
-				className="invert-bg rounded-full p-4 transition-transform duration-300 hover:scale-110"
+				className="invert-bg rounded-full p-6 transition-transform duration-300 hover:scale-110"
 			>
-				<Image
-					src="/assets/icons/arrow-top.svg"
-					width={40}
-					height={40}
-					alt="Arrow top"
-					className="invert-text"
-				/>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					strokeWidth={1.5}
+					stroke="currentColor"
+					className="invert-text size-8"
+				>
+					<path
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18"
+					/>
+				</svg>
 			</button>
 		</div>
 	);

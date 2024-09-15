@@ -1,384 +1,519 @@
 {
 	"categories": [
 		{
-			"name": "Colors",
-			"icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke-width=\"1.5\" stroke=\"currentColor\" class=\"size-6\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z\" /></svg>",
+			"category_name": "Colors",
+			"tag": "color",
 			"tools": [
 				{
 					"name": "Color Hunt",
 					"url": "https://colorhunt.co/",
-					"description": "Color palette inspiration site with thousands of hand-picked color combinations"
+					"description": "Color palette inspiration site with thousands of hand-picked color combinations",
+					"recommend": false,
+					"tag": "color"
 				},
 				{
 					"name": "Adobe Color",
 					"url": "https://color.adobe.com/",
-					"description": "Create color schemes with the color wheel or browse thousands of color combinations"
+					"description": "Create color schemes with the color wheel or browse thousands of color combinations",
+					"recommend": false,
+					"tag": "color"
 				},
 				{
 					"name": "Coolors",
 					"url": "https://coolors.co/",
-					"description": "Fast color scheme generator and color palette inspiration tool"
+					"description": "Fast color scheme generator and color palette inspiration tool",
+					"recommend": false,
+					"tag": "color"
 				},
 				{
 					"name": "MyColor.Space",
 					"url": "https://mycolor.space/",
-					"description": "Generate beautiful color palettes and gradients"
+					"description": "Generate beautiful color palettes and gradients",
+					"recommend": false,
+					"tag": "color"
 				},
 				{
 					"name": "CCColor",
 					"url": "https://fffuel.co/cccolor/",
-					"description": "Color palette generator with customizable options"
+					"description": "Color palette generator with customizable options",
+					"recommend": false,
+					"tag": "color"
 				},
 				{
 					"name": "Happy Hues",
 					"url": "https://www.happyhues.co/",
-					"description": "Curated color palettes for beautiful website designs"
+					"description": "Curated color palettes for beautiful website designs",
+					"recommend": false,
+					"tag": "color"
 				}
 			]
 		},
 		{
-			"name": "Images (Free)",
+			"category_name": "Images",
+			"tag": "image",
 			"tools": [
 				{
 					"name": "Unsplash",
 					"url": "https://unsplash.com",
-					"description": "Beautiful, free images and photos that you can download and use for any project"
+					"description": "Beautiful, free images and photos that you can download and use for any project",
+					"recommend": false,
+					"tag": "image"
 				},
 				{
 					"name": "Pexels",
 					"url": "https://www.pexels.com",
-					"description": "Free stock photos, royalty-free images & videos shared by creators"
+					"description": "Free stock photos, royalty-free images & videos shared by creators",
+					"recommend": false,
+					"tag": "image"
 				},
 				{
 					"name": "Freepik",
 					"url": "https://www.freepik.com/",
-					"description": "Free vectors, stock photos, PSD and icons"
+					"description": "Free vectors, stock photos, PSD and icons",
+					"recommend": false,
+					"tag": "image"
 				},
 				{
 					"name": "Pixabay",
 					"url": "https://pixabay.com/th/",
-					"description": "Stunning free images & royalty-free stock"
+					"description": "Stunning free images & royalty-free stock",
+					"recommend": false,
+					"tag": "image"
 				}
 			]
 		},
 		{
-			"name": "Icons",
+			"category_name": "Icons",
+			"tag": "icon",
 			"tools": [
 				{
 					"name": "Heroicons",
 					"url": "https://heroicons.com/",
-					"description": "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS"
+					"description": "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Flaticon",
 					"url": "https://www.flaticon.com/",
-					"description": "Large database of free icons available in PNG, SVG, EPS, PSD and BASE 64 formats"
+					"description": "Large database of free icons available in PNG, SVG, EPS, PSD and BASE 64 formats",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Font Awesome",
 					"url": "https://fontawesome.com/icons",
-					"description": "Vector icons and social logos for your website"
-				},
-				{
-					"name": "Feather Icons",
-					"url": "https://www.iconfinder.com/search/icons?family=feather&price=free",
-					"description": "Simply beautiful open source icons"
+					"description": "Vector icons and social logos for your website",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "UXWing",
 					"url": "https://uxwing.com/",
-					"description": "Free vector icons and illustrations for commercial use"
+					"description": "Free vector icons and illustrations for commercial use",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "SVG Repo",
 					"url": "https://www.svgrepo.com/",
-					"description": "Browse 500,000+ SVG vectors and icons"
+					"description": "Browse 500,000+ SVG vectors and icons",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Lordicon",
 					"url": "https://lordicon.com/",
-					"description": "Animated icon library"
+					"description": "Animated icon library",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "UI Martin Icons",
 					"url": "https://uimartin.gumroad.com/l/demoiconei",
-					"description": "Handcrafted icon set for designers and developers"
+					"description": "Handcrafted icon set for designers and developers",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Basicons",
 					"url": "https://basicons.xyz/",
-					"description": "Basic icons for product design & development"
+					"description": "Basic icons for product design & development",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Feather Icons",
 					"url": "https://feathericons.com/",
-					"description": "Simply beautiful open source icons"
+					"description": "Simply beautiful open source icons",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Phosphor Icons",
 					"url": "https://phosphoricons.com/",
-					"description": "Flexible icon family for interfaces, diagrams, presentations"
+					"description": "Flexible icon family for interfaces, diagrams, presentations",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "IconPark",
 					"url": "https://iconpark.oceanengine.com/official",
-					"description": "Open-source icon library with adjustable strokes and colors"
+					"description": "Open-source icon library with adjustable strokes and colors",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Mingcute Icons",
 					"url": "https://www.mingcute.com/",
-					"description": "Minimalist icon library"
+					"description": "Minimalist icon library",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "CSS.gg",
 					"url": "https://css.gg/",
-					"description": "Open-source CSS, SVG and Figma UI Icons"
+					"description": "Open-source CSS, SVG and Figma UI Icons",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "Iconscout",
 					"url": "https://iconscout.com/icons/monthly",
-					"description": "Curated SVGs, Vector Icons, Illustrations, 3D graphics, and Lottie Animations"
-				}
-			]
-		},
-		{
-			"name": "Fonts",
-			"tools": [
-				{
-					"name": "CDN Fonts",
-					"url": "https://www.cdnfonts.com/",
-					"description": "Free fonts hosted on fast CDN servers"
-				},
-				{
-					"name": "Google Fonts",
-					"url": "https://fonts.google.com/",
-					"description": "Making the web more beautiful, fast, and open through great typography"
-				},
-				{
-					"name": "MyFonts",
-					"url": "https://www.myfonts.com/pages/tags/free-fonts",
-					"description": "The world's largest collection of premium-quality fonts"
-				},
-				{
-					"name": "Free Design Resources",
-					"url": "https://freedesignresources.net/",
-					"description": "High quality design resources for free"
-				},
-				{
-					"name": "FontSpace",
-					"url": "https://www.fontspace.com/new/fonts",
-					"description": "Free downloads of legally licensed fonts"
-				},
-				{
-					"name": "Fontshare",
-					"url": "https://www.fontshare.com/",
-					"description": "Quality fonts. Free for personal and commercial use"
-				}
-			]
-		},
-		{
-			"name": "Designs",
-			"tools": [
-				{
-					"name": "Minimal Gallery",
-					"url": "https://www.minimal.gallery",
-					"description": "Curated gallery of minimal website designs"
-				},
-				{
-					"name": "Dark Mode Design",
-					"url": "https://www.darkmodedesign.com",
-					"description": "A showcase of beautiful dark mode designs"
-				},
-				{
-					"name": "Dark Design",
-					"url": "https://www.dark.design",
-					"description": "A curated collection of dark-themed websites"
-				},
-				{
-					"name": "Awwwards",
-					"url": "https://www.awwwards.com",
-					"description": "A website that recognizes and promotes the talent and effort of the best developers, designers and web agencies in the world"
-				},
-				{
-					"name": "Page Collective",
-					"url": "https://pagecollective.com",
-					"description": "Curated directory of the best digital design inspiration"
-				},
-				{
-					"name": "Refero Design",
-					"url": "https://refero.design",
-					"description": "A curated library of web design inspiration"
-				},
-				{
-					"name": "Stack Sorted",
-					"url": "https://stacksorted.com",
-					"description": "Discover and search through a vast library of hand-picked web design inspiration"
-				},
-				{
-					"name": "Dribbble",
-					"url": "https://dribbble.com/shots/popula",
-					"description": "Discover the world's top designers & creatives"
-				},
-				{
-					"name": "App Shots",
-					"url": "https://appshots.design",
-					"description": "A collection of beautiful app screenshots"
-				},
-				{
-					"name": "Landing Folio",
-					"url": "https://www.landingfolio.com",
-					"description": "The best landing page design inspiration, templates and resources"
-				},
-				{
-					"name": "Land-book",
-					"url": "https://land-book.com",
-					"description": "Design gallery with the best and most carefully collected websites"
-				},
-				{
-					"name": "Lapa Ninja",
-					"url": "https://www.lapa.ninja/",
-					"description": "The best landing page design inspiration from around the web"
-				}
-			]
-		},
-		{
-			"name": "Illustrations",
-			"tools": [
-				{
-					"name": "DrawKit",
-					"url": "https://www.drawkit.com",
-					"description": "Beautiful, free illustrations. Updated weekly"
-				},
-				{
-					"name": "Icons8 Illustrations",
-					"url": "https://icons8.com/illustration",
-					"description": "Free vector illustrations to class up your project"
-				},
-				{
-					"name": "Storyset",
-					"url": "https://storyset.com/",
-					"description": "Awesome free customizable illustrations for your next project"
-				},
-				{
-					"name": "Absurd Design",
-					"url": "https://absurd.design/",
-					"description": "Free surrealist illustrations for your next project"
-				},
-				{
-					"name": "unDraw",
-					"url": "https://undraw.co/illustrations",
-					"description": "Open-source illustrations for any idea you can imagine and create"
-				},
-				{
-					"name": "Humaaans",
-					"url": "https://blush.design/collections/humaaans/humaaans",
-					"description": "Mix-&-match illustrations of people with a design library"
-				},
-				{
-					"name": "DesignStripe",
-					"url": "https://designstripe.com/search/illustrations",
-					"description": "Create, customize and download illustrations to power up your projects"
-				},
-				{
-					"name": "Open Doodles",
-					"url": "https://www.opendoodles.com/",
-					"description": "A free set of open-source illustrations"
-				},
-				{
-					"name": "Zanzi Illustrations",
-					"url": "https://www.getillustrations.com/illustration-pack/zanzi-free-illustrations-for-websites",
-					"description": "Free illustrations for websites"
-				},
-				{
-					"name": "Storytale.io",
-					"url": "https://storytale.io/",
-					"description": "Unique illustrations for web and mobile projects"
+					"description": "Curated SVGs, Vector Icons, Illustrations, 3D graphics, and Lottie Animations",
+					"recommend": false,
+					"tag": "icon"
 				},
 				{
 					"name": "3D Icons",
 					"url": "https://3dicons.co/",
-					"description": "Beautifully crafted 3D icons"
+					"description": "Beautifully crafted 3D icons",
+					"recommend": false,
+					"tag": "icon"
 				}
 			]
 		},
-
 		{
-			"name": "Background Generators",
+			"category_name": "Fonts",
+			"tag": "font",
+			"tools": [
+				{
+					"name": "CDN Fonts",
+					"url": "https://www.cdnfonts.com/",
+					"description": "Free fonts hosted on fast CDN servers",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Google Fonts",
+					"url": "https://fonts.google.com/",
+					"description": "Making the web more beautiful, fast, and open through great typography",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "MyFonts",
+					"url": "https://www.myfonts.com/pages/tags/free-fonts",
+					"description": "The world's largest collection of premium-quality fonts",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Free Design Resources",
+					"url": "https://freedesignresources.net/",
+					"description": "High quality design resources for free",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "FontSpace",
+					"url": "https://www.fontspace.com/new/fonts",
+					"description": "Free downloads of legally licensed fonts",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Fontshare",
+					"url": "https://www.fontshare.com/",
+					"description": "Quality fonts. Free for personal and commercial use",
+					"recommend": false,
+					"tag": "font"
+				}
+			]
+		},
+		{
+			"category_name": "Designs",
+			"tag": "design",
+			"tools": [
+				{
+					"name": "Minimal Gallery",
+					"url": "https://www.minimal.gallery",
+					"description": "Curated gallery of minimal website designs",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Dark Mode Design",
+					"url": "https://www.darkmodedesign.com",
+					"description": "A showcase of beautiful dark mode designs",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Dark Design",
+					"url": "https://www.dark.design",
+					"description": "A curated collection of dark-themed websites",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Awwwards",
+					"url": "https://www.awwwards.com",
+					"description": "A website that recognizes and promotes the talent and effort of the best developers, designers and web agencies in the world",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Page Collective",
+					"url": "https://pagecollective.com",
+					"description": "Curated directory of the best digital design inspiration",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Refero Design",
+					"url": "https://refero.design",
+					"description": "A curated library of web design inspiration",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Stack Sorted",
+					"url": "https://stacksorted.com",
+					"description": "Discover and search through a vast library of hand-picked web design inspiration",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Dribbble",
+					"url": "https://dribbble.com/shots/popula",
+					"description": "Discover the world's top designers & creatives",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "App Shots",
+					"url": "https://appshots.design",
+					"description": "A collection of beautiful app screenshots",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Landing Folio",
+					"url": "https://www.landingfolio.com",
+					"description": "The best landing page design inspiration, templates and resources",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Land-book",
+					"url": "https://land-book.com",
+					"description": "Design gallery with the best and most carefully collected websites",
+					"recommend": false,
+					"tag": "design"
+				},
+				{
+					"name": "Lapa Ninja",
+					"url": "https://www.lapa.ninja/",
+					"description": "The best landing page design inspiration from around the web",
+					"recommend": false,
+					"tag": "design"
+				}
+			]
+		},
+		{
+			"category_name": "Illustrations",
+			"tag": "illustration",
+			"tools": [
+				{
+					"name": "DrawKit",
+					"url": "https://www.drawkit.com",
+					"description": "Beautiful, free illustrations. Updated weekly",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Icons8 Illustrations",
+					"url": "https://icons8.com/illustration",
+					"description": "Free vector illustrations to class up your project",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Storyset",
+					"url": "https://storyset.com/",
+					"description": "Awesome free customizable illustrations for your next project",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Absurd Design",
+					"url": "https://absurd.design/",
+					"description": "Free surrealist illustrations for your next project",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "unDraw",
+					"url": "https://undraw.co/illustrations",
+					"description": "Open-source illustrations for any idea you can imagine and create",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Humaaans",
+					"url": "https://blush.design/collections/humaaans/humaaans",
+					"description": "Mix-&-match illustrations of people with a design library",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "DesignStripe",
+					"url": "https://designstripe.com/search/illustrations",
+					"description": "Create, customize and download illustrations to power up your projects",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Open Doodles",
+					"url": "https://www.opendoodles.com/",
+					"description": "A free set of open-source illustrations",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Zanzi Illustrations",
+					"url": "https://www.getillustrations.com/illustration-pack/zanzi-free-illustrations-for-websites",
+					"description": "Free illustrations for websites",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Storytale.io",
+					"url": "https://storytale.io/",
+					"description": "Unique illustrations for web and mobile projects",
+					"recommend": false,
+					"tag": "illustration"
+				}
+			]
+		},
+		{
+			"category_name": "Background",
+			"tag": "background",
 			"tools": [
 				{
 					"name": "Mesh Gradient",
 					"url": "https://meshgradient.in/",
-					"description": "Create beautiful mesh gradients"
+					"description": "Create beautiful mesh gradients",
+					"recommend": false,
+					"tag": "background"
 				},
 				{
 					"name": "PhotoRoom Instant Backgrounds",
 					"url": "https://www.photoroom.com/tools/instant-backgrounds",
-					"description": "AI-powered background generator"
+					"description": "AI-powered background generator",
+					"recommend": false,
+					"tag": "background"
 				},
 				{
 					"name": "Cool Backgrounds",
 					"url": "https://coolbackgrounds.io/",
-					"description": "Create cool background images using gradients, patterns, and more"
+					"description": "Create cool background images using gradients, patterns, and more",
+					"recommend": false,
+					"tag": "background"
 				},
 				{
 					"name": "Haikei",
 					"url": "https://app.haikei.app/",
-					"description": "Generate unique SVG design assets"
+					"description": "Generate unique SVG design assets",
+					"recommend": false,
+					"tag": "background"
 				},
 				{
 					"name": "Super Designer",
 					"url": "https://superdesigner.co/tools/backgrounds?type=side-wave",
-					"description": "Create unique backgrounds, patterns, and shapes"
+					"description": "Create unique backgrounds, patterns, and shapes",
+					"recommend": false,
+					"tag": "background"
 				},
 				{
 					"name": "BGJar",
 					"url": "https://bgjar.com/",
-					"description": "Free svg background generator for your websites, blogs and app"
+					"description": "Free svg background generator for your websites, blogs and app",
+					"recommend": false,
+					"tag": "background"
 				}
 			]
 		},
 		{
-			"name": "VS Code Extensions",
+			"category_name": "VS Code Extensions",
+			"tag": "vscode-extension",
 			"tools": [
 				{
 					"name": "Live Server",
 					"url": "https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer",
-					"description": "Launch a development local Server with live reload feature for static & dynamic pages"
+					"description": "Launch a development local Server with live reload feature for static & dynamic pages",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "Auto Close Tag",
 					"url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag",
-					"description": "Automatically add HTML/XML close tag"
+					"description": "Automatically add HTML/XML close tag",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "Auto Rename Tag",
 					"url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag",
-					"description": "Auto rename paired HTML/XML tag"
+					"description": "Auto rename paired HTML/XML tag",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "Path Intellisense",
 					"url": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense",
-					"description": "Visual Studio Code plugin that autocompletes filenames"
+					"description": "Visual Studio Code plugin that autocompletes filenames",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "Prettier - Code formatter",
 					"url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
-					"description": "Code formatter using prettier"
+					"description": "Code formatter using prettier",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "indent-rainbow",
 					"url": "https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow",
-					"description": "Makes indentation easier to read"
+					"description": "Makes indentation easier to read",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "Random Everything",
 					"url": "https://marketplace.visualstudio.com/items?itemName=helixquar.randomeverything",
-					"description": "Generate random data directly in VS Code"
+					"description": "Generate random data directly in VS Code",
+					"recommend": false,
+					"tag": "vscode-extension"
 				},
 				{
 					"name": "Image preview",
 					"url": "https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview",
-					"description": "Shows image preview in the gutter and on hover"
+					"description": "Shows image preview in the gutter and on hover",
+					"recommend": false,
+					"tag": "vscode-extension"
 				}
 			]
 		}

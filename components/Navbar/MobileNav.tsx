@@ -37,6 +37,12 @@ const MobileNav = () => {
 				<div className="flex min-h-[85px] items-center gap-8 ">
 					{/* <Audio /> */}
 					<Theme />
+					<Link
+						className="paragraph-bold text-dark200_light800 cursor-pointer"
+						href="/myTools"
+					>
+						My Tools
+					</Link>
 				</div>
 				<div className="flex-column gap-4">
 					{navLinks.map((link) => (

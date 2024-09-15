@@ -3,7 +3,7 @@ import React from 'react';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className="flex-column bg-light800_dark200 transition-theme ">
+		<div className="flex-column bg-light800_dark200 transition-theme min-h-screen">
 			{children}
 			<Toaster />
 		</div>

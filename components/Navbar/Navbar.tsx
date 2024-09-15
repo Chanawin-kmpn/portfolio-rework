@@ -21,10 +21,10 @@ const Navbar = () => {
 					/>
 				</ScrollLink>
 				<Link
-					className="paragraph-bold text-dark200_light800 cursor-pointer"
+					className="paragraph-bold text-dark200_light800 cursor-pointer max-sm:hidden"
 					href="/myTools"
 				>
-					MyTools
+					My Tools
 				</Link>
 			</div>
 			<div className="flex">
