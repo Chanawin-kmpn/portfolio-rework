@@ -197,6 +197,13 @@
 					"description": "SVG generators for gradients, patterns, textures, shapes & backgrounds",
 					"recommend": true,
 					"tag": "icon"
+				},
+				{
+					"name": "SVGL",
+					"url": "https://svgl.app/",
+					"description": "A comprehensive library of SVG logos for various software, technologies, and brands",
+					"recommend": true,
+					"tag": "icon"
 				}
 			]
 		},
