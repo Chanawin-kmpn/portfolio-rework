@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import Theme from '@/components/Navbar/Theme';
 import ScrollToTopButton from '@/components/ScrollToTopButton';
 
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-import MyToolsContent from '@/components/MyToolsContent';
+const MyToolsContent = dynamic(() => import('@/components/MyToolsContent'), {
+	ssr: false,
+});
 
 const page = () => {
 	return (
@@ -16,7 +19,9 @@ const page = () => {
 				</Link>
 				<Theme />
 			</div>
-			<MyToolsContent />
+			<Suspense fallback={<div>Loading...</div>}>
+				<MyToolsContent />
+			</Suspense>
 		</div>
 	);
 };
