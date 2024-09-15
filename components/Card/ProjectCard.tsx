@@ -1,12 +1,12 @@
 import { techStackData } from '@/constants';
 import { useTheme } from '@/context/ThemeProvider';
-import { Project } from '@/data/projects';
+import { ProjectProp } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 interface Props {
-	project: Project;
+	project: ProjectProp;
 }
 
 const ProjectCard: React.FC<Props> = ({ project }) => {
