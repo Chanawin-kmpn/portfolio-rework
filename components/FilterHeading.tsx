@@ -1,8 +1,5 @@
+import { FilterHeadingProps } from '@/types/types';
 import React from 'react';
-
-interface FilterHeadingProps {
-	selectedCategories: string[];
-}
 
 const FilterHeading: React.FC<FilterHeadingProps> = ({
 	selectedCategories,

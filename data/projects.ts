@@ -1,21 +1,7 @@
 import { techStackData } from '@/constants';
+import { ProjectProp } from '@/types/types';
 
-export interface Project {
-	id: number;
-	name: string;
-	description: string;
-	createdAt: string;
-	stack: (keyof typeof techStackData)[];
-	liveDemo: string;
-	heroImage: string;
-	purpose: string;
-	webStackExplanation: string;
-	problems: string;
-	lessonsLearned: string;
-	screenshots: string[];
-}
-
-export const projects: Project[] = [
+export const projects: ProjectProp[] = [
 	{
 		id: 1,
 		name: 'Project 1',

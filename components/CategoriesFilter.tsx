@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { Category } from '@/app/(root)/myTools/page';
-
-interface CategoriesFilterProps {
-	categories: Category[];
-	onFilter: (selectedCategories: string[]) => void;
-	initialSelected: string[];
-}
+import { CategoriesFilterProps } from '@/types/types';
 
 const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
 	categories,
@@ -22,7 +16,7 @@ const CategoriesFilter: React.FC<CategoriesFilterProps> = ({
 
 	const handleCategoryChange = (categoryName: string) => {
 		const updatedCategories = selectedCategories.includes(categoryName)
-			? selectedCategories.filter((c) => c !== categoryName)
+			? selectedCategories.filter((category) => category !== categoryName)
 			: [...selectedCategories, categoryName];
 
 		setSelectedCategories(updatedCategories);

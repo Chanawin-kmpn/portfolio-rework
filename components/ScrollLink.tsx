@@ -1,13 +1,6 @@
 'use client';
 
-import { ReactNode } from 'react';
-
-interface ScrollLinkProps {
-	href: string;
-	isMobile?: boolean;
-	isGradient?: boolean;
-	children: ReactNode;
-}
+import { ScrollLinkProps } from '@/types/types';
 
 const ScrollLink = ({
 	href,

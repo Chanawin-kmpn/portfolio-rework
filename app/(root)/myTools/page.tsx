@@ -8,25 +8,7 @@ import Link from 'next/link';
 import myToolsData from '@/data/myTools.json';
 import FilterHeading from '@/components/FilterHeading';
 import { useRouter, useSearchParams } from 'next/navigation';
-
-export interface Category {
-	category_name: string;
-	tag: string;
-	tools: Tool[];
-}
-
-interface Tool {
-	name: string;
-	url: string;
-	description: string;
-	recommend: boolean;
-	tag: string;
-	category: string;
-}
-
-interface MyToolsData {
-	categories: Category[];
-}
+import { Category, MyToolsData, Tool } from '@/types/types';
 
 const Page: React.FC = () => {
 	const router = useRouter();

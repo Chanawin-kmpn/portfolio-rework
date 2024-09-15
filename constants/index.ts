@@ -1,3 +1,5 @@
+import { SkillProps } from '@/types/types';
+
 export const themes = [
 	{ value: 'light', icon: '/assets/icons/sun.svg' },
 	{ value: 'dark', icon: '/assets/icons/moon.svg' },
@@ -22,13 +24,7 @@ export const navLinks = [
 	},
 ];
 
-interface Skill {
-	skill: string;
-	imgSkill: string;
-	theme?: boolean;
-}
-
-export const techStackData: { [key: string]: Omit<Skill, 'skill'> } = {
+export const techStackData: { [key: string]: Omit<SkillProps, 'skill'> } = {
 	html: { imgSkill: 'html.svg' },
 	css: { imgSkill: 'css.svg' },
 	javascript: { imgSkill: 'javascript.svg' },
@@ -45,7 +41,7 @@ export const techStackData: { [key: string]: Omit<Skill, 'skill'> } = {
 	vscode: { imgSkill: 'vscode.svg' },
 };
 
-export const mySkills: Skill[] = [
+export const mySkills: SkillProps[] = [
 	{ skill: 'HTML', ...techStackData.html },
 	{ skill: 'CSS', ...techStackData.css },
 	{ skill: 'JavaScript', ...techStackData.javascript },

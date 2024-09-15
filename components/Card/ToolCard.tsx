@@ -1,19 +1,7 @@
+import { ToolsDisplayProps } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-
-interface Tool {
-	name: string;
-	url: string;
-	description: string;
-	recommend: boolean;
-	tag: string;
-	category: string;
-}
-
-interface ToolsDisplayProps {
-	tools: Tool[];
-}
 
 const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 	return (

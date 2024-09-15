@@ -1,15 +1,12 @@
 import { socialLink } from '@/constants';
 import { useTheme } from '@/context/ThemeProvider';
+import { DirectionProps } from '@/types/types';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-interface Props {
-	direction: string;
-}
-
-const SocialLink = ({ direction }: Props) => {
+const SocialLink = ({ direction }: DirectionProps) => {
 	const { mode } = useTheme();
 
 	return (
