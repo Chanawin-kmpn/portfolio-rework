@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import RecommandTag from '../RecommandTag';
+import { link } from 'fs';
 
 const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 	return (
@@ -20,7 +21,12 @@ const ToolCard: React.FC<ToolsDisplayProps> = ({ tools }) => {
 							height={40}
 							alt={`${tool.tag}-icons`}
 						/>
-						<Link href={tool.url} target="_blank" className="z-20">
+						<Link
+							href={tool.url}
+							target="_blank"
+							className="z-20"
+							aria-label={`Access to ${tool.name} website`}
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"

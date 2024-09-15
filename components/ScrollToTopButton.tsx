@@ -35,6 +35,7 @@ function ScrollToTopButton() {
 			<button
 				onClick={scrollToTop}
 				className="invert-bg rounded-full p-6 transition-transform duration-300 hover:scale-110"
+				aria-label="Button to top"
 			>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"

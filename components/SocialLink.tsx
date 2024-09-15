@@ -19,7 +19,12 @@ const SocialLink = ({ direction }: DirectionProps) => {
 			)}
 		>
 			{socialLink.map((link) => (
-				<Link key={link.label} href={link.href} target="_blank">
+				<Link
+					key={link.label}
+					href={link.href}
+					target="_blank"
+					aria-label={`Access to ${link.label}`}
+				>
 					<Image
 						src={`/assets/icons/${mode}-${link.socialImg}`}
 						width={24}
