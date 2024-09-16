@@ -310,7 +310,7 @@
 				},
 				{
 					"name": "Dribbble",
-					"url": "https://dribbble.com/shots/popula",
+					"url": "https://dribbble.com",
 					"description": "Discover the world's top designers & creatives",
 					"recommend": true,
 					"tag": "design"
@@ -484,14 +484,14 @@
 					"name": "Auto Close Tag",
 					"url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-close-tag",
 					"description": "Automatically add HTML/XML close tag",
-					"recommend": true,
+					"recommend": false,
 					"tag": "vscode-extension"
 				},
 				{
 					"name": "Auto Rename Tag",
 					"url": "https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag",
 					"description": "Auto rename paired HTML/XML tag",
-					"recommend": true,
+					"recommend": false,
 					"tag": "vscode-extension"
 				},
 				{
@@ -519,7 +519,7 @@
 					"name": "Random Everything",
 					"url": "https://marketplace.visualstudio.com/items?itemName=helixquar.randomeverything",
 					"description": "Generate random data directly in VS Code",
-					"recommend": true,
+					"recommend": false,
 					"tag": "vscode-extension"
 				},
 				{
@@ -527,6 +527,83 @@
 					"url": "https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview",
 					"description": "Shows image preview in the gutter and on hover",
 					"recommend": false,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "Material Icon Theme",
+					"url": "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme",
+					"description": "Enhance VS Code with distinctive Material Design icons for improved file and folder visualization.",
+					"recommend": true,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "One Dark Pro",
+					"url": "https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme",
+					"description": "Atom's iconic One Dark theme for VS Code, offering optimal contrast and readability.",
+					"recommend": true,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "Better Comments",
+					"url": "https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments",
+					"description": "Create more human-friendly, color-coded comments to improve code documentation.",
+					"recommend": false,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "CodeSnap",
+					"url": "https://marketplace.visualstudio.com/items?itemName=adpyke.codesnap",
+					"description": "Capture beautiful, customizable screenshots of your code directly within VS Code.",
+					"recommend": false,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "Color Highlight",
+					"url": "https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight",
+					"description": "Highlight color codes in your files for improved color selection and consistency.",
+					"recommend": false,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "colorize",
+					"url": "https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize",
+					"description": "Visualize CSS/SASS/LESS colors directly in your code for faster development.",
+					"recommend": false,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "Discord Presence",
+					"url": "https://marketplace.visualstudio.com/items?itemName=icrawl.discord-vscode",
+					"description": "Display your coding activity on Discord with a rich presence status.",
+					"recommend": false,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "ESLint",
+					"url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint",
+					"description": "Integrate ESLint into VS Code for real-time JavaScript code quality checks.",
+					"recommend": true,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "Git Graph",
+					"url": "https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph",
+					"description": "Visualize Git history and perform operations with an interactive graph in VS Code.",
+					"recommend": true,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "Tailwind CSS IntelliSense",
+					"url": "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss",
+					"description": "Intelligent Tailwind CSS tooling with auto-completion, syntax highlighting, and linting.",
+					"recommend": true,
+					"tag": "vscode-extension"
+				},
+				{
+					"name": "TypoSmooth",
+					"url": "https://marketplace.visualstudio.com/items?itemName=prasadbobby.vscode-typosmooth",
+					"description": "Add smooth cursor animations to enhance your VS Code typing experience.",
+					"recommend": true,
 					"tag": "vscode-extension"
 				}
 			]
