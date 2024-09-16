@@ -502,14 +502,14 @@
 					"tag": "vscode-extension"
 				},
 				{
-					"name": "Prettier - Code formatter",
+					"name": "Prettier",
 					"url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode",
 					"description": "Code formatter using prettier",
 					"recommend": true,
 					"tag": "vscode-extension"
 				},
 				{
-					"name": "indent-rainbow",
+					"name": "Indent Rainbow",
 					"url": "https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow",
 					"description": "Makes indentation easier to read",
 					"recommend": false,
@@ -523,7 +523,7 @@
 					"tag": "vscode-extension"
 				},
 				{
-					"name": "Image preview",
+					"name": "Image Preview",
 					"url": "https://marketplace.visualstudio.com/items?itemName=kisstkondoros.vscode-gutter-preview",
 					"description": "Shows image preview in the gutter and on hover",
 					"recommend": false,
@@ -565,7 +565,7 @@
 					"tag": "vscode-extension"
 				},
 				{
-					"name": "colorize",
+					"name": "Colorize",
 					"url": "https://marketplace.visualstudio.com/items?itemName=kamikillerto.vscode-colorize",
 					"description": "Visualize CSS/SASS/LESS colors directly in your code for faster development.",
 					"recommend": false,
@@ -603,7 +603,7 @@
 					"name": "TypoSmooth",
 					"url": "https://marketplace.visualstudio.com/items?itemName=prasadbobby.vscode-typosmooth",
 					"description": "Add smooth cursor animations to enhance your VS Code typing experience.",
-					"recommend": true,
+					"recommend": false,
 					"tag": "vscode-extension"
 				}
 			]
