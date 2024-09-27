@@ -45,6 +45,27 @@
 					"description": "Curated color palettes for beautiful website designs",
 					"recommend": false,
 					"tag": "color"
+				},
+				{
+					"name": "Chroma",
+					"url": "https://chroma.dev/",
+					"description": "Powerful color tools including an eyedropper, color picker, and palette generator.",
+					"recommend": false,
+					"tag": "color"
+				},
+				{
+					"name": "ColorMind",
+					"url": "http://colormind.io/",
+					"description": "Colormind is a color scheme generator that uses deep learning. It can learn color styles from photographs, movies, and popular art.",
+					"recommend": false,
+					"tag": "color"
+				},
+				{
+					"name": "Paletton",
+					"url": "https://paletton.com/",
+					"description": "Paletton is a color scheme designer tool that helps users create harmonious color combinations for various design projects",
+					"recommend": false,
+					"tag": "color"
 				}
 			]
 		},
@@ -122,13 +143,6 @@
 					"tag": "icon"
 				},
 				{
-					"name": "Lordicon",
-					"url": "https://lordicon.com/",
-					"description": "Animated icon library",
-					"recommend": false,
-					"tag": "icon"
-				},
-				{
 					"name": "UI Martin Icons",
 					"url": "https://uimartin.gumroad.com/l/demoiconei",
 					"description": "Handcrafted icon set for designers and developers",
@@ -146,7 +160,7 @@
 					"name": "Feather Icons",
 					"url": "https://feathericons.com/",
 					"description": "Simply beautiful open source icons",
-					"recommend": false,
+					"recommend": true,
 					"tag": "icon"
 				},
 				{
@@ -202,6 +216,34 @@
 					"name": "SVGL",
 					"url": "https://svgl.app/",
 					"description": "A comprehensive library of SVG logos for various software, technologies, and brands",
+					"recommend": true,
+					"tag": "icon"
+				},
+				{
+					"name": "Lordicon",
+					"url": "https://lordicon.com/",
+					"description": "Lordicon offers customizable animated icons for dynamic visuals in websites and apps.",
+					"recommend": false,
+					"tag": "icon"
+				},
+				{
+					"name": "Noun Project",
+					"url": "https://thenounproject.com/icons/",
+					"description": "A vast collection of icons, perfet for enhancing your projects with clear, creative visuals.",
+					"recommend": false,
+					"tag": "icon"
+				},
+				{
+					"name": "Atlas icons",
+					"url": "https://atlasicons.vectopus.com/",
+					"description": "Atlas Icons offers a unique collection of customizable, high-quality 3D icons to make your projects stand out.",
+					"recommend": true,
+					"tag": "icon"
+				},
+				{
+					"name": "Iconsax",
+					"url": "https://iconsax.io/",
+					"description": "A large collection of modern, customizable icons, perfect for any design project.",
 					"recommend": true,
 					"tag": "icon"
 				}
@@ -422,8 +464,8 @@
 			]
 		},
 		{
-			"category_name": "Background",
-			"tag": "background",
+			"category_name": "Backgrounds",
+			"tag": "backgrounds",
 			"tools": [
 				{
 					"name": "Mesh Gradient",
