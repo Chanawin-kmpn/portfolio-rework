@@ -465,7 +465,7 @@
 		},
 		{
 			"category_name": "Backgrounds",
-			"tag": "backgrounds",
+			"tag": "background",
 			"tools": [
 				{
 					"name": "Mesh Gradient",
