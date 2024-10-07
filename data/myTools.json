@@ -294,6 +294,34 @@
 					"description": "Quality fonts. Free for personal and commercial use",
 					"recommend": false,
 					"tag": "font"
+				},
+				{
+					"name": "Freefont",
+					"url": "https://www.freefaces.gallery/",
+					"description": "Curated gallery of diverse, high-quality typefaces for all uses.",
+					"recommend": true,
+					"tag": "font"
+				},
+				{
+					"name": "DirtylineStudio",
+					"url": "https://dirtylinestudio.com/",
+					"description": "Boutique foundry offering distinctive, free handcrafted fonts.",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Velvetyne",
+					"url": "https://velvetyne.fr/",
+					"description": "Collective showcasing experimental, avant-garde free typefaces.",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Dafont",
+					"url": "https://www.dafont.com/",
+					"description": "Vast library of downloadable fonts with easy categorization.",
+					"recommend": true,
+					"tag": "font"
 				}
 			]
 		},
