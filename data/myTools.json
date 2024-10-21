@@ -246,6 +246,20 @@
 					"description": "A large collection of modern, customizable icons, perfect for any design project.",
 					"recommend": true,
 					"tag": "icon"
+				},
+				{
+					"name": "ionicons",
+					"url": "https://ionic.io/ionicons",
+					"description": "Premium designed icons for use in web, iOS, Android, and desktop apps.",
+					"recommend": true,
+					"tag": "icon"
+				},
+				{
+					"name": "Forge Icons",
+					"url": "https://icons.theforgesmith.com/",
+					"description": "Icon for E-Commerce, Travel, Social Media, App Design  and much more..",
+					"recommend": true,
+					"tag": "icon"
 				}
 			]
 		},
