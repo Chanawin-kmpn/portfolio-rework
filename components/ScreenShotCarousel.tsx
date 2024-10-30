@@ -16,7 +16,6 @@ const ScreenShotCarousel = ({
 	projectScreenshot: string[];
 }) => {
 	const [open, setOpen] = useState(false);
-
 	const handleZoom = () => {
 		setOpen((prev) => !prev);
 	};
@@ -52,7 +51,7 @@ const ScreenShotCarousel = ({
 							onClick={handleZoom}
 						>
 							<Image
-								src={img}
+								src={`/assets/images/project-screenshots/ppfreshpork/${img}.webp`}
 								fill
 								sizes="100%"
 								alt="Project screenshot"
@@ -67,7 +66,7 @@ const ScreenShotCarousel = ({
 							onClick={handleZoom}
 						>
 							<Image
-								src={img}
+								src={`/assets/images/project-screenshots/ppfreshpork/${img}.webp`}
 								fill
 								sizes="100%"
 								alt="Project screenshot"
@@ -85,23 +84,24 @@ const ScreenShotCarousel = ({
 				>
 					<div
 						onClick={(e) => e.stopPropagation()}
-						className="z-50 flex  items-center px-4 xl:size-1/2"
+						className="z-50 flex flex-1 items-center justify-center px-4"
 					>
 						<Carousel
-							className=""
+							className="w-full max-w-7xl" // ปรับความกว้างสูงสุด
 							opts={{
 								align: 'center',
 							}}
 						>
-							<CarouselContent className="">
+							<CarouselContent>
 								{projectScreenshot.map((img, index) => (
-									<CarouselItem key={index} className="max-w-fit">
+									<CarouselItem key={index} className="flex justify-center">
 										<Image
-											src={img}
-											width={650}
-											height={650}
+											src={`/assets/images/project-screenshots/ppfreshpork/${img}.webp`}
+											width={1200} // เพิ่มขนาดรูป
+											height={800} // เพิ่มขนาดรูป
 											alt="Project screenshot"
-											className="object-cover"
+											className="size-auto max-h-[90vh]" // ปรับให้รูปขยายเต็มหน้าจอแต่ไม่เกินความสูงของ viewport
+											quality={100}
 										/>
 									</CarouselItem>
 								))}

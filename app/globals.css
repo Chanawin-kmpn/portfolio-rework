@@ -39,7 +39,7 @@ body {
 
 @layer components {
 	.bg-project-detail {
-		@apply bg-light-800/70 dark:bg-dark-200/70;
+		@apply bg-light-800/80 dark:bg-dark-200/80 backdrop-blur-sm;
 	}
 	.rotate-45 {
 		transform: rotate(45deg);

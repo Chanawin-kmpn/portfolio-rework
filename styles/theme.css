@@ -96,7 +96,11 @@
 	}
 
 	.h3-bold {
-		@apply text-[2rem] xl:text-4xl font-bold leading-[35.2px];
+		@apply text-[2rem] xl:text-4xl font-bold leading-[35.2px] text-dark200_light800 text-dark200_light800;
+	}
+
+	.h4-bold {
+		@apply text-2xl xl:text-3xl font-bold;
 	}
 
 	.project-name {
@@ -124,7 +128,7 @@
 	}
 
 	.small-regular {
-		@apply text-xs xl:text-sm font-normal;
+		@apply text-xs xl:text-sm font-normal text-dark200_light800 text-dark200_light800;
 	}
 
 	.input {

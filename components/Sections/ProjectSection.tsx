@@ -16,7 +16,7 @@ const ProjectSection = () => {
 				</div>
 				<div className="xl:flex-column top-[193px] flex-1 self-start overflow-hidden xl:sticky xl:gap-16 ">
 					<div className="flex-column xl:invert-bg xl: gap-4 rounded-[10px] xl:w-[580px] xl:gap-8 xl:p-8">
-						<h3 className="h3-bold">In every my project.</h3>
+						<h4 className="h4-bold">In every my project.</h4>
 						<p className="paragraph-regular xl:invert-text">
 							I enjoy developing my skills through online challenges,
 							collaborating with teammates in bootcamps, and pursuing personal

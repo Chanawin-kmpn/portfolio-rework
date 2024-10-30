@@ -1,6 +1,21 @@
 import { techStackData } from '@/constants';
 import { ReactNode } from 'react';
 
+interface ProblemDetail {
+	title: string;
+	descriptions: string[];
+}
+
+interface ThoughtProcessDetail {
+	title: string;
+	descriptions: string[];
+}
+
+interface LessonDetail {
+	title: string;
+	points: string[];
+}
+
 export interface ProjectProp {
 	id: number;
 	name: string;
@@ -10,9 +25,25 @@ export interface ProjectProp {
 	liveDemo: string;
 	heroImage: string;
 	purpose: string;
-	webStackExplanation: string;
-	problems: string;
-	lessonsLearned: string;
+	objectives: string[];
+	keyFeatures: string[];
+	expectedBenefits: string[];
+	webStackExplanation: string[];
+	problemsAndThought: {
+		problems: {
+			title: string;
+			list: ProblemDetail[];
+		};
+		thoughtProcess: {
+			title: string;
+			list: ThoughtProcessDetail[];
+		};
+	};
+	lessonsLearned: {
+		introduction: string;
+		lessons: LessonDetail[];
+		conclusion: string;
+	};
 	screenshots: string[];
 }
 
