@@ -8,6 +8,7 @@ export const projects: ProjectProp[] = [
 		description:
 			'P.P Freshpork is a family business website development project aimed at enhancing product accessibility and building trust between customers and the company',
 		createdAt: 'October 7, 2024',
+		status: 'complete',
 		stack: [
 			'typescript',
 			'nextjs',
@@ -179,17 +180,19 @@ export const projects: ProjectProp[] = [
 	},
 	{
 		id: 2,
-		name: 'Project 2',
-		description: 'Description of Project 2',
+		name: 'DevFlow',
+		description:
+			'Devflow is a comprehensive Q&A platform inspired by StackOverflow, designed for developers to ask questions, share knowledge, and solve coding challenges. The platform features a robust voting system, view tracking, user reputation, and content filtering capabilities to ensure high-quality technical discussions and community engagement.',
 		createdAt: '2023-05-01',
-		stack: ['react', 'nextjs', 'tailwindcss'],
+		status: 'incomplete',
+		stack: ['nextjs', 'typescript', 'tailwindcss', 'mongodb', 'shadcn'],
 		liveDemo: 'https://project2-demo.com',
-		heroImage: 'https://fakeimg.pl/1312x736/',
-		purpose: 'Purpose and goal of Project 2',
+		heroImage: '/assets/images/project-screenshots/devflow/heroImage.png',
+		purpose: 'Purpose and goal of DevFlow',
 		objectives: ['Objectives'],
 		keyFeatures: ['Key Features'],
 		expectedBenefits: ['Expected Benefites'],
-		webStackExplanation: ['Detailed explanation of web stack for Project 2'],
+		webStackExplanation: ['Detailed explanation of web stack for DevFlow'],
 		problemsAndThought: {
 			problems: {
 				title: 'Problems title',
@@ -233,6 +236,7 @@ export const projects: ProjectProp[] = [
 		name: 'Project 3',
 		description: 'Description of Project 3',
 		createdAt: '2023-05-01',
+		status: 'incomplete',
 		stack: ['react', 'nextjs', 'tailwindcss'],
 		liveDemo: 'https://project3-demo.com',
 		heroImage: 'https://fakeimg.pl/1312x736/',

@@ -4,6 +4,7 @@ import { ProjectProp } from '@/types/types';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { Button } from '../ui/button';
 
 interface Props {
 	project: ProjectProp;
@@ -19,7 +20,7 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
 					width={668}
 					height={668}
 					alt="Project image"
-					className="h-[200px] w-[250px] object-cover transition-transform duration-300 hover:scale-105 xl:size-full xl:object-contain"
+					className="h-[200px] w-[250px] object-cover transition-transform duration-300 hover:scale-105 xl:size-full xl:object-cover"
 				/>
 			</div>
 			<div className="bg-project-detail flex-column flex-1 gap-4 p-4 max-xl:rounded-b-[10px] xl:absolute xl:right-0 xl:h-full xl:w-[267px]">
@@ -40,19 +41,41 @@ const ProjectCard: React.FC<Props> = ({ project }) => {
 							/>
 						))}
 					</div>
-					<Link
-						href={`/projects/${project.id}`}
-						className="body-medium group flex items-center gap-2 xl:mt-auto"
+					<Button
+						disabled={project.status === 'incomplete'}
+						variant="ghost"
+						className={`${
+							project.status === 'incomplete' && 'cursor-not-allowed'
+						} bg-none xl:mt-auto`}
+						asChild
 					>
-						More Detail
-						<Image
-							src={`/assets/icons/${mode}-arrow.svg`}
-							width={24}
-							height={24}
-							alt="Arrow"
-							className="transition-transform duration-300 group-hover:translate-x-2"
-						/>
-					</Link>
+						{project.status === 'incomplete' ? (
+							<span className="group flex items-center gap-2 text-xl">
+								More Detail
+								<Image
+									src={`/assets/icons/${mode}-arrow.svg`}
+									width={24}
+									height={24}
+									alt="Arrow"
+									className="text-dark-200 transition-transform duration-300"
+								/>
+							</span>
+						) : (
+							<Link
+								href={`/projects/${project.id}`}
+								className="group flex items-center gap-2 text-xl"
+							>
+								More Detail
+								<Image
+									src={`/assets/icons/${mode}-arrow.svg`}
+									width={24}
+									height={24}
+									alt="Arrow"
+									className="text-dark-200 transition-transform duration-300 group-hover:translate-x-2"
+								/>
+							</Link>
+						)}
+					</Button>
 				</div>
 			</div>
 		</div>
