@@ -260,6 +260,13 @@
 					"description": "Icon for E-Commerce, Travel, Social Media, App Design  and much more..",
 					"recommend": true,
 					"tag": "icon"
+				},
+				{
+					"name": "Devicon",
+					"url": "https://devicon.dev/",
+					"description": "Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.",
+					"recommend": true,
+					"tag": "icon"
 				}
 			]
 		},
