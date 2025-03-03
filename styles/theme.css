@@ -64,7 +64,7 @@
 	}
 
 	.card-shadow {
-		@apply shadow-[3px_3px_0_4px_rgb(18,18,18)] dark:shadow-[3px_3px_0_4px_rgba(224,224,226)];
+		@apply shadow-[2px_2px_0_4px_rgb(18,18,18)] dark:shadow-[2px_2px_0_4px_rgba(224,224,226)];
 	}
 
 	.horizon-line {

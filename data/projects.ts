@@ -4,6 +4,7 @@ import { ProjectProp } from '@/types/types';
 export const projects: ProjectProp[] = [
 	{
 		id: 1,
+		slug: 'pp-freshpork',
 		name: 'P.P Freshpork',
 		description:
 			'P.P Freshpork is a family business website development project aimed at enhancing product accessibility and building trust between customers and the company',
@@ -180,6 +181,7 @@ export const projects: ProjectProp[] = [
 	},
 	{
 		id: 2,
+		slug: 'devflow',
 		name: 'DevFlow',
 		description:
 			'Devflow is a comprehensive Q&A platform inspired by StackOverflow, designed for developers to ask questions, share knowledge, and solve coding challenges. The platform features a robust voting system, view tracking, user reputation, and content filtering capabilities to ensure high-quality technical discussions and community engagement.',
@@ -233,6 +235,7 @@ export const projects: ProjectProp[] = [
 	},
 	{
 		id: 3,
+		slug: 'learn-css-thai',
 		name: 'Project 3',
 		description: 'Description of Project 3',
 		createdAt: '2023-05-01',

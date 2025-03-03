@@ -7,10 +7,10 @@ const SkillSection = () => {
 	const { mode } = useTheme();
 
 	return (
-		<div className="flex-column items-center gap-16 xl:flex-row ">
+		<>
 			<div
 				className="relative max-xl:hidden"
-				style={{ width: '423px', height: '1024px' }}
+				style={{ width: '423px', height: '1024px', gridColumn: '1/4' }}
 			>
 				<Image
 					src={`/assets/images/backgrounds/${mode}-skill-bg.webp`}
@@ -20,7 +20,10 @@ const SkillSection = () => {
 					style={{ objectFit: 'contain' }}
 				/>
 			</div>
-			<div className="flex-column max-w-[953px] items-center gap-8 xl:gap-16 xl:py-16 xl:pr-16">
+			<div
+				className="flex-column max-w-[953px] items-center gap-8 xl:gap-16 xl:py-16 xl:pr-16"
+				style={{ gridColumn: '4/-1' }}
+			>
 				<h2 className="h2-bold xl:self-end">My SKills</h2>
 				<div className="flex-column gap-8 xl:gap-16 ">
 					<p className="paragraph-medium text-dark200_light800">
@@ -39,7 +42,7 @@ const SkillSection = () => {
 							</li>
 						))}
 					</ul>
-					<ul className="flex flex-wrap gap-4 xl:gap-12">
+					<ul className="skill-tech-stack">
 						{mySkills.map((skill) => (
 							<li
 								key={skill.skill}
@@ -56,7 +59,7 @@ const SkillSection = () => {
 					</ul>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 

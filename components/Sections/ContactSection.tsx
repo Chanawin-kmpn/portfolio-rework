@@ -29,7 +29,7 @@ const ContactSection = () => {
 								</p>
 								<span className="invert-bg inline-block h-[2px] w-full max-w-[176px] max-xl:hidden  max-xl:flex-1"></span>
 							</div>
-							<h4 className="project-name">chanawin.k@gmail.com</h4>
+							<p className="text-2xl font-bold">chanawin.k@gmail.com</p>
 						</div>
 					</div>
 					<div className="flex-column gap-16">

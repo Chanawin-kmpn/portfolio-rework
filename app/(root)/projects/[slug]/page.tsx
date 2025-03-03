@@ -14,17 +14,17 @@ export async function generateStaticParams() {
 	const projects = await getProjects();
 
 	return projects.map((project) => ({
-		id: project.id.toString(),
+		slug: project.slug,
 	}));
 }
 
-async function getProject(id: string): Promise<ProjectProp> {
+async function getProject(slug: string): Promise<ProjectProp> {
 	const projects = await getProjects();
-	return projects.find((p) => p.id.toString() === id) || ({} as ProjectProp);
+	return projects.find((p) => p.slug === slug) || ({} as ProjectProp);
 }
 
-const ProjectDetail = async ({ params }: { params: { id: string } }) => {
-	const project = await getProject(params.id);
+const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
+	const project = await getProject(params.slug);
 	if (!project) return <div>Project not found</div>;
 
 	return (

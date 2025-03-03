@@ -18,6 +18,7 @@ interface LessonDetail {
 
 export interface ProjectProp {
 	id: number;
+	slug: string;
 	name: string;
 	description: string;
 	createdAt: string;

@@ -9,7 +9,7 @@ const ProjectSection = () => {
 		<div className="flex-column text-dark200_light800 xl:invert-text gap-8 xl:p-16">
 			<h2 className="h2-bold max-xl:self-center">My Projects</h2>
 			<div className="flex flex-col-reverse gap-8 xl:flex-row xl:gap-16">
-				<div className="xl:flex-column flex h-fit snap-x snap-mandatory gap-8 overflow-auto p-4 xl:p-0">
+				<div className="flex-column flex h-fit gap-8 overflow-auto p-4 md:flex-row xl:flex-col xl:p-0">
 					{projects.map((project: ProjectProp) => (
 						<ProjectCard key={project.id} project={project} />
 					))}

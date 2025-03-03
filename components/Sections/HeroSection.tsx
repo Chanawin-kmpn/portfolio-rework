@@ -7,17 +7,20 @@ import SocialLink from '../SocialLink';
 const HeroSection = () => {
 	const { mode } = useTheme();
 	return (
-		<div className="flex-column items-start justify-start gap-16 xl:mt-2 xl:flex xl:size-full xl:flex-row 2xl:mt-16 ">
+		<>
 			<Image
 				src={`/assets/images/backgrounds/${mode || 'light'}-hero-bg.webp`}
 				width={532}
 				height={887}
 				alt="Hero background"
 				unoptimized={true}
-				className="max-xl:hidden"
+				className="max-xl:hidden xl:col-start-1 xl:col-end-4"
 				priority={true}
 			/>
-			<div className="flex-column w-full gap-12 py-1 xl:gap-44 xl:py-16">
+			<div
+				className="flex-column col-span-full w-full gap-12 py-1 xl:gap-44 xl:py-16 "
+				style={{ gridColumn: '4/-1' }}
+			>
 				<div className="flex-column gap-44 xl:gap-8">
 					<div className="flex-column gap-8">
 						<h1 className="h1-bold xl:h1-bold text-dark200_light800">
@@ -48,7 +51,7 @@ const HeroSection = () => {
 				</div>
 				<SocialLink direction="row" />
 			</div>
-		</div>
+		</>
 	);
 };
 
