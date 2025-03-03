@@ -15,6 +15,9 @@ body {
 @layer utilities {
 	.section {
 		@apply h-fit 2xl:min-h-screen;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+		gap: 4rem;
 	}
 	.flex-center {
 		@apply flex justify-center items-center;
@@ -71,5 +74,26 @@ body {
 	.gradient-btn::after {
 		@apply content-[''] absolute z-10 bottom-0 left-0 right-0 h-[30%]
 			   bg-gradient-to-b from-transparent to-black/20 rounded-b !important;
+	}
+
+	.project-tech-stack {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(2.5rem, 1fr));
+		gap: 1rem;
+	}
+
+	.skill-tech-stack {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+		gap: 1rem;
+	}
+
+	@media (max-width: 768px) {
+		.project-tech-stack {
+			grid-template-columns: repeat(auto-fill, minmax(1.5rem, 1fr));
+		}
+		.skill-tech-stack {
+			grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
+		}
 	}
 }
