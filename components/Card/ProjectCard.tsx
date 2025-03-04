@@ -14,22 +14,22 @@ interface Props {
 const ProjectCard: React.FC<Props> = ({ project }) => {
 	const { mode } = useTheme();
 	return (
-		<div className="flex-column max-xl:card-shadow text-dark200_light800 relative  min-h-[448px] min-w-[300px]  rounded-[10px] xl:aspect-square xl:max-w-[668px]">
-			<div className="w-full overflow-hidden rounded-t-[11px] max-xl:max-h-[200px] xl:size-full xl:rounded-b-[10px]">
+		<div className="flex-column max-xl:card-shadow text-dark200_light800 relative  min-h-[448px] min-w-[300px]  rounded-[10px] border border-dark-200 xl:aspect-square xl:max-w-[668px]">
+			<div className="w-full overflow-hidden rounded-t-[10px] max-xl:max-h-[200px] xl:size-full xl:rounded-b-[10px]">
 				<Image
 					src={project.heroImage}
 					width={668}
 					height={668}
 					alt="Project image"
-					className="object-cover transition-transform duration-300 hover:scale-105 xl:size-full xl:object-cover"
+					className="object-cover object-top transition-transform duration-300 hover:scale-105 xl:size-full "
 				/>
 			</div>
-			<div className="bg-project-detail flex-column flex-1 gap-4 p-4 max-xl:rounded-b-[10px] xl:absolute xl:right-0 xl:h-full xl:w-[267px]">
+			<div className="bg-project-detail flex-column flex-1 gap-4 overflow-hidden p-4 max-xl:rounded-b-[10px] xl:absolute xl:right-0 xl:h-full xl:w-[267px] xl:rounded-r-[10px]">
 				<div className="flex-column gap-2">
 					<p className="project-name">{project.name}</p>
 					<p className="small-regular">{project.description}</p>
 				</div>
-				<div className="flex-column mt-auto gap-2 xl:flex-1">
+				<div className="flex-column mt-auto gap-2  xl:flex-1">
 					<div className="project-tech-stack">
 						{project.stack.map((tech, index) => (
 							<Image

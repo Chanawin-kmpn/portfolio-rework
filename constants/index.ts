@@ -36,6 +36,7 @@ export const techStackData: { [key: string]: Omit<SkillProps, 'skill'> } = {
 	express: { imgSkill: 'express.svg', theme: true },
 	react: { imgSkill: 'react.svg' },
 	nextjs: { imgSkill: 'nextjs.svg', theme: true },
+	mdxjs: { imgSkill: 'mdxjs.svg' },
 	mongodb: { imgSkill: 'mongodb.svg' },
 	figma: { imgSkill: 'figma.svg' },
 	git: { imgSkill: 'git.svg', theme: true },

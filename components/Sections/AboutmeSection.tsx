@@ -6,7 +6,7 @@ const AboutmeSection = () => {
 	const { mode } = useTheme();
 	return (
 		<>
-			<div className="flex-column col-span-full justify-center gap-8 self-start xl:col-span-4 xl:gap-16 xl:py-16 xl:pl-16">
+			<div className="flex-column col-span-full items-center justify-center gap-8 self-start xl:col-span-4 xl:gap-16 xl:py-16 xl:pl-16">
 				<h2 className="h2-bold xl:self-start">About me</h2>
 				<div className="aspect-square w-fit overflow-hidden rounded-full border-2 border-dark-200 dark:border-light-800 xl:hidden">
 					<Image
@@ -41,13 +41,7 @@ const AboutmeSection = () => {
 						developer, ready to tackle the challenges in the rapidly evolving
 						tech landscape.
 					</p>
-					<p className="paragraph-medium ">
-						Beyond technical skills, I bring strong problem-solving abilities,
-						effective teamwork, and a growth mindset to every project. I'm
-						particularly excited about emerging technologies like Web3 and AI,
-						and I'm always eager to explore how these can be integrated into
-						innovative solutions.
-					</p>
+
 					<p className="paragraph-medium ">
 						When I'm not coding, you can find me exploring the latest tech
 						trends, contributing to open-source projects, or collaborating with

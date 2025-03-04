@@ -13,7 +13,10 @@ import {
 const ScreenShotCarousel = ({
 	projectScreenshot,
 }: {
-	projectScreenshot: string[];
+	projectScreenshot: {
+		imageFolder: string;
+		imageGallery: string[];
+	};
 }) => {
 	const [open, setOpen] = useState(false);
 	const handleZoom = () => {
@@ -43,7 +46,7 @@ const ScreenShotCarousel = ({
 	return (
 		<>
 			<div className="grid w-full grid-cols-2 gap-4 xl:grid-cols-4 ">
-				{projectScreenshot.map((img, index) =>
+				{projectScreenshot.imageGallery.map((img, index) =>
 					index === 0 ? (
 						<div
 							className="relative col-span-2 aspect-square w-full xl:row-span-2"
@@ -51,12 +54,12 @@ const ScreenShotCarousel = ({
 							onClick={handleZoom}
 						>
 							<Image
-								src={`/assets/images/project-screenshots/ppfreshpork/${img}.webp`}
+								src={`/assets/images/project-screenshots/${projectScreenshot.imageFolder}/${img}.webp`}
 								fill
 								sizes="100%"
 								alt="Project screenshot"
 								className="object-cover"
-								priority
+								loading="lazy"
 							/>
 						</div>
 					) : (
@@ -66,12 +69,12 @@ const ScreenShotCarousel = ({
 							onClick={handleZoom}
 						>
 							<Image
-								src={`/assets/images/project-screenshots/ppfreshpork/${img}.webp`}
+								src={`/assets/images/project-screenshots/${projectScreenshot.imageFolder}/${img}.webp`}
 								fill
 								sizes="100%"
 								alt="Project screenshot"
 								className="object-cover"
-								priority
+								loading="lazy"
 							/>
 						</div>
 					)
@@ -93,16 +96,18 @@ const ScreenShotCarousel = ({
 							}}
 						>
 							<CarouselContent>
-								{projectScreenshot.map((img, index) => (
+								{projectScreenshot.imageGallery.map((img, index) => (
 									<CarouselItem key={index} className="flex justify-center">
-										<Image
-											src={`/assets/images/project-screenshots/ppfreshpork/${img}.webp`}
-											width={1200} // เพิ่มขนาดรูป
-											height={800} // เพิ่มขนาดรูป
-											alt="Project screenshot"
-											className="size-auto max-h-[90vh]" // ปรับให้รูปขยายเต็มหน้าจอแต่ไม่เกินความสูงของ viewport
-											quality={100}
-										/>
+										<div className="relative  h-[800px] max-h-[90vh] w-full">
+											<Image
+												src={`/assets/images/project-screenshots/${projectScreenshot.imageFolder}/${img}.webp`}
+												fill
+												sizes="(max-width: 768px) 90vw, 70vw"
+												className="object-contain"
+												alt="Project screenshot"
+												quality={100}
+											/>
+										</div>
 									</CarouselItem>
 								))}
 							</CarouselContent>

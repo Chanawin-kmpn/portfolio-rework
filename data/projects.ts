@@ -1,5 +1,8 @@
 import { techStackData } from '@/constants';
 import { ProjectProp } from '@/types/types';
+import { read } from 'fs';
+import { use } from 'react';
+import { start } from 'repl';
 
 export const projects: ProjectProp[] = [
 	{
@@ -11,8 +14,8 @@ export const projects: ProjectProp[] = [
 		createdAt: 'October 7, 2024',
 		status: 'complete',
 		stack: [
-			'typescript',
 			'nextjs',
+			'typescript',
 			'tailwindcss',
 			'shadcn',
 			'figma',
@@ -48,82 +51,28 @@ export const projects: ProjectProp[] = [
 			'For styling and UI components, I combine TailwindCSS with Shadcn UI. TailwindCSS provides utility-first CSS classes that make it easy to create responsive and customized designs, while Shadcn UI offers a collection of beautifully designed, accessible, and customizable components. This combination allows us to build a professional and consistent user interface efficiently while maintaining high standards of accessibility and user experience.',
 		],
 
-		problemsAndThought: {
-			problems: {
-				title: 'Problems',
-				list: [
-					{
-						title: 'Limited Product Showcase',
-						descriptions: [
-							'Lack of channels to demonstrate product quality and standards',
-							'Customers unable to clearly see product details and quality',
-							'Need space to display various certification standards',
-						],
-					},
-					{
-						title: 'Brand Identity Communication',
-						descriptions: [
-							'Need to establish trust as a family business',
-							'Lack of company history and story presentation',
-							'Need to communicate corporate values and vision',
-						],
-					},
-					{
-						title: 'Service Visibility',
-						descriptions: [
-							'Need to advertise company services, especially as a manufacturing representative',
-							'Lack of channels to present manufacturing capabilities',
-							'Need to demonstrate production potential',
-						],
-					},
-					{
-						title: 'Product Portfolio Display',
-						descriptions: [
-							"Need to showcase company's complete product range",
-							'Lack of clear product categorization',
-							'Need for an efficient product display system',
-						],
-					},
-				],
+		challengesAndProblemSolving: [
+			{
+				title: 'No guidelines for website layout design',
+				solving:
+					'This project was designed by me from scratch as a website about product information and manufacturing plants. I studied various websites to determine what sections should be included on each page.',
 			},
-			thoughtProcess: {
-				title: 'Thought Process',
-				list: [
-					{
-						title: 'Research & Analysis',
-						descriptions: [
-							'Analyzed company accessibility statistics from Google Maps to understand user behavior',
-							'Defined clear target audiences to design relevant user experiences',
-							'Studied customer needs and expectations',
-						],
-					},
-					{
-						title: 'Design Strategy',
-						descriptions: [
-							'Designed UI/UX reflecting family business values, creating warmth and credibility',
-							'Emphasized product quality and standards through organized layouts',
-							'Created simple yet professional user experience',
-						],
-					},
-					{
-						title: 'Technical Implementation',
-						descriptions: [
-							'Utilized modern technologies (Next.js, TypeScript) for maximum efficiency',
-							'Developed responsive website supporting all devices',
-							'Focused on image optimization and SEO for fast loading and efficient searching',
-						],
-					},
-					{
-						title: 'Content Strategy',
-						descriptions: [
-							'Organized information for easy access and systematic presentation',
-							'Presented company story through engaging design',
-							'Clearly displayed production capabilities and portfolio',
-						],
-					},
-				],
+			{
+				title: 'Finding methods to filter products',
+				solving:
+					'This company has various types of products which posed a problem of how to categorize them. Eventually, I chose to categorize them based on production methods and packaging.',
 			},
-		},
+			{
+				title: 'Poor responsive display of products',
+				solving:
+					'On the product display page, I chose to use Grid for layout to make it easier to implement responsiveness.',
+			},
+			{
+				title: 'Performance issues on product pages with many images to load',
+				solving:
+					'Modified each image to load lazily so they only load when visible to the user.',
+			},
+		],
 		lessonsLearned: {
 			introduction:
 				"Throughout the development of P.P Freshpork's website, I gained invaluable experience in end-to-end project development. Here are the key learnings:",
@@ -171,13 +120,22 @@ export const projects: ProjectProp[] = [
 			conclusion:
 				'This project has been a comprehensive learning experience, combining business analysis, design thinking, and technical implementation into a cohesive development process.',
 		},
-		screenshots: [
-			'homepage',
-			'productpage',
-			'servicepage',
-			'aboutpage',
-			'contactpage',
+		futureDevelopmentPlan: [
+			'Add an Admin system to be able to add or remove desired products',
+			'Move all product data to an actual Database (currently pulling data from json files)',
+			'Upgrade to an E-commerce system',
+			'Add a popular product recommendation system',
 		],
+		screenshots: {
+			imageFolder: 'ppfreshpork',
+			imageGallery: [
+				'homepage',
+				'productpage',
+				'servicepage',
+				'aboutpage',
+				'contactpage',
+			],
+		},
 	},
 	{
 		id: 2,
@@ -195,26 +153,12 @@ export const projects: ProjectProp[] = [
 		keyFeatures: ['Key Features'],
 		expectedBenefits: ['Expected Benefites'],
 		webStackExplanation: ['Detailed explanation of web stack for DevFlow'],
-		problemsAndThought: {
-			problems: {
-				title: 'Problems title',
-				list: [
-					{
-						title: 'List title',
-						descriptions: ['List Descriptions'],
-					},
-				],
+		challengesAndProblemSolving: [
+			{
+				title: '',
+				solving: '',
 			},
-			thoughtProcess: {
-				title: 'Thought Process title',
-				list: [
-					{
-						title: 'List title',
-						descriptions: ['List Descriptions'],
-					},
-				],
-			},
-		},
+		],
 		lessonsLearned: {
 			introduction: 'Lesson Introduction',
 			lessons: [
@@ -225,66 +169,135 @@ export const projects: ProjectProp[] = [
 			],
 			conclusion: 'Conclusion',
 		},
-		screenshots: [
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-		],
+		futureDevelopmentPlan: [],
+		screenshots: {
+			imageFolder: 'devflow',
+			imageGallery: [
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+			],
+		},
 	},
 	{
 		id: 3,
 		slug: 'learn-css-thai',
-		name: 'Project 3',
-		description: 'Description of Project 3',
-		createdAt: '2023-05-01',
-		status: 'incomplete',
-		stack: ['react', 'nextjs', 'tailwindcss'],
-		liveDemo: 'https://project3-demo.com',
-		heroImage: 'https://fakeimg.pl/1312x736/',
-		purpose: 'Purpose and goal of Project 3',
-		objectives: ['Objectives'],
-		keyFeatures: ['Key Features'],
-		expectedBenefits: ['Expected Benefites'],
-		webStackExplanation: ['Detailed explanation of web stack for Project 3'],
-		problemsAndThought: {
-			problems: {
-				title: 'Problems title',
-				list: [
-					{
-						title: 'List title',
-						descriptions: ['List Descriptions'],
-					},
-				],
+		name: 'Learn CSS Thai',
+		description:
+			'This project is a CSS documentation article created for Thai people who are beginning to learn CSS on their own. The content covers everything from basics to more complex techniques, with examples that can be modified and tested by yourself. It helps reduce language barriers and increases opportunities for website development skills for Thai people, providing a foundation for further study and advancement.',
+		createdAt: 'March 3, 2025',
+		status: 'complete',
+		stack: [
+			'typescript',
+			'nextjs',
+			'tailwindcss',
+			'shadcn',
+			'mdxjs',
+			'figma',
+			'git',
+			'vscode',
+		],
+		liveDemo: 'https://learn-css-thai.vercel.app/',
+		heroImage:
+			'/assets/images/project-screenshots/learn-css-thai/heroImage.png',
+		purpose:
+			'The Learn CSS Thai project originated from the need to address the lack of modern, easy-to-understand CSS learning resources in Thai language with immediate examples for practice. I found that many students and beginners struggle to learn CSS from existing English documentation. Although I personally support self-learning in English because it opens up vast knowledge and techniques, my goal in creating this project is to help beginners learning CSS to easily access content when starting out, to understand various concepts before they begin searching for techniques or knowledge elsewhere. Nevertheless, I still emphasize and prioritize reading the documentation of that technology.',
+		objectives: [
+			'To help CSS beginners understand basic content before studying various techniques on their own',
+			"To share the author's learning experiences as a guide for readers",
+		],
+		keyFeatures: [
+			'Content in each topic has been arranged appropriately for learning progression',
+			'Includes a Code Editor to experiment with different properties to learn their usage',
+			'Contains comparative images to visualize differences',
+			'Short article content for easy reader comprehension',
+			'Supplementary content, techniques, and warnings interspersed throughout the main content',
+		],
+		expectedBenefits: [
+			'Readers can build upon this for their own learning journey',
+			'Readers can utilize examples from the articles',
+			'Readers gain confidence when starting to learn CSS',
+		],
+		webStackExplanation: [
+			'Learn CSS Thai is built with a modern tech stack, with a focus on fast rendering because it needs to display numerous examples such as Code Editor, Code Block, and Callout Information. Additionally, these displays are divided into Components that accept various Properties to allow customization as needed.',
+			'This website is developed with Next.js version 15, the latest version, which helps load components faster and manages SEO excellently. For content display, MDX was chosen for writing and rendering content, as MDX provides convenience in writing content without needing various Element Tags, while also allowing the addition of Interactive Components.',
+			'For the website design, I drew inspiration from the TailwindCSS website because it has a clean, simple look. For Layout management, I chose Jun Layout as I had tried it at a Workshop and became interested, so I experimented with it in this project. I also used Shadcn/ui to manage image galleries, various buttons, and for searching different topics.',
+		],
+		challengesAndProblemSolving: [
+			{
+				title: 'How to create a CodeEditor',
+				solving:
+					'Studied from open source projects that allow modifications including the use of various custom hooks for debouncing, dragging both panes, and formatting code in the editor.',
 			},
-			thoughtProcess: {
-				title: 'Thought Process title',
-				list: [
-					{
-						title: 'List title',
-						descriptions: ['List Descriptions'],
-					},
-				],
+			{
+				title: 'Making the Code Editor run best performance',
+				solving:
+					'Had to customize library loading with Lazy Loading and using debounce for display result.',
 			},
-		},
+			{
+				title: 'Managing large amounts of lesson data',
+				solving:
+					'Developed an efficient MDX file management system and data caching.',
+			},
+			{
+				title: 'How to start writing documentation with MDX',
+				solving:
+					'Studied what MDX is, the differences between creating regular page content versus writing with MDX, then examined documentation websites of various open source projects before experimenting in my own project.',
+			},
+			{
+				title: 'How to organize and arrange content effectively',
+				solving:
+					'Studied websites that teach CSS to see how they typically organize their content, then categorized topics into appropriate sections.',
+			},
+		],
 		lessonsLearned: {
 			introduction: 'Lesson Introduction',
 			lessons: [
 				{
-					title: 'Lesson title',
-					points: ['Lesson point'],
+					title: 'Creating a Documentation Website',
+					points: [
+						"In this project, I tried creating a CSS Document website that displays content using MDX for the first time. I learned that when creating this type of website, it's not necessary to write with regular HTML tags.",
+					],
+				},
+				{
+					title: 'Learning Code from Various Open Source Projects',
+					points: [
+						'This project utilized Code Editor and MDX, which were very new to me. I studied working examples and customized them to suit my needs.',
+						"From reading other developers' open source code, I learned and saw the benefits of their thought processes in creating components or various custom hooks that could be applied to the Code Editor.",
+					],
+				},
+				{
+					title: 'Lessons Learned from Writing Explanatory Content',
+					points: [
+						"This project was the first time I used my knowledge to write explanations for others to read, which served as a review for myself. I learned that there are still some topics I need to understand better and many things I don't yet know.",
+						'I practiced planning content for beginners, determining what should be studied first. I referenced various learning resources combined with my own thoughts from when I was first learning about what would be a good starting point.',
+					],
+				},
+				{
+					title: 'Design and Styling',
+					points: [
+						"In this project, I used TailwindCSS as the CSS framework for styling, along with regular CSS, allowing for flexible customization. I learned that creating classes with TailwindCSS enables very quick styling that's also easy to modify.",
+						'For the Layout, I used Jun Layout, a package I had the opportunity to try during a TailwindCSS Layout Workshop at Skooldio. Using it saved me a significant amount of time in managing layouts.',
+						'In this project, I tried creating Animated SVG with Lottie, which allowed me to have SVGs that can move, making the website more interesting.',
+					],
 				},
 			],
 			conclusion: 'Conclusion',
 		},
-		screenshots: [
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
-			'https://fakeimg.pl/650/',
+		futureDevelopmentPlan: [
+			'Add error notifications when there are code errors',
+			'Add exercises for each chapter',
+			'Add fullscreen mode for the CodeEditor',
+			'Improve the Homepage design',
+			'Add a popular blogs category',
+			'Add English language support',
 		],
+		screenshots: {
+			imageFolder: 'learn-css-thai',
+			imageGallery: ['coverImage', 'image-1', 'image-2', 'image-3', 'image-4'],
+		},
 	},
 	// Add similar objects for Project 2 and Project 3
 ];

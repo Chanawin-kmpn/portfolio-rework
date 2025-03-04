@@ -61,7 +61,7 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 					<p className="body-semibold">Live Demo:</p>
 					<Link
 						href={project.liveDemo}
-						className="paragraph-medium text-custom-pink dark:text-custom-pink"
+						className="paragraph-medium text-custom-pink"
 						target="_blank"
 					>
 						View Site
@@ -75,12 +75,13 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 					fill
 					sizes="100%"
 					className="object-contain"
+					priority
 				/>
 			</div>
 
 			<div className="flex-column w-full gap-4 xl:flex-row">
 				<div className="flex-column flex-1 gap-8">
-					<h2 className="h2-bold">About Project</h2>
+					<h2 className="h2-bold text-custom-pink">About Project</h2>
 					<div className="space-y-16">
 						<div className="space-y-4">
 							<h3 className="h3-bold">Propose</h3>
@@ -89,24 +90,39 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 						<div className="space-y-4">
 							<p className="paragraph-medium">Objectives</p>
 							<ol className="space-y-2">
-								{project.objectives.map((list) => (
-									<li className="small-regular ml-8 list-decimal">{list}</li>
+								{project.objectives.map((list, index) => (
+									<li
+										className="text-dark200_light800 ml-8 list-decimal text-sm xl:text-base"
+										key={index}
+									>
+										{list}
+									</li>
 								))}
 							</ol>
 						</div>
 						<div className="space-y-4">
 							<p className="paragraph-medium">Key Fetures</p>
 							<ol className="space-y-2">
-								{project.keyFeatures.map((list) => (
-									<li className="small-regular ml-8 list-decimal">{list}</li>
+								{project.keyFeatures.map((list, index) => (
+									<li
+										className="text-dark200_light800 ml-8 list-decimal text-sm xl:text-base"
+										key={index}
+									>
+										{list}
+									</li>
 								))}
 							</ol>
 						</div>
 						<div className="space-y-4">
 							<p className="paragraph-medium">Expected Benefits</p>
 							<ol className="space-y-2">
-								{project.expectedBenefits.map((list) => (
-									<li className="small-regular ml-8 list-decimal">{list}</li>
+								{project.expectedBenefits.map((list, index) => (
+									<li
+										className="text-dark200_light800 ml-8 list-decimal text-sm xl:text-base"
+										key={index}
+									>
+										{list}
+									</li>
 								))}
 							</ol>
 						</div>
@@ -118,6 +134,7 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 						fill
 						alt="Project Purpose image"
 						className="object-fill"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -130,66 +147,39 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 						sizes="100%"
 						alt="Project stack background"
 						className="object-cover"
+						loading="lazy"
 					/>
 				</div>
 				<div className="flex-column flex-1 gap-8">
-					<h2 className="h2-bold">Web Stack Overview</h2>
-					{project.webStackExplanation.map((paragraph) => (
-						<p className="paragraph-regular">{paragraph}</p>
+					<h2 className="h2-bold text-custom-pink">Web Stack Overview</h2>
+					{project.webStackExplanation.map((paragraph, index) => (
+						<p className="paragraph-regular" key={index}>
+							{paragraph}
+						</p>
 					))}
 				</div>
 			</div>
 
 			<div className="flex-column w-full gap-8">
-				<h2 className="h2-bold">Projects Screenshots</h2>
+				<h2 className="h2-bold text-custom-pink">Projects Screenshots</h2>
 				<ScreenShotCarousel projectScreenshot={project.screenshots} />
 			</div>
 
 			<div className="flex-column w-full gap-4 xl:flex-row">
 				<div className="flex-column w-full flex-1 gap-8">
-					<h2 className="h2-bold">Problems and Thought Process</h2>
-					<div className="space-y-6">
-						<h3 className="h3-bold mb-4">
-							{project.problemsAndThought.problems.title}
-						</h3>
-						<div className="space-y-6">
-							{project.problemsAndThought.problems.list.map(
-								(problem, index) => (
-									<div key={index} className="space-y-4">
-										<p className="paragraph-regular">{problem.title}</p>
-										<ul className="list-disc space-y-2 pl-5">
-											{problem.descriptions.map((desc, descIndex) => (
-												<li key={descIndex} className="small-regular">
-													{desc}
-												</li>
-											))}
-										</ul>
-									</div>
-								)
-							)}
+					<h2 className="h2-bold text-custom-pink">
+						Challenges and Problem Solving
+					</h2>
+					{project.challengesAndProblemSolving.map((problem, index) => (
+						<div key={index}>
+							<p className="text-dark200_light800 mb-2 text-xl font-bold xl:text-2xl">
+								{problem.title}
+							</p>
+							<p className="text-dark200_light800 ">
+								<span className="font-bold">Solved:</span> {problem.solving}
+							</p>
 						</div>
-					</div>
-					<div>
-						<h3 className="h3-bold mb-4">
-							{project.problemsAndThought.thoughtProcess.title}
-						</h3>
-						<div className="space-y-6">
-							{project.problemsAndThought.thoughtProcess.list.map(
-								(thought, index) => (
-									<div key={index} className="space-y-4">
-										<p className="paragraph-regular">{thought.title}</p>
-										<ul className=" list-disc space-y-2 pl-5">
-											{thought.descriptions.map((desc, descIndex) => (
-												<li key={descIndex} className="small-regular">
-													{desc}
-												</li>
-											))}
-										</ul>
-									</div>
-								)
-							)}
-						</div>
-					</div>
+					))}
 				</div>
 				<div className="relative aspect-square w-full max-w-[500px]">
 					<Image
@@ -197,6 +187,7 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 						fill
 						alt="Project Purpose image"
 						className="object-fill"
+						loading="lazy"
 					/>
 				</div>
 			</div>
@@ -208,28 +199,50 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 						fill
 						alt="Project Purpose image"
 						className="object-fill"
+						loading="lazy"
 					/>
 				</div>
 				<div className="flex-column w-full flex-1 gap-8">
-					<h2 className="h2-bold">Lessons Learned</h2>
-					<div className="space-y-6">
-						{project.lessonsLearned.lessons.map((lesson, index) => (
-							<div key={index} className="space-y-4">
-								<p className="paragraph-medium text-xl font-semibold">
-									{index + 1}. {lesson.title}
-								</p>
-								<ul className="list-disc space-y-2 pl-5">
-									{lesson.points.map((point, pointIndex) => (
+					<div className="flex flex-col gap-8">
+						<h2 className="h2-bold text-custom-pink">Lessons Learned</h2>
+						<div className="space-y-6">
+							{project.lessonsLearned.lessons.map((lesson, index) => (
+								<div key={index} className="space-y-2">
+									<p className="text-dark200_light800 text-xl font-bold xl:text-2xl">
+										{index + 1}. {lesson.title}
+									</p>
+									<ul className="space-y-4 pl-5">
+										{lesson.points.map((point, pointIndex) => (
+											<li
+												key={pointIndex}
+												className="text-dark200_light800 text-base  xl:text-xl"
+											>
+												- {point}
+											</li>
+										))}
+									</ul>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="flex flex-col gap-8">
+						<h2 className="h2-bold text-custom-pink">
+							Future Developement Plans
+						</h2>
+						<div className="space-y-6">
+							<div className="space-y-4">
+								<ul className="space-y-4 pl-5">
+									{project.futureDevelopmentPlan.map((plan, index) => (
 										<li
-											key={pointIndex}
-											className="small-regular text-gray-700"
+											key={index}
+											className="text-dark200_light800 text-base xl:text-xl"
 										>
-											{point}
+											- {plan}
 										</li>
 									))}
 								</ul>
 							</div>
-						))}
+						</div>
 					</div>
 				</div>
 			</div>

@@ -31,22 +31,20 @@ export interface ProjectProp {
 	keyFeatures: string[];
 	expectedBenefits: string[];
 	webStackExplanation: string[];
-	problemsAndThought: {
-		problems: {
-			title: string;
-			list: ProblemDetail[];
-		};
-		thoughtProcess: {
-			title: string;
-			list: ThoughtProcessDetail[];
-		};
-	};
+	challengesAndProblemSolving: {
+		title: string;
+		solving: string;
+	}[];
 	lessonsLearned: {
 		introduction: string;
 		lessons: LessonDetail[];
 		conclusion: string;
 	};
-	screenshots: string[];
+	futureDevelopmentPlan: string[];
+	screenshots: {
+		imageFolder: string;
+		imageGallery: string[];
+	};
 }
 
 export interface ThemeContextType {
