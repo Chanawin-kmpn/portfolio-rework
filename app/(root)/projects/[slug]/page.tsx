@@ -61,7 +61,7 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 					<p className="body-semibold">Live Demo:</p>
 					<Link
 						href={project.liveDemo}
-						className="paragraph-medium text-custom-pink"
+						className="paragraph-medium text-custom-pink dark:text-custom-pink"
 						target="_blank"
 					>
 						View Site
@@ -81,7 +81,9 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 
 			<div className="flex-column w-full gap-4 xl:flex-row">
 				<div className="flex-column flex-1 gap-8">
-					<h2 className="h2-bold text-custom-pink">About Project</h2>
+					<h2 className="h2-bold text-custom-pink dark:text-custom-pink">
+						About Project
+					</h2>
 					<div className="space-y-16">
 						<div className="space-y-4">
 							<h3 className="h3-bold">Propose</h3>
@@ -151,7 +153,9 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 					/>
 				</div>
 				<div className="flex-column flex-1 gap-8">
-					<h2 className="h2-bold text-custom-pink">Web Stack Overview</h2>
+					<h2 className="h2-bold text-custom-pink dark:text-custom-pink">
+						Web Stack Overview
+					</h2>
 					{project.webStackExplanation.map((paragraph, index) => (
 						<p className="paragraph-regular" key={index}>
 							{paragraph}
@@ -161,13 +165,15 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 			</div>
 
 			<div className="flex-column w-full gap-8">
-				<h2 className="h2-bold text-custom-pink">Projects Screenshots</h2>
+				<h2 className="h2-bold text-custom-pink dark:text-custom-pink">
+					Projects Screenshots
+				</h2>
 				<ScreenShotCarousel projectScreenshot={project.screenshots} />
 			</div>
 
 			<div className="flex-column w-full gap-4 xl:flex-row">
 				<div className="flex-column w-full flex-1 gap-8">
-					<h2 className="h2-bold text-custom-pink">
+					<h2 className="h2-bold text-custom-pink dark:text-custom-pink">
 						Challenges and Problem Solving
 					</h2>
 					{project.challengesAndProblemSolving.map((problem, index) => (
@@ -204,7 +210,9 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 				</div>
 				<div className="flex-column w-full flex-1 gap-8">
 					<div className="flex flex-col gap-8">
-						<h2 className="h2-bold text-custom-pink">Lessons Learned</h2>
+						<h2 className="h2-bold text-custom-pink dark:text-custom-pink">
+							Lessons Learned
+						</h2>
 						<div className="space-y-6">
 							{project.lessonsLearned.lessons.map((lesson, index) => (
 								<div key={index} className="space-y-2">
@@ -226,7 +234,7 @@ const ProjectDetail = async ({ params }: { params: { slug: string } }) => {
 						</div>
 					</div>
 					<div className="flex flex-col gap-8">
-						<h2 className="h2-bold text-custom-pink">
+						<h2 className="h2-bold text-custom-pink dark:text-custom-pink">
 							Future Developement Plans
 						</h2>
 						<div className="space-y-6">
