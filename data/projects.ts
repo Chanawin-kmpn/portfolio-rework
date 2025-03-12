@@ -137,52 +137,9 @@ export const projects: ProjectProp[] = [
 			],
 		},
 	},
+
 	{
 		id: 2,
-		slug: 'devflow',
-		name: 'DevFlow',
-		description:
-			'Devflow is a comprehensive Q&A platform inspired by StackOverflow, designed for developers to ask questions, share knowledge, and solve coding challenges. The platform features a robust voting system, view tracking, user reputation, and content filtering capabilities to ensure high-quality technical discussions and community engagement.',
-		createdAt: '2023-05-01',
-		status: 'incomplete',
-		stack: ['nextjs', 'typescript', 'tailwindcss', 'mongodb', 'shadcn'],
-		liveDemo: 'https://project2-demo.com',
-		heroImage: '/assets/images/project-screenshots/devflow/heroImage.png',
-		purpose: 'Purpose and goal of DevFlow',
-		objectives: ['Objectives'],
-		keyFeatures: ['Key Features'],
-		expectedBenefits: ['Expected Benefites'],
-		webStackExplanation: ['Detailed explanation of web stack for DevFlow'],
-		challengesAndProblemSolving: [
-			{
-				title: '',
-				solving: '',
-			},
-		],
-		lessonsLearned: {
-			introduction: 'Lesson Introduction',
-			lessons: [
-				{
-					title: 'Lesson title',
-					points: ['Lesson point'],
-				},
-			],
-			conclusion: 'Conclusion',
-		},
-		futureDevelopmentPlan: [],
-		screenshots: {
-			imageFolder: 'devflow',
-			imageGallery: [
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-			],
-		},
-	},
-	{
-		id: 3,
 		slug: 'learn-css-thai',
 		name: 'Learn CSS Thai',
 		description:
@@ -297,6 +254,50 @@ export const projects: ProjectProp[] = [
 		screenshots: {
 			imageFolder: 'learn-css-thai',
 			imageGallery: ['coverImage', 'image-1', 'image-2', 'image-3', 'image-4'],
+		},
+	},
+	{
+		id: 3,
+		slug: 'prioritask',
+		name: 'Prioritask',
+		description:
+			'Prioritask is a productivity application that revolutionizes task management through the implementation of the Eisenhower Matrix framework, enabling users to categorize activities based on importance and urgency in a visually intuitive 2×2 grid interface.',
+		createdAt: '2025-03-10',
+		status: 'incomplete',
+		stack: ['nextjs', 'typescript', 'tailwindcss', 'mongodb', 'shadcn'],
+		liveDemo: 'https://project2-demo.com',
+		heroImage: '/assets/images/project-screenshots/prioritask/heroImage.png',
+		purpose: 'Purpose and goal of DevFlow',
+		objectives: ['Objectives'],
+		keyFeatures: ['Key Features'],
+		expectedBenefits: ['Expected Benefites'],
+		webStackExplanation: ['Detailed explanation of web stack for DevFlow'],
+		challengesAndProblemSolving: [
+			{
+				title: '',
+				solving: '',
+			},
+		],
+		lessonsLearned: {
+			introduction: 'Lesson Introduction',
+			lessons: [
+				{
+					title: 'Lesson title',
+					points: ['Lesson point'],
+				},
+			],
+			conclusion: 'Conclusion',
+		},
+		futureDevelopmentPlan: [],
+		screenshots: {
+			imageFolder: 'devflow',
+			imageGallery: [
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+				'https://fakeimg.pl/650/',
+			],
 		},
 	},
 	// Add similar objects for Project 2 and Project 3
