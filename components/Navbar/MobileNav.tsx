@@ -56,13 +56,22 @@ const MobileNav = () => {
 							</ScrollLink>
 							{link.route === 'projects' && (
 								<div className="flex-column text-dark200_light800 gap-[10px] text-xl font-bold">
-									{projects.map((project) => (
-										<div className="mx-auto" key={project.id}>
-											<Link href={`/projects/${project.slug}`} key={project.id}>
-												{project.name}
-											</Link>
-										</div>
-									))}
+									{projects.map((project) => {
+										if (project.status === 'complete') {
+											return (
+												<>
+													<div className="mx-auto" key={project.id}>
+														<Link
+															href={`/projects/${project.slug}`}
+															key={project.id}
+														>
+															{project.name}
+														</Link>
+													</div>
+												</>
+											);
+										}
+									})}
 								</div>
 							)}
 						</div>
