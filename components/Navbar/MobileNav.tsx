@@ -48,17 +48,17 @@ const MobileNav = () => {
 					{navLinks.map((link) => (
 						<div
 							key={link.label}
-							className="flex-column gap-[10px] self-start p-[10px]"
+							className="flex-column w-full gap-[10px] self-start p-[10px]"
 							onClick={() => setIsOpen(false)}
 						>
 							<ScrollLink href={link.route} isMobile={true}>
 								{link.label}
 							</ScrollLink>
 							{link.route === 'projects' && (
-								<div className="flex-column  text-dark200_light800  gap-[10px] text-xl font-bold">
+								<div className="flex-column text-dark200_light800 gap-[10px] text-xl font-bold">
 									{projects.map((project) => (
-										<div className="ml-4" key={project.id}>
-											<Link href={`/projects/${project.id}`} key={project.id}>
+										<div className="mx-auto" key={project.id}>
+											<Link href={`/projects/${project.slug}`} key={project.id}>
 												{project.name}
 											</Link>
 										</div>
