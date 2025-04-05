@@ -267,6 +267,13 @@
 					"description": "Devicon is a set of icons representing programming languages, designing, and development tools. You can use it as a font or directly copy/paste the SVG code into your project.",
 					"recommend": true,
 					"tag": "icon"
+				},
+				{
+					"name": "Isocons",
+					"url": "https://www.isocons.app/",
+					"description": "Isocons is a comprehensive collection of carefully crafted isometric icons designed for user interface (UI) applications.",
+					"recommend": true,
+					"tag": "icon"
 				}
 			]
 		},
