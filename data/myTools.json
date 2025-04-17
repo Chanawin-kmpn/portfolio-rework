@@ -440,6 +440,13 @@
 					"description": "The best landing page design inspiration from around the web",
 					"recommend": true,
 					"tag": "design"
+				},
+				{
+					"name": "UIVerse",
+					"url": "https://uiverse.io/s",
+					"description": "Community-built library of UI elements. Copy as HTML/CSS, Tailwind, React and Figma.",
+					"recommend": true,
+					"tag": "design"
 				}
 			]
 		},
