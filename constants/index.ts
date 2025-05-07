@@ -39,6 +39,7 @@ export const techStackData: { [key: string]: Omit<SkillProps, 'skill'> } = {
 	mdxjs: { imgSkill: 'mdxjs.svg' },
 	mongodb: { imgSkill: 'mongodb.svg' },
 	figma: { imgSkill: 'figma.svg' },
+	firebase: { imgSkill: 'firebase.svg' },
 	git: { imgSkill: 'git.svg', theme: true },
 	vscode: { imgSkill: 'vscode.svg' },
 };
@@ -57,6 +58,7 @@ export const mySkills: SkillProps[] = [
 	{ skill: 'Next.js', ...techStackData.nextjs },
 	{ skill: 'MongoDb', ...techStackData.mongodb },
 	{ skill: 'Figma', ...techStackData.figma },
+	{ skill: 'Firebase', ...techStackData.firebase },
 	{ skill: 'Git', ...techStackData.git },
 	{ skill: 'Visual Studio Code', ...techStackData.vscode },
 ];

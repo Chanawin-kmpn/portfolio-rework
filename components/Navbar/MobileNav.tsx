@@ -59,16 +59,11 @@ const MobileNav = () => {
 									{projects.map((project) => {
 										if (project.status === 'complete') {
 											return (
-												<>
-													<div className="mx-auto" key={project.id}>
-														<Link
-															href={`/projects/${project.slug}`}
-															key={project.id}
-														>
-															{project.name}
-														</Link>
-													</div>
-												</>
+												<div className="mx-auto" key={project.id}>
+													<Link href={`/projects/${project.slug}`}>
+														{project.name}
+													</Link>
+												</div>
 											);
 										}
 									})}

@@ -1,8 +1,4 @@
-import { techStackData } from '@/constants';
 import { ProjectProp } from '@/types/types';
-import { read } from 'fs';
-import { use } from 'react';
-import { start } from 'repl';
 
 export const projects: ProjectProp[] = [
 	{
@@ -263,41 +259,115 @@ export const projects: ProjectProp[] = [
 		description:
 			'Prioritask is a productivity application that revolutionizes task management through the implementation of the Eisenhower Matrix framework, enabling users to categorize activities based on importance and urgency in a visually intuitive 2×2 grid interface.',
 		createdAt: '2025-03-10',
-		status: 'incomplete',
-		stack: ['nextjs', 'typescript', 'tailwindcss', 'mongodb', 'shadcn'],
-		liveDemo: 'https://project2-demo.com',
+		status: 'complete',
+		stack: [
+			'nextjs',
+			'typescript',
+			'tailwindcss',
+			'shadcn',
+			'firebase',
+			'git',
+			'figma',
+			'vscode',
+		],
+		liveDemo: 'https://prioritask-one.vercel.app/',
 		heroImage: '/assets/images/project-screenshots/prioritask/heroImage.png',
-		purpose: 'Purpose and goal of DevFlow',
-		objectives: ['Objectives'],
-		keyFeatures: ['Key Features'],
-		expectedBenefits: ['Expected Benefites'],
-		webStackExplanation: ['Detailed explanation of web stack for DevFlow'],
+		purpose:
+			'The Prioritask project was inspired by a matrix that considers importance and urgency, similar to the principles of the Eisenhower Matrix. This concept has been further developed into a user-friendly web-based system, enabling individuals to easily access and utilize it. By effectively managing their tasks, users can not only enhance their productivity but also foster a sense of accountability in their daily lives. Additionally, the application provides users with monthly statistics of the tasks they create, empowering them to reflect on their progress and continue improving personal responsibility.',
+		objectives: [
+			'To help users prioritize tasks and activities in their daily lives effectively.',
+			'Users can improve their accountability.',
+		],
+		keyFeatures: [
+			'Users can try the application before signing up, allowing them to add up to 5 tasks per priority.',
+			'Users can add a maximum of 25 tasks in each priority.',
+			'Users can view and manage all tasks on the Dashboard.',
+			'Users can edit or delete tasks by themselves.',
+			'Users can track and view the statistics of task creation and the success rate for each month.',
+			'Users can modify their profile information, such as display name and password when logging in with email and password.',
+			'Supports usage on Desktop, Tablet, and Mobile.',
+		],
+		expectedBenefits: [
+			'Users can effectively prioritize their tasks, allowing them to achieve their goals faster.',
+			'By grouping tasks based on importance and urgency, users can feel more at ease and focus on what is necessary.',
+			'When users can track and view their work statistics, it motivates them to improve themselves.',
+			"Users can try the app's main features before deciding to sign up.",
+		],
+		webStackExplanation: [
+			'Prioritask is built with modern technology aimed at speed and efficiency to ensure users have a satisfactory experience while using the application.',
+			'Since Prioritask is a web application that needs to display task information in real-time but not continuously, it uses Next.js to render using **Incremental Static Regeneration (ISR)**, which allows loading only the necessary updated data without reloading everything, making the application smooth and reducing response time.',
+			'The design utilizes TailwindCSS and Shadcn/ui to create a modern layout, such as the Dashboard and Chart sections, helping users to view information effectively.',
+			'For the backend, Firebase was chosen to manage the backend, as it has complete features for handling user login and efficiently managing databases, while providing data security and authentication, making it convenient and safe for users.',
+			'This application supports usage on Desktop, Tablet, and Mobile, so users can access it anytime and anywhere, with a design that allows users to easily customize and an interface that is user-friendly and suitable for all user groups.',
+		],
 		challengesAndProblemSolving: [
 			{
-				title: '',
-				solving: '',
+				title: "What to do if users don't want to sign up right away?",
+				solving:
+					'Some users may not want to register immediately, which could lead to missing out on essential features of the app. Thus, we introduced a Free Trial system to allow users to try before signing up, enabling them to experience the app directly before making a decision, increasing the likelihood that they will ultimately become subscribers.',
+			},
+			{
+				title: 'How to prevent automatic updates of user data?',
+				solving:
+					'Frequent updates can lead to data instability. Therefore, a rate limit was imposed on data changes; when the specified rate is reached, users will not be able to update their information until the defined time limit has elapsed.',
+			},
+			{
+				title:
+					'How to prevent spam task creation by users who are not logged in?',
+				solving:
+					"There is a risk of inappropriate task creation in large quantities by users who have not registered. Therefore, we set a limit of 5 tasks per priority for users who are not logged in or are on the Free Trial, and used Local Storage for task data, storing users' task information in the browser, which helps maintain app performance.",
+			},
+			{
+				title: 'The filter task function was omitted during development.',
+				solving:
+					'Poor initial design led to important functions being overlooked. Thus, we had to plan and modify the data retrieved from the backend, ensuring all critical features were considered.',
+			},
+			{
+				title:
+					'How to manage a large number of tasks if user volume increases?',
+				solving:
+					'With many users, the system might struggle to manage task display efficiently. Therefore, we determined the need to set expiration dates for tasks, allowing removal of unnecessary tasks and providing increased clarity within the system.',
 			},
 		],
 		lessonsLearned: {
 			introduction: 'Lesson Introduction',
 			lessons: [
 				{
-					title: 'Lesson title',
-					points: ['Lesson point'],
+					title: 'User flow planning',
+					points: [
+						'If the user flow of the application is not well planned from the beginning, it leads to complex data retrieval issues during development due to uncertainty about what should be displayed on which page and what is needed to fetch data.',
+						'This results in overlooked functions during development, such as the filter used to sort data on the Dashboard.',
+					],
+				},
+				{
+					title: 'Firebase',
+					points: [
+						'This project is the first in which I used Firebase independently, leading to extensive learning in utilizing Firebase.',
+						'The first lesson learned was to prioritize managing user data so that it could be used with other components.',
+						"Next, I learned about querying data in different formats and inserting data into Firestore's database. Notably, if the data retrieval requires differing sorts, it becomes necessary to create new indexes.",
+						'One key lesson is to enhance user management to facilitate easier use in other areas.',
+					],
+				},
+				{
+					title: 'System analysis',
+					points: [
+						'This project involved independently designing the database structure, resulting in some fields being omitted and causing issues like missing expiration dates or user types when creating tasks.',
+						'These mistakes highlighted the need for a more detailed plan regarding what data is required and how the system should function.',
+						'Thus, using a use case diagram in future projects could help address these issues.',
+					],
 				},
 			],
 			conclusion: 'Conclusion',
 		},
-		futureDevelopmentPlan: [],
+		futureDevelopmentPlan: [
+			'Add a calendar view mode instead of using a grid, while maintaining the Eisenhower priority concept.',
+			'Implement a notification system for users via email as task deadlines approach.',
+			'Add a feature for users to record recurring daily tasks.',
+			'Develop a tutorial path for new users.',
+		],
 		screenshots: {
-			imageFolder: 'devflow',
-			imageGallery: [
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-				'https://fakeimg.pl/650/',
-			],
+			imageFolder: 'prioritask',
+			imageGallery: ['coverImage', 'image-1', 'image-2', 'image-3', 'image-4'],
 		},
 	},
 	// Add similar objects for Project 2 and Project 3
