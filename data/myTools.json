@@ -523,6 +523,20 @@
 					"description": "Unique illustrations for web and mobile projects",
 					"recommend": false,
 					"tag": "illustration"
+				},
+				{
+					"name": "Cool Shapes",
+					"url": "https://coolshap.es/",
+					"description": "100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.",
+					"recommend": false,
+					"tag": "illustration"
+				},
+				{
+					"name": "Thiings",
+					"url": "https://www.thiings.co/",
+					"description": "100+ Abstract shapes with cool grainy gradient. Ready to use with any design dev project.",
+					"recommend": false,
+					"tag": "illustration"
 				}
 			]
 		},
