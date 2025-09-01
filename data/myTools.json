@@ -320,7 +320,7 @@
 					"name": "Fontshare",
 					"url": "https://www.fontshare.com/",
 					"description": "Quality fonts. Free for personal and commercial use",
-					"recommend": false,
+					"recommend": true,
 					"tag": "font"
 				},
 				{
@@ -349,6 +349,27 @@
 					"url": "https://www.dafont.com/",
 					"description": "Vast library of downloadable fonts with easy categorization.",
 					"recommend": true,
+					"tag": "font"
+				},
+				{
+					"name": "Uncut",
+					"url": "https://uncut.wtf/",
+					"description": "UNCUT.wtf is a free typeface catalogue, focusing on somewhat contemporary type. There are currently 163 typefaces featured.",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Pangram Pangram",
+					"url": "https://pangrampangram.com/",
+					"description": "Pangram Pangram is a world-renowned type foundry crafting premium, contemporary fonts for bold brands and creatives.",
+					"recommend": false,
+					"tag": "font"
+				},
+				{
+					"name": "Swiss Typefaces",
+					"url": "https://www.swisstypefaces.com/",
+					"description": "A digital platform where you can find and purchase high-quality, premium typefaces (fonts) created by a design company rooted in the Swiss International Style.",
+					"recommend": false,
 					"tag": "font"
 				}
 			]
