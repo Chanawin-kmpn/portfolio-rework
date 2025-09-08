@@ -1,5 +1,5 @@
-import { techStackData } from '@/constants';
-import { ReactNode } from 'react';
+import { techStackData } from "@/constants";
+import { ReactNode } from "react";
 
 interface ProblemDetail {
 	title: string;
@@ -22,7 +22,7 @@ export interface ProjectProp {
 	name: string;
 	description: string;
 	createdAt: string;
-	status: 'complete' | 'incomplete';
+	status: "complete" | "incomplete";
 	stack: (keyof typeof techStackData)[];
 	liveDemo: string;
 	heroImage: string;
