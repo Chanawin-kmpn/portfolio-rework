@@ -66,6 +66,13 @@
 					"description": "Paletton is a color scheme designer tool that helps users create harmonious color combinations for various design projects",
 					"recommend": false,
 					"tag": "color"
+				},
+				{
+					"name": "UIColors",
+					"url": "https://uicolors.app/",
+					"description": "UIColors is a click-to-copy color palette tool for Tailwind CSS, providing curated color collections in OKLCH, HEX, and HSL formats.",
+					"recommend": true,
+					"tag": "color"
 				}
 			]
 		},
