@@ -1,8 +1,8 @@
 // src/lib/embeddings/openaiSmall.ts
-import { Embeddings } from "@langchain/core/embeddings";
+import type { EmbeddingsInterface } from "@langchain/core/embeddings";
 import { openai } from "../openai";
 
-export class OpenAISmallEmbeddings extends Embeddings {
+export class OpenAISmallEmbeddings implements EmbeddingsInterface {
 	private model = "text-embedding-3-small";
 
 	async embedDocuments(texts: string[]): Promise<number[][]> {
@@ -11,7 +11,7 @@ export class OpenAISmallEmbeddings extends Embeddings {
 			input: texts,
 		});
 
-		// openai v4 response: data: [{ embedding: number[] }, ...]
+		// OpenAI v4: res.data: { embedding: number[] }[]
 		return res.data.map((item) => item.embedding);
 	}
 

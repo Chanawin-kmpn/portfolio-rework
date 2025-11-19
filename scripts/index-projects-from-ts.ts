@@ -1,11 +1,11 @@
 // src/scripts/index-projects-from-ts.ts
 import "dotenv/config";
 import { Document } from "@langchain/core/documents";
-import { textSplitter } from "../lib/textSplitter";
+import { DataAPIClient } from "@datastax/astra-db-ts";
+import OpenAI from "openai";
 
-// ปรับ path ให้ตรงไฟล์จริงของคุณ
+import { textSplitter } from "../lib/textSplitter";
 import { projects } from "../data/projects";
-import { getAstraVectorStore } from "@/lib/vectorStore/astra";
 
 type Challenge = {
 	title: string;
@@ -50,6 +50,36 @@ type Project = {
 	[key: string]: any;
 };
 
+// ----- ENV -----
+const {
+	ASTRA_DB_ENDPOINT,
+	ASTRA_DB_TOKEN,
+	ASTRA_DB_COLLECTION,
+	ASTRA_DB_NAMESPACE,
+	OPENAI_API_KEY,
+} = process.env;
+
+if (!ASTRA_DB_ENDPOINT) {
+	throw new Error("❌ ASTRA_DB_ENDPOINT ยังไม่ได้ตั้งค่าใน .env");
+}
+if (!ASTRA_DB_TOKEN) {
+	throw new Error("❌ ASTRA_DB_TOKEN ยังไม่ได้ตั้งค่าใน .env");
+}
+if (!OPENAI_API_KEY) {
+	throw new Error("❌ OPENAI_API_KEY ยังไม่ได้ตั้งค่าใน .env");
+}
+
+const collectionName = ASTRA_DB_COLLECTION || "portfolio_vectors";
+
+// ----- CLIENTS -----
+const openai = new OpenAI({ apiKey: OPENAI_API_KEY });
+
+const client = new DataAPIClient(ASTRA_DB_TOKEN);
+const db = ASTRA_DB_NAMESPACE
+	? client.db(ASTRA_DB_ENDPOINT, { namespace: ASTRA_DB_NAMESPACE })
+	: client.db(ASTRA_DB_ENDPOINT);
+
+// ----- HELPERS -----
 function projectToDocument(project: Project): Document {
 	const {
 		id,
@@ -174,6 +204,31 @@ function projectToDocument(project: Project): Document {
 	});
 }
 
+type SimilarityMetric = "dot_product" | "cosine" | "euclidean";
+
+const createCollection = async (
+	similarityMetric: SimilarityMetric = "cosine"
+) => {
+	const collections = await db.listCollections();
+	const exists = collections.find((c) => c.name === collectionName);
+
+	if (exists) {
+		console.log(`ℹ️ Collection "${collectionName}" มีอยู่แล้ว`);
+		return;
+	}
+
+	console.log(`🆕 Creating Astra collection: ${collectionName}`);
+
+	const res = await db.createCollection(collectionName, {
+		vector: {
+			dimension: 1536, // text-embedding-3-small
+			metric: similarityMetric,
+		},
+	});
+
+	console.log("✅ Collection created:", res);
+};
+
 async function main() {
 	console.log("Indexing projects from TS file...");
 
@@ -190,13 +245,32 @@ async function main() {
 		} per project).`
 	);
 
-	const store = await getAstraVectorStore();
-	await store.addDocuments(splitDocs);
+	const collection = await db.collection(collectionName);
 
-	console.log("✅ Indexed TS projects into Astra vector store.");
+	for (const doc of splitDocs) {
+		const embeddingRes = await openai.embeddings.create({
+			model: "text-embedding-3-small",
+			input: doc.pageContent,
+			encoding_format: "float",
+		});
+
+		const vector = embeddingRes.data[0].embedding;
+
+		const res = await collection.insertOne({
+			$vector: vector,
+			text: doc.pageContent,
+			...doc.metadata,
+		});
+
+		console.log("Inserted project chunk id:", res.insertedId);
+	}
+
+	console.log("✅ Indexed TS projects into Astra collection.");
 }
 
-main().catch((err) => {
-	console.error(err);
-	process.exit(1);
-});
+createCollection()
+	.then(() => main())
+	.catch((err) => {
+		console.error("❌ Error while indexing projects:", err);
+		process.exit(1);
+	});
