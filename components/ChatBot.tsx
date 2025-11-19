@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 type Sender = "user" | "bot";
 
@@ -229,7 +230,7 @@ const ChatBot: React.FC = () => {
 												: "rounded-bl-sm bg-zinc-800/80 text-zinc-50"
 										}`}
 									>
-										{m.text}
+										<ReactMarkdown>{m.text}</ReactMarkdown>
 									</div>
 								</div>
 							))}
@@ -242,7 +243,7 @@ const ChatBot: React.FC = () => {
 						<div className="flex items-center gap-2">
 							<Input
 								placeholder="พิมพ์ข้อความของคุณ..."
-								className="h-8 border-zinc-700 text-xs text-dark-200 focus-visible:ring-0 focus-visible:ring-offset-0"
+								className="h-8 border-zinc-700 bg-light-900 text-xs text-dark-200 focus-visible:ring-0 focus-visible:ring-offset-0"
 								value={input}
 								onChange={(e) => setInput(e.target.value)}
 								onKeyDown={handleKeyDown}
@@ -250,7 +251,7 @@ const ChatBot: React.FC = () => {
 							/>
 							<Button
 								size="icon"
-								className="bg-gradient size-8 w-fit px-4 text-xs font-semibold hover:opacity-90 disabled:opacity-60"
+								className="bg-gradient size-8 w-fit px-4 text-xs font-semibold text-light-900 hover:opacity-90 disabled:opacity-60"
 								onClick={handleSend}
 								disabled={isSending}
 							>

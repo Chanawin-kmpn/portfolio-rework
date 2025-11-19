@@ -25,6 +25,13 @@ if (!OPENAI_API_KEY) {
 
 const collectionName = ASTRA_DB_COLLECTION || "portfolio_vectors";
 
+const RESUME_URL =
+	process.env.RESUME_URL ||
+	"https://drive.google.com/file/d/1SfS4WXDyYthn_EZMQMAGKG08Pg1GpUxw/view";
+
+const EN_NAME = "Chanawin";
+const TH_NAME = "ชนาวินทร์";
+
 // ใช้ official client สำหรับ embeddings
 const openaiEmbeddingClient = new OpenAI({ apiKey: OPENAI_API_KEY });
 
@@ -55,7 +62,7 @@ Chanawin's core skills (from the "My Skills" section):
 `;
 
 // ---------- Helpers: intent + language ----------
-type Intent = "skill" | "project" | "tool" | "other";
+type Intent = "skill" | "project" | "tool" | "resume" | "other";
 
 function detectIntent(message: string): Intent {
 	const m = message.toLowerCase();
@@ -74,6 +81,12 @@ function detectIntent(message: string): Intent {
 		)
 	) {
 		return "tool";
+	}
+
+	if (
+		/resume|curriculum vitae|cv|ซีวี|เรซูเม่|เรซูเม|ประวัติการทำงาน/.test(m)
+	) {
+		return "resume";
 	}
 
 	return "other";
@@ -154,6 +167,46 @@ export async function POST(req: Request) {
 
 		const intent = detectIntent(message);
 		const userIsThai = looksLikeThai(message);
+
+		if (intent === "resume") {
+			const systemPrompt = `
+You are an AI assistant for Chanawin's portfolio website.
+
+The user is asking about Chanawin's resume/CV.
+
+- Always answer in the same language as the user (${
+				userIsThai
+					? `มีครับ คุณสามารถดาวน์โหลดเรซูเม่ของ Chanawin ได้ที่ 
+<a href="${RESUME_URL}" target="_blank" rel="noopener noreferrer">
+คลิกที่นี่เพื่อดาวน์โหลดเรซูเม่
+</a>`
+					: `Yes, you can download Chanawin's resume here:
+<a href="${RESUME_URL}" target="_blank" rel="noopener noreferrer">
+Download Chanawin's resume
+</a>`
+			}).
+- Always include this direct link to download Chanawin's resume:
+  ${RESUME_URL}
+- Keep the answer short (1–3 sentences).
+- Include the link as a clickable Markdown link in the answer.
+`;
+
+			const userPrompt = `
+User question:
+${message}
+
+Now answer the user, include the resume link as a Markdown hyperlink.
+`;
+
+			const result = await streamText({
+				model: openaiModel("gpt-3.5-turbo"),
+				system: systemPrompt,
+				messages: [{ role: "user", content: userPrompt }],
+				temperature: 0.1,
+			});
+
+			return result.toTextStreamResponse();
+		}
 		const projectSlug = extractProjectSlug(message);
 
 		const { context } = await getRelevantContext(
@@ -168,19 +221,23 @@ export async function POST(req: Request) {
 		if (intent === "skill") {
 			finalContext += `\n\n[Skills Summary]\n${SKILLS_CONTEXT}`;
 		}
-		// NOTE: intent = "project" ไม่ต้องต่อ PROJECTS_CONTEXT แล้ว
-		// เพราะเราใช้ข้อมูลโปรเจกต์จาก Astra โดยตรง
 
 		const systemPrompt = `
-You are an AI assistant for Chanawin's portfolio website.
+You are an AI assistant for ${EN_NAME}'s portfolio website.
 
 GOAL
-- Help visitors understand Chanawin's skills, tech stack, projects, and the tools he uses.
+- Help visitors understand ${EN_NAME}'s skills, tech stack, projects, and the tools he uses.
 - Always stay faithful to the provided portfolio context.
 
 USER LANGUAGE
 - The user is currently writing in ${userIsThai ? "Thai" : "English"}.
 - Answer in the same language as the user.
+
+NAME RULES
+- The owner's English name is "${EN_NAME}".
+- The correct Thai name is "${TH_NAME}".
+- When answering in Thai, ALWAYS refer to him as "${TH_NAME}".
+- NEVER use the misspelled form "ชนวิน", "ชนาวิน" or any shortened/alternative spelling.
 
 INTENT
 - The detected high-level intent for the latest question is: ${intent.toUpperCase()}.
