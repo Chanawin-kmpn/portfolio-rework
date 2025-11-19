@@ -53,7 +53,7 @@ const splitter = new RecursiveCharacterTextSplitter({
 
 // ----- CREATE COLLECTION -----
 const createCollection = async (
-	similarityMetric: SimilarityMetric = "cosine"
+	similarityMetric: SimilarityMetric = "dot_product"
 ) => {
 	// เช็กก่อนว่ามี collection แล้วหรือยัง
 	const collections = await db.listCollections();

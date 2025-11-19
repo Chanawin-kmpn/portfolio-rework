@@ -64,7 +64,7 @@ const db = ASTRA_DB_NAMESPACE
 type SimilarityMetric = "dot_product" | "cosine" | "euclidean";
 
 const createCollection = async (
-	similarityMetric: SimilarityMetric = "cosine"
+	similarityMetric: SimilarityMetric = "dot_product"
 ) => {
 	const collections = await db.listCollections();
 	const exists = collections.find((c) => c.name === collectionName);

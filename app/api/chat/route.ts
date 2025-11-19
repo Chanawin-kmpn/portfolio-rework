@@ -35,9 +35,74 @@ const db = ASTRA_DB_NAMESPACE
 	: client.db(ASTRA_DB_ENDPOINT);
 const collection = db.collection(collectionName);
 
-// ดึง context จาก Astra (RAG)
-async function getRelevantContext(query: string, k: number = 6) {
-	// 1) ทำ embedding จากคำถาม
+// ---------- Static context: Skills ----------
+const SKILLS_CONTEXT = `
+Chanawin's core skills (from the "My Skills" section):
+
+[EN]
+- Languages: HTML, CSS, JavaScript, TypeScript
+- Frontend / UI: Tailwind CSS, shadcn/ui, styled-components, GSAP, THREE.js, React, Next.js
+- Backend / Runtime: Node.js, Express
+- Database / Backend services: MongoDB, Firebase
+- Tools & Others: Git, Visual Studio Code, Figma
+
+[TH]
+- ภาษาโปรแกรม: HTML, CSS, JavaScript, TypeScript
+- ด้าน Frontend / UI: Tailwind CSS, shadcn/ui, styled-components, GSAP, THREE.js, React, Next.js
+- ด้าน Backend / Runtime: Node.js, Express
+- ด้านฐานข้อมูล / Backend services: MongoDB, Firebase
+- เครื่องมืออื่น ๆ: Git, Visual Studio Code, Figma
+`;
+
+// ---------- Helpers: intent + language ----------
+type Intent = "skill" | "project" | "tool" | "other";
+
+function detectIntent(message: string): Intent {
+	const m = message.toLowerCase();
+
+	if (/skill|skills|tech\s*stack|สกิล|ทักษะ|ความสามารถ/.test(m)) {
+		return "skill";
+	}
+
+	if (/project|projects|โปรเจค|โปรเจ็กต์|ผลงาน|งานที่ทำ/.test(m)) {
+		return "project";
+	}
+
+	if (
+		/tool|tools|เครื่องมือ|ใช้เว็บอะไร|ใช้เครื่องมืออะไร|ไอคอน|icon|favicon|extension|ส่วนขยาย/.test(
+			m
+		)
+	) {
+		return "tool";
+	}
+
+	return "other";
+}
+
+function looksLikeThai(text: string): boolean {
+	return /[\u0E00-\u0E7F]/.test(text);
+}
+
+// จับชื่อโปรเจกต์จากข้อความ user เพื่อ map เป็น slug
+function extractProjectSlug(message: string): string | null {
+	const m = message.toLowerCase();
+
+	if (m.includes("prioritask")) return "prioritask";
+	if (m.includes("freshpork") || m.includes("fresh pork"))
+		return "pp-freshpork";
+	if (m.includes("learn css thai") || m.includes("css thai"))
+		return "learn-css-thai";
+
+	return null;
+}
+
+// ---------- RAG: ดึง context จาก Astra ----------
+async function getRelevantContext(
+	query: string,
+	k: number = 6,
+	intent: Intent = "other",
+	projectSlug?: string | null
+) {
 	const embeddingRes = await openaiEmbeddingClient.embeddings.create({
 		model: "text-embedding-3-small",
 		input: query,
@@ -46,30 +111,38 @@ async function getRelevantContext(query: string, k: number = 6) {
 
 	const vector = embeddingRes.data[0].embedding;
 
-	// 2) หาเอกสารที่ใกล้ที่สุดใน Astra
-	const cursor = collection.find(
-		{},
-		{
-			sort: { $vector: vector },
-			limit: k,
+	// ใช้ filter ตาม intent / slug
+	const filter: any = {};
+
+	if (intent === "project") {
+		filter.type = "project";
+		if (projectSlug) {
+			filter.slug = projectSlug;
 		}
-	);
+	}
+
+	const cursor = collection.find(filter, {
+		sort: { $vector: vector },
+		limit: k,
+	});
 
 	const docs = await cursor.toArray();
 
-	// 3) รวมเป็น context text
 	const context = docs
 		.map((doc: any, idx: number) => {
 			const text = doc.text || "";
 			const source = doc.source || doc.metadata?.source || "unknown";
-			return `[#${idx + 1} | source: ${source}]\n${text}`;
+			const type = doc.type || doc.metadata?.type || "unknown";
+			const slug = doc.slug || doc.metadata?.slug;
+			const name = doc.name || doc.metadata?.name;
+			return `[#${idx + 1} | source: ${source} | type: ${type} | slug: ${slug} | name: ${name}]\n${text}`;
 		})
 		.join("\n\n----\n\n");
 
 	return { context, rawDocs: docs };
 }
 
-// Streaming handler ด้วย streamText
+// ---------- Streaming handler ----------
 export async function POST(req: Request) {
 	try {
 		const body = await req.json().catch(() => null);
@@ -79,30 +152,115 @@ export async function POST(req: Request) {
 			return new Response("Missing 'message' in body", { status: 400 });
 		}
 
-		const { context } = await getRelevantContext(message, 6);
+		const intent = detectIntent(message);
+		const userIsThai = looksLikeThai(message);
+		const projectSlug = extractProjectSlug(message);
+
+		const { context } = await getRelevantContext(
+			message,
+			6,
+			intent,
+			projectSlug
+		);
+
+		// ต่อ static context เพิ่มตาม intent
+		let finalContext = context;
+		if (intent === "skill") {
+			finalContext += `\n\n[Skills Summary]\n${SKILLS_CONTEXT}`;
+		}
+		// NOTE: intent = "project" ไม่ต้องต่อ PROJECTS_CONTEXT แล้ว
+		// เพราะเราใช้ข้อมูลโปรเจกต์จาก Astra โดยตรง
 
 		const systemPrompt = `
 You are an AI assistant for Chanawin's portfolio website.
-You answer in a friendly, concise style.
-Use ONLY the provided context about projects, tools, and portfolio.
-If something is not in the context, say you are not sure and answer briefly from general developer knowledge.
-If the user speaks Thai, reply in Thai. If they speak English, reply in English.
+
+GOAL
+- Help visitors understand Chanawin's skills, tech stack, projects, and the tools he uses.
+- Always stay faithful to the provided portfolio context.
+
+USER LANGUAGE
+- The user is currently writing in ${userIsThai ? "Thai" : "English"}.
+- Answer in the same language as the user.
+
+INTENT
+- The detected high-level intent for the latest question is: ${intent.toUpperCase()}.
+
+DEFINITIONS
+- "Skills" / "สกิล" / "ทักษะ" / "ความสามารถ":
+  programming languages, frameworks, libraries, technologies, and relevant tools Chanawin can use.
+- "Projects" / "โปรเจกต์" / "โปรเจค" / "ผลงาน":
+  web applications or sites Chanawin has built, including their goals and tech stacks.
+- "Tools" / "เครื่องมือ":
+  design tools, icon/background/font resources, VS Code extensions, and other utilities Chanawin uses in his workflow.
+- External websites such as BGJar, SVGL, icon libraries, and font sites are tools/resources, not core skills.
+
+ANSWERING RULES
+1. Use ONLY information that appears in the provided CONTEXT about Chanawin, his skills, tools, and projects.
+2. Respect the detected INTENT:
+   - If intent = SKILL:
+     - Summarise Chanawin's skills using the skills summary and relevant context.
+     - Answer as a structured bullet list with sections such as:
+       - Languages
+       - Frontend / UI
+       - Backend / Runtime
+       - Database / Backend services
+       - Tools & Others
+   - If intent = PROJECT:
+     - Focus on project-related context.
+     - If the question is general, list 2–4 key projects.
+     - For each project, include:
+       - Project name
+       - 1–2 sentence summary
+       - Tech stack (only technologies mentioned in the context)
+     - If the user mentions a specific project name (e.g. "Prioritask"), prioritise that project and give a concise summary + tech stack.
+   - If intent = TOOL:
+     - Focus on tools Chanawin uses:
+       - Design tools (e.g. Figma)
+       - Icon / illustration / background / font resources
+       - VS Code extensions or other developer tools
+     - Briefly explain what each tool is for and why it's useful.
+   - If intent = OTHER:
+     - Answer based on the CONTEXT and general portfolio information.
+
+3. Never treat BGJar, SVGL, icon or font sites as the main "skills". They are tools/resources.
+4. If the CONTEXT does not clearly contain the answer, say that the portfolio does not specify this,
+   and avoid inventing technologies, tools, or projects.
+5. Be friendly and concise. Prefer 3–8 bullet points or 1–3 short paragraphs.
 `;
 
 		const userPrompt = `
-User question:
+You will answer a visitor's question about Chanawin using the CONTEXT below.
+
+STEP 1 — Understand intent
+- The pre-detected intent is: ${intent}.
+- Double-check by reading the user's question (which may be in Thai or English).
+
+STEP 2 — Select relevant context
+- From CONTEXT, mentally select only the parts that are clearly related to that intent.
+- Ignore unrelated examples, decorative assets, icon/background/font websites unless the user explicitly asks about tools/resources.
+
+STEP 3 — Answer
+- Use the same language as the user.
+- If the question is about skills/tech stack:
+  - Answer with a clear bullet list grouped into sections (Languages, Frontend / UI, Backend / Runtime, Database / Backend services, Tools & Others).
+- If the question is about projects:
+  - List the relevant projects (or the specific one asked) with a short summary and their tech stack.
+- If the question is about tools:
+  - List the relevant tools/resources and explain their use briefly.
+- For other questions, answer in 1–3 short paragraphs or 3–8 bullet points.
+- If something is not specified in CONTEXT, clearly say that the portfolio does not provide that information.
+
+USER QUESTION:
 ${message}
 
-Relevant context from the portfolio (projects, tools, etc.):
-${context}
+CONTEXT (from Chanawin's portfolio, projects, tools, etc.):
+${finalContext}
 
-Answer the user's question using this context.
-If the question is about how to contact the developer, you can mention the email shown in the portfolio if it appears in the context.
+Now write the final answer for the user.
 `;
 
-		// ใช้ streamText ของ ai
 		const result = await streamText({
-			model: openaiModel("gpt-3.5-turbo"), // หรือ gpt-4o-mini / gpt-4.1
+			model: openaiModel("gpt-3.5-turbo"),
 			system: systemPrompt,
 			messages: [
 				{
@@ -110,10 +268,9 @@ If the question is about how to contact the developer, you can mention the email
 					content: userPrompt,
 				},
 			],
-			temperature: 0.5,
+			temperature: 0.15,
 		});
 
-		// ส่งออกเป็น text stream response
 		return result.toTextStreamResponse();
 	} catch (err: any) {
 		console.error("Error in /api/chat:", err);

@@ -207,7 +207,7 @@ function projectToDocument(project: Project): Document {
 type SimilarityMetric = "dot_product" | "cosine" | "euclidean";
 
 const createCollection = async (
-	similarityMetric: SimilarityMetric = "cosine"
+	similarityMetric: SimilarityMetric = "dot_product"
 ) => {
 	const collections = await db.listCollections();
 	const exists = collections.find((c) => c.name === collectionName);
@@ -259,7 +259,10 @@ async function main() {
 		const res = await collection.insertOne({
 			$vector: vector,
 			text: doc.pageContent,
-			...doc.metadata,
+			type: "project",
+			source: doc.metadata?.source ?? "project-ts",
+			slug: doc.metadata?.slug,
+			name: doc.metadata?.name,
 		});
 
 		console.log("Inserted project chunk id:", res.insertedId);
