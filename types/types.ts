@@ -45,6 +45,7 @@ export interface ProjectProp {
 		imageFolder: string;
 		imageGallery: string[];
 	};
+	[key: string]: any;
 }
 
 export interface ThemeContextType {

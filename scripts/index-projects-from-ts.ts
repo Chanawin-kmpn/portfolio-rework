@@ -6,49 +6,7 @@ import OpenAI from "openai";
 
 import { textSplitter } from "../lib/textSplitter";
 import { projects } from "../data/projects";
-
-type Challenge = {
-	title: string;
-	solving: string;
-};
-
-type LessonSection = {
-	title: string;
-	points: string[];
-};
-
-type LessonsLearned = {
-	introduction?: string;
-	lessons?: LessonSection[];
-	conclusion?: string;
-};
-
-type Screenshots = {
-	imageFolder: string;
-	imageGallery: string[];
-};
-
-type Project = {
-	id: number | string;
-	slug: string;
-	name: string;
-	description?: string;
-	createdAt?: string;
-	status?: string;
-	stack?: string[];
-	liveDemo?: string;
-	heroImage?: string;
-	purpose?: string;
-	objectives?: string[];
-	keyFeatures?: string[];
-	expectedBenefits?: string[];
-	webStackExplanation?: string[];
-	challengesAndProblemSolving?: Challenge[];
-	lessonsLearned?: LessonsLearned;
-	futureDevelopmentPlan?: string[];
-	screenshots?: Screenshots;
-	[key: string]: any;
-};
+import { ProjectProp } from "@/types/types";
 
 // ----- ENV -----
 const {
@@ -80,7 +38,7 @@ const db = ASTRA_DB_NAMESPACE
 	: client.db(ASTRA_DB_ENDPOINT);
 
 // ----- HELPERS -----
-function projectToDocument(project: Project): Document {
+function projectToDocument(project: ProjectProp): Document {
 	const {
 		id,
 		slug,
@@ -232,7 +190,7 @@ const createCollection = async (
 async function main() {
 	console.log("Indexing projects from TS file...");
 
-	const docs: Document[] = (projects as Project[]).map((p) =>
+	const docs: Document[] = (projects as ProjectProp[]).map((p) =>
 		projectToDocument(p)
 	);
 
